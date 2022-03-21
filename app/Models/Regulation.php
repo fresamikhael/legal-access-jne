@@ -15,6 +15,25 @@ class Regulation extends Model
     protected $primaryKey = 'id';
 
     public $incrementing = false;
+
+    public function scopeFilter($query, array $filters)
+    {
+        $query->when($filters['name'] ?? false, function($query, $name) {
+            return $query->where('name', 'like', '%'.$name.'%');
+        });
+
+        $query->when($filters['number'] ?? false, function($query, $number) {
+            return $query->where('number', 'like', '%'.$number.'%');
+        });
+        
+        $query->when($filters['year'] ?? false, function($query, $year) {
+            return $query->where('year', 'like', '%'.$year.'%');
+        });
+        
+        $query->when($filters['title'] ?? false, function($query, $title) {
+            return $query->where('title', 'like', '%'.$title.'%');
+        });
+    }
     
     public static function boot()
     {

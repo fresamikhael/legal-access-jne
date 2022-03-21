@@ -1,41 +1,111 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="p-5 grid col-">
-        <!-- Modal toggle -->
-<button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="defaultModal">
-    Toggle modal
-  </button>
-  
-        <!-- Main modal -->
-        <div id="defaultModal" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center h-modal md:h-full md:inset-0">
-            <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
-                <!-- Modal content -->
-                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                    <!-- Modal header -->
-                    <div class="flex justify-between items-start p-5 rounded-t border-b dark:border-gray-600">
-                        <h3 class="text-xl font-semibold text-gray-900 lg:text-2xl dark:text-white">
-                            Terms of Service
-                        </h3>
-                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="defaultModal">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
-                        </button>
+    <div class="p-5 grid grid-cols-[0.5fr_2fr] gap-10">
+        <div class="border border-[#D0391C]">
+            <div class="bg-[#D0391C] p-4 text-white flex gap-2 items-center border-b border-b-[#0D2B70]">
+                <i class="fa-solid fa-align-left"></i>
+                <span>Pencarian</span>
+            </div>
+
+            <div class="p-5">
+                <form action="{{ route('database') }}" method="GET">
+                    <div class="mb-6">
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Pilih Jenis Peraturan</label>
+                        <select id="name" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option value="">-- Semua Peraturan --</option>
+                            <option value="UU">UU</option>
+                            <option value="PERPU">PERPU</option>
+                            <option value="PP">PP</option>
+                            <option value="PERPRES">PERPRES</option>
+                        </select>
                     </div>
-                    <!-- Modal body -->
-                    <div class="p-6 space-y-6">
-                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                            With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                        </p>
-                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                            The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                        </p>
+
+                    <div class="mb-6">
+                        <label for="number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nomor Peraturan</label>
+                        <input type="text" id="number" name="number" value="{{ request('number') }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
-                    <!-- Modal footer -->
-                    <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
-                        <button data-modal-toggle="defaultModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                        <button data-modal-toggle="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600">Decline</button>
+
+                    <div class="mb-6">
+                        <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tahun Peraturan</label>
+                        <input type="text" id="year" name="year" value="{{ request('year') }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
+
+                    <div class="mb-6">
+                        <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tentang</label>
+                        <input type="text" id="title" name="title" value="{{ request('title') }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    </div>
+
+                    <button type="submit" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Cari</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="border border-[#D0391C]">
+            <div class="bg-[#D0391C] p-4 text-white flex gap-2 items-center border-b border-b-[#0D2B70]">
+                <i class="fa-solid fa-align-left"></i>
+                <span>Data Peraturan</span>
+            </div>
+
+            <div class="p-5">
+                <span class="flex items-center justify-end mb-4 font-light text-sm">
+                    Ditampilkan {{ $regulation->firstItem() }} - {{ $regulation->lastItem() }} dari {{ $regulation->total() }} Data Peraturan
+                </span>
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    No
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Tahun Peraturan
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Peraturan
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Tentang
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    <span class="sr-only">Aksi</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if ($regulation->count())
+                                @foreach ($regulation as $row)
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                            {{ $regulation->firstItem()+$loop->index }}
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            {{ $row->year }}
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <a href="{{ route('database.detail', [$row->id]) }}" class="text-red-500 hover:text-black hover:underline">{{ Str::limit($row->name, 40, '...') }}</a>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            {{ Str::limit($row->title, 100, '...') }}
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            <a href="#" class="">
+                                                <i class="fa-solid fa-file-arrow-down"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @else
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-800 dark:text-white whitespace-nowrap">
+                                    Data yang dicari tidak tersedia
+                                </th>
+                            @endif
+                        </tbody>
+                    </table>
                 </div>
+
+                {{ $regulation->links('vendor.pagination.custom') }}
             </div>
         </div>
     </div>

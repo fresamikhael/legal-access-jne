@@ -45,6 +45,7 @@ Route::middleware('auth')->group(function () {
     });
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/database', [DatabaseController::class, 'index'])->name('database');
+    Route::get('/database/detail/{id}', [DatabaseController::class, 'detail'])->name('database.detail');
 
     Route::get('/database-customer', [DatabaseController::class, 'index'])->name('database-customer');
     Route::get('/database-vendor', [DatabaseController::class, 'dataVendor'])->name('database-vendor');
