@@ -16,12 +16,12 @@
                             <input type='email' name="email" placeholder="Email"
                                 class="-mx-6 px-8  w-full border rounded py-2 text-gray-700 focus:outline-none"
                                 @error('email') is-invalid @enderror" />
-                            @error('email')
-                                <span class="text-red-700" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                         </div>
+                        @error('email')
+                            <span class="text-red-700" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                     <div class="w-full mb-2">
                         <div class="flex items-center">
@@ -29,12 +29,12 @@
                             <input type='password' name="password" placeholder="Password"
                                 class="-mx-6 px-8 w-full border rounded py-2 text-gray-700 focus:outline-none"
                                 @error('password') is-invalid @enderror" />
-                            @error('password')
-                                <span class="text-red-700" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                         </div>
+                        @error('password')
+                            <span class="text-red-700" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                     <a href="#" class="text-xs text-gray-500 float-right mb-4">Forgot Password?</a>
                     <button type="submit"

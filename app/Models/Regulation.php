@@ -16,6 +16,13 @@ class Regulation extends Model
 
     public $incrementing = false;
 
+    protected $table = 'regulations';
+
+    public function files()
+    {
+        return $this->hasMany(FileRegulation::class);
+    }
+
     public function scopeFilter($query, array $filters)
     {
         $query->when($filters['name'] ?? false, function($query, $name) {
@@ -34,7 +41,7 @@ class Regulation extends Model
             return $query->where('title', 'like', '%'.$title.'%');
         });
     }
-    
+
     public static function boot()
     {
         parent::boot();
