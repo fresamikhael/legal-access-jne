@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Drafting\VendorSupplier;
+use App\Models\Province;
 
 class VendorController extends Controller
 {
@@ -32,9 +33,12 @@ class VendorController extends Controller
             }
         }
 
+        $province = Province::get();
+
         return view('pages.drafting.vendor_supplier.index', [
             'no_kasus' => $no_kasus,
-            'datenow' => $datenow
+            'datenow' => $datenow,
+            'province' => $province
         ]);
     }
 
