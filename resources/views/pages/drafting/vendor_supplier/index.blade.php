@@ -262,7 +262,7 @@
                                 Vendor</label>
                             <div class="flex-[4]">
                                 <input name="file_vendor_offer"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -274,7 +274,7 @@
                                 Kesepakatan Para Pihak</label>
                             <div class="flex-[4]">
                                 <input name="file_mom"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -285,7 +285,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Disposisi</label>
                             <div class="flex-[4]">
                                 <input name="file_dispotition"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -297,7 +297,7 @@
                                 Perjanjian dalam bentuk word</label>
                             <div class="flex-[4]">
                                 <input name="file_agreement_draft"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -305,7 +305,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col gap-4 mb-4 ml-20 -mt-8">
+            <div class="flex flex-col gap-4 mb-4 ml-20 mt-4">
                 <div class="grid grid-rows-3 grid-flow-col gap-4 mb-4">
                     <div class="row-span-4 font-medium"></div>
                     <div class="col-span-2">
@@ -315,7 +315,7 @@
                                 Customer</label>
                             <div class="flex-[4]">
                                 <input name="file_customer_entity"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -327,7 +327,7 @@
                                 Akta & SK Kemenkumham</label>
                             <div class="flex-[4]">
                                 <input name="file_sk_menkumham"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -339,7 +339,7 @@
                                 Nomor Induk Berusaha (NIB)</label>
                             <div class="flex-[4]">
                                 <input name="file_nib"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -351,7 +351,7 @@
                                 Nomor Pokok Wajib Pajak (NPWP)</label>
                             <div class="flex-[4]">
                                 <input name="file_npwp"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -359,7 +359,7 @@
                 </div>
 
             </div>
-            <div class="flex flex-col gap-4 mb-4 ml-14 -mt-8">
+            <div class="flex flex-col gap-4 mb-4 ml-14 mt-4">
                 <div class="grid grid-rows-3 grid-flow-col gap-4 mb-4">
                     <div class="row-span-4 font-medium"></div>
                     <div class="col-span-2">
@@ -369,7 +369,7 @@
                                 Izin Usaha & Izin Lokasi OSS</label>
                             <div class="flex-[4]">
                                 <input name="file_business_permit"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -381,7 +381,7 @@
                                 KTP Direksi</label>
                             <div class="flex-[4]">
                                 <input name="file_director_id_card"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -392,7 +392,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Lain-lain</label>
                             <div class="flex-[4]">
                                 <input name="file_other"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="file_other" type="file" required>
                             </div>
                         </div>
