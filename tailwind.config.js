@@ -3,7 +3,7 @@ module.exports = {
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
-        "./node_modules/flowbite/**/*.js"
+        "./node_modules/flowbite/**/*.js",
     ],
     theme: {
         extend: {
@@ -12,6 +12,7 @@ module.exports = {
                 "span-7": "span 7 / span 7",
                 "span-8": "span 8 / span 8",
                 "span-9": "span 9 / span 9",
+                "span-10": "span 10 / span 10",
                 "span-22": "span 22 / span 22",
                 8: "span 8 / span 8",
             },
@@ -20,7 +21,5 @@ module.exports = {
             },
         },
     },
-    plugins: [
-        require('flowbite/plugin')
-    ],
+    plugins: [require("flowbite/plugin")],
 };

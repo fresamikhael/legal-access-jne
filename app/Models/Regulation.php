@@ -18,6 +18,11 @@ class Regulation extends Model
 
     protected $table = 'regulations';
 
+    public function files()
+    {
+        return $this->hasMany(FileRegulation::class);
+    }
+
     public function scopeFilter($query, array $filters)
     {
         $query->when($filters['name'] ?? false, function($query, $name) {

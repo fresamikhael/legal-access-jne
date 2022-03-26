@@ -90,9 +90,11 @@
                                             {{ Str::limit($row->title, 100, '...') }}
                                         </td>
                                         <td class="px-6 py-4 text-right">
-                                            <a href="#" class="">
-                                                <i class="fa-solid fa-file-arrow-down"></i>
-                                            </a>
+                                            @foreach ($row->files as $data)
+                                                <a href="{{ asset($data->file) }}" target="_blank" class="">
+                                                    <i class="fa-solid fa-file-arrow-down"></i>
+                                                </a>
+                                            @endforeach
                                         </td>
                                     </tr>
                                 @endforeach

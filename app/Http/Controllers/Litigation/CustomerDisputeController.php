@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Litigation\Cs;
 use App\Http\Controllers\Controller;
 use App\Models\Litigation\CustomerDispute;
+use App\Models\Province;
 
 class CustomerDisputeController extends Controller
 {
@@ -33,9 +34,12 @@ class CustomerDisputeController extends Controller
             }
         }
 
+        $province = Province::get();
+
         return view('pages.litigation.customer_dispute.index', [
             'no_kasus' => $no_kasus,
-            'datenow' => $datenow
+            'datenow' => $datenow,
+            'province' => $province
         ]);
     }
 
