@@ -16,18 +16,23 @@ class CreateOthersTable extends Migration
         Schema::create('others', function (Blueprint $table) {
             $table->string('id')->unique();
             $table->string('user_id');
-            $table->date('date');
+
             $table->string('party_name');
+            $table->string('party_province');
+            $table->string('party_regency');
+            $table->string('party_district');
+            $table->string('party_village');
+            $table->string('party_zip_code');
+            $table->text('party_address');
+
             $table->string('department');
             $table->string('document_number');
             $table->integer('total_loss');
             $table->text('incident_chronology');
+
             $table->string('file_document');
-            $table->string('file_proof1');
-            $table->string('file_proof2');
-            $table->string('file_proof3');
-            $table->string('file_disposition');
-            $table->string('file_other_document')->nullable();
+            $table->string('file_proof');
+
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
