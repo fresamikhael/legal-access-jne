@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Litigation\Cs;
 use App\Models\Litigation\Other;
 use App\Http\Controllers\Controller;
+use App\Models\Province;
 
 class OtherController extends Controller
 {
@@ -34,9 +35,12 @@ class OtherController extends Controller
             }
         }
 
+        $province = Province::get();
+
         return view('pages.litigation.other.index', [
             'no_kasus' => $no_kasus,
-            'datenow' => $datenow
+            'datenow' => $datenow,
+            'province' => $province
         ]);
     }
 

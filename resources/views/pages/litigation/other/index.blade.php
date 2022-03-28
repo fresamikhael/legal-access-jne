@@ -31,74 +31,7 @@
                                 placeholder="" required>
                         </div>
                     </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
-                            Pihak
-                        </label>
-                        <div class="flex-[4]">
-                            <select name="" id=""
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="">Pilih Provinsi</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                        </label>
-                        <div class="flex-[4]">
-                            <select name="" id=""
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="">Pilih Kab/Kota</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                        </label>
-                        <div class="flex-[4]">
-                            <select name="" id=""
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="">Pilih Kecamatan</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                        </label>
-                        <div class="flex-[4]">
-                            <select name="" id=""
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="">Pilih Kelurahan</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                        </label>
-                        <div class="flex-[4]">
-                            <select name="" id=""
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="">Pilih Kode Pos</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                        </label>
-                        <div class="flex-[4]">
-                            <input type="text" id="text" name="first_party"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Masukkan Nama Jalan" required>
-                        </div>
-                    </div>
-                    <div class="flex">
-                    </div>
+                    <div id="formAddress"></div>
                 </div>
 
                 <div class="flex flex-col gap-4">
@@ -157,7 +90,7 @@
                                 Dokumen*</label>
                             <div class="flex-[4]">
                                 <input
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" name="file_document"
                                     required>
                             </div>
@@ -170,7 +103,7 @@
                                 Bukti*</label>
                             <div class="flex-[4]">
                                 <input
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" name="file_proof1"
                                     required>
                             </div>
@@ -183,7 +116,7 @@
                                 Dokumen Tambahan</label>
                             <div class="flex-[4]">
                                 <input
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" name="file_proof2"
                                     required>
                             </div>
@@ -201,4 +134,169 @@
             </div>
         </form>
     </div>
+
+    <script type="text/babel">
+        function FormAddress() {
+                                const [regency, setRegency] = React.useState([])
+                                const [district, setDistrict] = React.useState([])
+                                const [village, setVillage] = React.useState([])
+
+                                const [form, setForm] = React.useState({
+                                    party_province: "",
+                                    party_regency: "",
+                                    party_district: "",
+                                    party_village: "",
+                                    party_zip_code: "",
+                                    party_address: "",
+                                })
+
+                                const inputProvinceChange = (e) => {
+                                    const name = e.target.name
+                                    const value = e.target.value
+
+                                    axios.get(`/api/regencies/${value}`).then(res => {
+                                        if(res.data.meta.code === 200) {
+                                            setRegency(res.data.data)
+                                        }
+                                    })
+
+                                    setForm({ ...form, [name]: value })
+                                }
+
+                                const inputRegencyChange = (e) => {
+                                    const name = e.target.name
+                                    const value = e.target.value
+
+                                    axios.get(`/api/districts/${value}`).then(res => {
+                                        if(res.data.meta.code === 200) {
+                                            setDistrict(res.data.data)
+                                        }
+                                    })
+
+                                    setForm({ ...form, [name]: value })
+                                }
+
+                                const inputDistrictChange = (e) => {
+                                    const name = e.target.name
+                                    const value = e.target.value
+
+                                    axios.get(`/api/villages/${value}`).then(res => {
+                                        if(res.data.meta.code === 200) {
+                                            setVillage(res.data.data)
+                                        }
+                                    })
+
+                                    setForm({ ...form, [name]: value })
+                                }
+
+                                const inputChange = (e) => {
+                                    const name = e.target.name
+                                    const value = e.target.value
+
+                                    setForm({ ...form, [name]: value })
+                                }
+
+                                return (
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex">
+                                            <label for="party_province"
+                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                                                Pihak
+                                            </label>
+                                            <div class="flex-[4]">
+                                                <select onChange={ inputProvinceChange } name="party_province" id="party_province"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                    <option value="" selected disabled>Pilih Provinsi</option>
+                                                    @foreach ($province as $row)
+                                                        <option value="{{ $row->id }}">{{ $row->name }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        {form.party_province && (
+                                            <div class="flex">
+                                                <label for="party_regency"
+                                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                </label>
+                                                <div class="flex-[4]">
+                                                    <select onChange={ inputRegencyChange } name="party_regency" id="party_regency"
+                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                        <option value="" selected disabled>Pilih Kab/Kota</option>
+                                                        { regency.map((value, index) => {
+                                                            return (
+                                                                <option key={index} value={value.id}>{value.name}</option>
+                                                            )
+                                                        }) }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {form.party_regency && (
+                                            <div class="flex">
+                                                <label for="party_district"
+                                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                </label>
+                                                <div class="flex-[4]">
+                                                    <select onChange={ inputDistrictChange } name="party_district" id="party_district"
+                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                        <option value="" selected disabled>Pilih Kecamatan</option>
+                                                        { district.map((value, index) => {
+                                                            return (
+                                                                <option key={index} value={value.id}>{value.name}</option>
+                                                            )
+                                                        }) }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {form.party_district && (
+                                            <div class="flex">
+                                                <label for="party_village"
+                                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                </label>
+                                                <div class="flex-[4]">
+                                                    <select onChange={ inputChange } name="party_village" id="party_village"
+                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                        <option value="" selected disabled>Pilih Kelurahan</option>
+                                                        { village.map((value, index) => {
+                                                            return (
+                                                                <option key={index} value={value.id}>{value.name}</option>
+                                                            )
+                                                        }) }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {form.party_village && (
+                                            <div class="flex flex-col gap-4">
+                                                <div class="flex">
+                                                    <label for="party_zip_code"
+                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                    </label>
+                                                    <div class="flex-[4]">
+                                                        <input type="text" id="party_zip_code" name="party_zip_code"
+                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                            placeholder="Masukkan Kode Pos" required/>
+                                                    </div>
+                                                </div>
+                                                <div class="flex">
+                                                    <label for="party_address"
+                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                    </label>
+                                                    <div class="flex-[4]">
+                                                        <textarea id="party_address" name="party_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                )
+                            }
+
+                            ReactDOM.render(<FormAddress />,document.getElementById('formAddress'))
+                </script>
 @endsection
