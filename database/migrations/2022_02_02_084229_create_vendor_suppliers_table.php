@@ -16,9 +16,15 @@ class CreateVendorSuppliersTable extends Migration
         Schema::create('vendor_suppliers', function (Blueprint $table) {
             $table->string('id')->unique();
             $table->string('user_id');
-            $table->string('first_party');
-            $table->string('second_party');
-            $table->string('third_party');
+
+            $table->string('party_name');
+            $table->string('party_province');
+            $table->string('party_regency');
+            $table->string('party_district');
+            $table->string('party_village');
+            $table->string('party_zip_code');
+            $table->text('party_address');
+            
             $table->string('agreement_draft');
             $table->string('addendum');
             $table->integer('agreement_nominal');

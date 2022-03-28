@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Drafting\Lease;
 use App\Http\Controllers\Controller;
+use App\Models\Province;
 
 class LeaseController extends Controller
 {
@@ -32,9 +33,12 @@ class LeaseController extends Controller
             }
         }
 
+        $province = Province::get();
+
         return view('pages.drafting.lease.index', [
             'no_kasus' => $no_kasus,
-            'datenow' => $datenow
+            'datenow' => $datenow,
+            'province' => $province
         ]);
     }
 

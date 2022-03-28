@@ -10,47 +10,28 @@
             <div class="grid grid-cols-2 gap-16 mb-4">
                 <div class="flex flex-col gap-4">
                     <div class="flex">
-                        <label for="text"
+                        <label for="id"
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nomor
                             Pengajuan</label>
                         <div class="flex-[4]">
-                            <input type="text" id="text" name="id" value="{{ $no_kasus }}" readonly
+                            <input type="text" id="id" name="id" value="{{ $no_kasus }}" readonly
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="" required>
                         </div>
                     </div>
-                    <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                     <div class="flex">
                         <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Pihak
-                            Pertama</label>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama Landlord</label>
                         <div class="flex-[4]">
                             <input type="text" id="text" name="first_party"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="" required>
                         </div>
                     </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Pihak
-                            Kedua</label>
-                        <div class="flex-[4]">
-                            <input type="text" id="text" name="second_party"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Pihak
-                            Ketiga (apabila ada)</label>
-                        <div class="flex-[4]">
-                            <input type="text" id="text" name="third_party"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
-                        </div>
-                    </div>
-                    <div class="flex">
+
+                    <div id="formAddress"></div>
+
+                    {{-- <div class="flex">
                         <label for="text"
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Draft
                             Perjanjian</label>
@@ -59,15 +40,48 @@
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="" required>
                         </div>
-                    </div>
-                    <div class="flex">
+                    </div> --}}
+                    {{-- <div class="flex">
                         <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Addendum
-                            ke</label>
+                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Addendum
+                        ke</label>
                         <div class="flex-[4]">
                             <input type="text" id="text" name="addendum"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="" required>
+                        </div>
+                    </div> --}}
+                    <div class="flex">
+                        <label for="type"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Jenis</label>
+                        <div class="flex-[4]">
+                            <select required id="type" name="type"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option value="" selected disabled>-- Pilih --</option>
+                                <option value="Baru">Baru</option>
+                                <option value="Perpanjangan">Perpanjangan</option>
+                                <option value="Addendum">Addendum</option>
+                                <option value="Pembaharuan">Pembaharuan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="regional"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Regional</label>
+                        <div class="flex-[4]">
+                            <select required id="regional" name="regional"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option value="" selected disabled>-- Pilih --</option>
+                                <option value="Jakarta">Jakarta</option>
+                                <option value="Bodetabekarcil">Bodetabekarcil</option>
+                                <option value="Jawa Barat">Jawa Barat</option>
+                                <option value="Jawa Tengah & DIY">Jawa Tengah & DIY</option>
+                                <option value="JTBNN">JTBNN</option>
+                                <option value="Sumatera Bagian Utara">Sumatera Bagian Utara</option>
+                                <option value="Sumatera Bagian Selatan">Sumatera Bagian Selatan</option>
+                                <option value="Kalimantan">Kalimantan</option>
+                                <option value="Sulampapua">Sulampapua</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -93,15 +107,6 @@
                             Objek Sewa</label>
                         <div class="flex-[4]">
                             <input type="text" id="text" name="rental_address"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Regional</label>
-                        <div class="flex-[4]">
-                            <input type="text" id="text" name="regional"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="" required>
                         </div>
@@ -455,4 +460,169 @@
             </div>
         </form>
     </div>
+
+    <script type="text/babel">
+        function FormAddress() {
+            const [regency, setRegency] = React.useState([])
+            const [district, setDistrict] = React.useState([])
+            const [village, setVillage] = React.useState([])
+            
+            const [form, setForm] = React.useState({
+                party_province: "",
+                party_regency: "",
+                party_district: "",
+                party_village: "",
+                party_zip_code: "",
+                party_address: "",
+            })
+            
+            const inputProvinceChange = (e) => {
+                const name = e.target.name
+                const value = e.target.value
+
+                axios.get(`/api/regencies/${value}`).then(res => {
+                    if(res.data.meta.code === 200) {
+                        setRegency(res.data.data)
+                    }
+                })
+
+                setForm({ ...form, [name]: value })
+            }
+
+            const inputRegencyChange = (e) => {
+                const name = e.target.name
+                const value = e.target.value
+
+                axios.get(`/api/districts/${value}`).then(res => {
+                    if(res.data.meta.code === 200) {
+                        setDistrict(res.data.data)
+                    }
+                })
+
+                setForm({ ...form, [name]: value })
+            }
+
+            const inputDistrictChange = (e) => {
+                const name = e.target.name
+                const value = e.target.value
+
+                axios.get(`/api/villages/${value}`).then(res => {
+                    if(res.data.meta.code === 200) {
+                        setVillage(res.data.data)
+                    }
+                })
+
+                setForm({ ...form, [name]: value })
+            }
+
+            const inputChange = (e) => {
+                const name = e.target.name
+                const value = e.target.value
+
+                setForm({ ...form, [name]: value })
+            }
+
+            return (
+                <div class="flex flex-col gap-4">
+                    <div class="flex">
+                        <label for="party_province"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                            Landlord
+                        </label>
+                        <div class="flex-[4]">
+                            <select onChange={ inputProvinceChange } name="party_province" id="party_province"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option value="" selected disabled>Pilih Provinsi</option>
+                                @foreach ($province as $row)
+                                    <option value="{{$row->id}}">{{ $row->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+
+                    {form.party_province && (
+                        <div class="flex">
+                            <label for="party_regency"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                            </label>
+                            <div class="flex-[4]">
+                                <select onChange={ inputRegencyChange } name="party_regency" id="party_regency"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option value="" selected disabled>Pilih Kab/Kota</option>
+                                    { regency.map((value, index) => {
+                                        return (
+                                            <option key={index} value={value.id}>{value.name}</option>
+                                        )
+                                    }) }
+                                </select>
+                            </div>
+                        </div>
+                    )}
+
+                    {form.party_regency && (
+                        <div class="flex">
+                            <label for="party_district"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                            </label>
+                            <div class="flex-[4]">
+                                <select onChange={ inputDistrictChange } name="party_district" id="party_district"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option value="" selected disabled>Pilih Kecamatan</option>
+                                    { district.map((value, index) => {
+                                        return (
+                                            <option key={index} value={value.id}>{value.name}</option>
+                                        )
+                                    }) }
+                                </select>
+                            </div>
+                        </div>
+                    )}
+
+                    {form.party_district && (
+                        <div class="flex">
+                            <label for="party_village"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                            </label>
+                            <div class="flex-[4]">
+                                <select onChange={ inputChange } name="party_village" id="party_village"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option value="" selected disabled>Pilih Kelurahan</option>
+                                    { village.map((value, index) => {
+                                        return (
+                                            <option key={index} value={value.id}>{value.name}</option>
+                                        )
+                                    }) }
+                                </select>
+                            </div>
+                        </div>
+                    )}
+
+                    {form.party_village && (
+                        <div class="flex flex-col gap-4">
+                            <div class="flex">
+                                <label for="party_zip_code"
+                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                </label>
+                                <div class="flex-[4]">
+                                    <input type="text" id="party_zip_code" name="party_zip_code"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Masukkan Kode Pos" required/>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <label for="party_address"
+                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                </label>
+                                <div class="flex-[4]">
+                                    <textarea id="party_address" name="party_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            )
+        }
+
+        ReactDOM.render(<FormAddress />,document.getElementById('formAddress'))
+    </script>
 @endsection

@@ -250,6 +250,9 @@
                         </div>
                     </div>
                 </div>
+                
+                <div id="formAddressResponden"></div>
+
                 <div class="grid grid-rows-3 grid-flow-col gap-4 mb-4">
                     <div class="row-span-4 font-medium">Dokumen :</div>
                     <div class="col-span-2">
@@ -259,7 +262,7 @@
                                 Vendor</label>
                             <div class="flex-[4]">
                                 <input name="file_vendor_offer"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -271,7 +274,7 @@
                                 Kesepakatan Para Pihak</label>
                             <div class="flex-[4]">
                                 <input name="file_mom"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -282,7 +285,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Disposisi</label>
                             <div class="flex-[4]">
                                 <input name="file_dispotition"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -294,7 +297,7 @@
                                 Perjanjian dalam bentuk word</label>
                             <div class="flex-[4]">
                                 <input name="file_agreement_draft"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -302,7 +305,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col gap-4 mb-4 ml-20 -mt-8">
+            <div class="flex flex-col gap-4 mb-4 ml-20 mt-4">
                 <div class="grid grid-rows-3 grid-flow-col gap-4 mb-4">
                     <div class="row-span-4 font-medium"></div>
                     <div class="col-span-2">
@@ -312,7 +315,7 @@
                                 Customer</label>
                             <div class="flex-[4]">
                                 <input name="file_customer_entity"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -324,7 +327,7 @@
                                 Akta & SK Kemenkumham</label>
                             <div class="flex-[4]">
                                 <input name="file_sk_menkumham"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -336,7 +339,7 @@
                                 Nomor Induk Berusaha (NIB)</label>
                             <div class="flex-[4]">
                                 <input name="file_nib"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -348,14 +351,15 @@
                                 Nomor Pokok Wajib Pajak (NPWP)</label>
                             <div class="flex-[4]">
                                 <input name="file_npwp"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            <div class="flex flex-col gap-4 mb-4 ml-14 -mt-8">
+            <div class="flex flex-col gap-4 mb-4 ml-14 mt-4">
                 <div class="grid grid-rows-3 grid-flow-col gap-4 mb-4">
                     <div class="row-span-4 font-medium"></div>
                     <div class="col-span-2">
@@ -365,7 +369,7 @@
                                 Izin Usaha & Izin Lokasi OSS</label>
                             <div class="flex-[4]">
                                 <input name="file_business_permit"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -377,7 +381,7 @@
                                 KTP Direksi</label>
                             <div class="flex-[4]">
                                 <input name="file_director_id_card"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
                         </div>
@@ -388,7 +392,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Lain-lain</label>
                             <div class="flex-[4]">
                                 <input name="file_other"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="file_other" type="file" required>
                             </div>
                         </div>
@@ -729,5 +733,213 @@
         }
 
         ReactDOM.render(<FormAddressOptional />,document.getElementById('formAddressOptional'))
+    
+        function FormAddressResponden() {
+            const [regency, setRegency] = React.useState([])
+            const [district, setDistrict] = React.useState([])
+            const [village, setVillage] = React.useState([])
+            
+            const [form, setForm] = React.useState({
+                province_responden: "",
+                regency_responden: "",
+                district_responden: "",
+                village_responden: "",
+                zip_code_responden: "",
+                address_responden: "",
+            })
+            
+            const inputProvinceChange = (e) => {
+                const name = e.target.name
+                const value = e.target.value
+
+                axios.get(`/api/regencies/${value}`).then(res => {
+                    if(res.data.meta.code === 200) {
+                        setRegency(res.data.data)
+                    }
+                })
+
+                setForm({ ...form, [name]: value })
+            }
+
+            const inputRegencyChange = (e) => {
+                const name = e.target.name
+                const value = e.target.value
+
+                axios.get(`/api/districts/${value}`).then(res => {
+                    if(res.data.meta.code === 200) {
+                        setDistrict(res.data.data)
+                    }
+                })
+
+                setForm({ ...form, [name]: value })
+            }
+
+            const inputDistrictChange = (e) => {
+                const name = e.target.name
+                const value = e.target.value
+
+                axios.get(`/api/villages/${value}`).then(res => {
+                    if(res.data.meta.code === 200) {
+                        setVillage(res.data.data)
+                    }
+                })
+
+                setForm({ ...form, [name]: value })
+            }
+
+            const inputChange = (e) => {
+                const name = e.target.name
+                const value = e.target.value
+
+                setForm({ ...form, [name]: value })
+            }
+
+            return (
+                <div>
+                    <div class="grid grid-rows-2 grid-flow-col gap-4 mb-4">
+                        <div class="row-span-9 font-medium">Koresponden:</div>
+                        <div class="col-span-2">
+                            <div class="flex">
+                                <label for="name_responden"
+                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama
+                                    Responden</label>
+                                <div class="flex-[4]">
+                                    <input type="text" id="name_responden" name="name_responden"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-2">
+                            <div class="flex">
+                                <label for="province_responden"
+                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                                    Responden</label>
+                                <div class="flex-[4]">
+                                    <select onChange={ inputProvinceChange } name="province_responden" id="province_responden"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="" selected disabled>Pilih Provinsi</option>
+                                        @foreach ($province as $row)
+                                            <option value="{{$row->id}}">{{ $row->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        { form.province_responden && (
+                            <div class="col-span-2">
+                                <div class="flex">
+                                    <label for="regency_responden"
+                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300"></label>
+                                    <div class="flex-[4]">
+                                        <select onChange={ inputRegencyChange } name="regency_responden" id="regency_responden"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="" selected disabled>Pilih Kab/Kota</option>
+                                            { regency.map((value, index) => {
+                                                return (
+                                                    <option key={index} value={value.id}>{value.name}</option>
+                                                )
+                                            }) }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        ) }
+
+                        { form.regency_responden && (
+                            <div class="col-span-2">
+                                <div class="flex">
+                                    <label for="district_responden"
+                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300"></label>
+                                    <div class="flex-[4]">
+                                        <select onChange={ inputDistrictChange } name="district_responden" id="district_responden"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="" selected disabled>Pilih Kecamatan</option>
+                                            { district.map((value, index) => {
+                                                return (
+                                                    <option key={index} value={value.id}>{value.name}</option>
+                                                )
+                                            }) }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        ) }
+
+                        { form.district_responden && (
+                            <div class="col-span-2">
+                                <div class="flex">
+                                    <label for="village_responden"
+                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300"></label>
+                                    <div class="flex-[4]">
+                                        <select onChange={ inputChange } name="village_responden" id="village_responden"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="" selected disabled>Pilih Kelurahan</option>
+                                            { village.map((value, index) => {
+                                                return (
+                                                    <option key={index} value={value.id}>{value.name}</option>
+                                                )
+                                            }) }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        ) }
+
+                        { form.village_responden && (
+                            <div class="col-span-2">
+                                <div class="flex">
+                                    <label for="zip_code_responden"
+                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300"></label>
+                                    <div class="flex-[4]">
+                                        <input onChange={ inputChange } type="text" id="zip_code_responden" name="zip_code_responden"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Masukkan Kode Pos" required/>
+                                    </div>
+                                </div>
+                            </div>
+                        ) }
+
+                        { form.village_responden && (
+                            <div class="col-span-2">
+                                <div class="flex">
+                                    <label for="address_responden"
+                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300"></label>
+                                    <div class="flex-[4]">
+                                        <textarea onChange={ inputChange } id="address_responden" name="address_responden" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        ) }
+                        <div class="col-span-2">
+                            <div class="flex">
+                                <label for="tel_responden"
+                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">No
+                                    Telepon Responden</label>
+                                <div class="flex-[4]">
+                                    <input type="text" id="tel_responden" name="tel_responden"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-2">
+                            <div class="flex">
+                                <label for="mail_responden"
+                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Email
+                                    Responden</label>
+                                <div class="flex-[4]">
+                                    <input type="text" id="main_responden" name="mail_responden"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="" required/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<FormAddressResponden />,document.getElementById('formAddressResponden'))
     </script>
 @endsection
