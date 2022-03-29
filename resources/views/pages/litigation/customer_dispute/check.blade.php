@@ -44,6 +44,118 @@
                                 placeholder="" readonly>
                         </div>
                     </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama
+                            Pihak
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ $data->customer_dispute->sender_name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                            Pihak
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\Province::find($data->customer_dispute->sender_province)->name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\Regency::find($data->customer_dispute->sender_regency)->name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\District::find($data->customer_dispute->sender_district)->name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\Village::find($data->customer_dispute->sender_village)->name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ $data->customer_dispute->sender_zip_code }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ $data->customer_dispute->sender_address }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">No
+                            Telepon Pengirim</label>
+                        <div class="flex flex-[4]">
+                            <input type="text" id="text" name="sender_phone_number"
+                                value="{{ $data->customer_dispute->sender_phone_number }}"
+                                class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" requireddd>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Jenis
+                            Kasus</label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="sender_phone_number"
+                                value="{{ $data->customer_dispute->case_type }}"
+                                class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" requireddd readonly>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Faktor
+                            Penyebab</label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="sender_phone_number"
+                                value="{{ $data->customer_dispute->causative_factor }}"
+                                class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" requireddd readonly>
+                        </div>
+                    </div>
                     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                 </div>
 
@@ -58,74 +170,96 @@
                                 placeholder="" readonly>
                         </div>
                     </div>
-                </div>
-
-                <div class="flex flex-col gap-4">
-                    {{-- <div class="flex">
+                    <div class="flex">
                         <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nomor
-                            Kasus</label>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama
+                            Pihak
+                        </label>
                         <div class="flex-[4]">
-                            <input type="text" id="text" name="id" value="{{ $data->id }}"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" readonly>
-                        </div>
-                    </div> --}}
-                    {{-- <input type="hidden" name="user_id" value="{{ auth()->user()->id }}"> --}}
-                    {{-- <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Tanggal</label>
-                        <div class="flex-[4]">
-                            <input placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-31" type="date" id="text"
-                                name="text" value="{{ $data->outstanding->date }}"
+                            <input type="text" id="text" name="party_name"
+                                value="{{ $data->customer_dispute->receiver_name }}"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="" required>
                         </div>
-                    </div> --}}
+                    </div>
                     <div class="flex">
                         <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Jenis
-                            Kasus</label>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                            Pihak
+                        </label>
                         <div class="flex-[4]">
-                            <input type="text" id="date" name="form_id" value="{{ $data->customer_dispute->case_type }}"
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\Province::find($data->customer_dispute->receiver_province)->name }}"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" readonly>
+                                placeholder="" required>
                         </div>
                     </div>
                     <div class="flex">
                         <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Faktor
-                            Penyebab</label>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
                         <div class="flex-[4]">
-                            <input type="text" id="date" name="causative_factor"
-                                value="{{ $data->customer_dispute->causative_factor }}"
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\Regency::find($data->customer_dispute->receiver_regency)->name }}"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" readonly>
+                                placeholder="" required>
                         </div>
                     </div>
                     <div class="flex">
                         <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Jenis
-                            Kiriman</label>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
                         <div class="flex-[4]">
-                            <input type="text" id="text" name="shipping_type"
-                                value="{{ $data->customer_dispute->shipping_type }}"
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\District::find($data->customer_dispute->receiver_district)->name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\Village::find($data->customer_dispute->receiver_village)->name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ $data->customer_dispute->receiver_zip_code }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ $data->customer_dispute->receiver_address }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">No
+                            Telepon Pengirim</label>
+                        <div class="flex flex-[4]">
+                            <input type="text" id="text" name="sender_phone_number"
+                                value="{{ $data->customer_dispute->receiver_phone_number }}"
                                 class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="" requireddd>
                         </div>
                     </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Asuransi</label>
-                        <div class="flex-[4]">
-                            <input type="text" id="text" name="assurance" value="{{ $data->customer_dispute->assurance }}"
-                                class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-4">
                     <div class="flex">
                         <label for="text"
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Total
@@ -138,29 +272,31 @@
                             <input type="text" id="website-admin" name="total_loss"
                                 value="{{ $data->customer_dispute->total_loss }}"
                                 class=" rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="" requireddd>
                         </div>
                     </div>
                     <div class="flex">
                         <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Connete/Perjanjian</label>
-                        <div class="flex-[4]">
-                            <input type="text" id="website-admin" name="connote"
-                                value="{{ $data->customer_dispute->connote }}"
-                                class=" rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nominal
+                            Barang</label>
+                        <div class="flex flex-[4]">
+                            <span
+                                class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-l-md border border-r-0 border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                                Rp
+                            </span>
+                            <input type="text" id="website-admin" name="item_nominal"
+                                value="{{ $data->customer_dispute->item_nominal }}"
+                                class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" requireddd>
                         </div>
                     </div>
                     <div class="flex">
-                        <label for="date"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Tanggal
-                            Kejadian</label>
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Connote/Perjanjian</label>
                         <div class="flex-[4]">
-                            <input type="date" id="date" name="incident_date"
-                                value="{{ $data->customer_dispute->incident_date }}"
+                            <input type="text" id="text" value="{{ $data->customer_dispute->connote }}"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
-
+                                placeholder="" name="connote" requireddd>
                         </div>
                     </div>
                     <div class="flex">
@@ -169,7 +305,28 @@
                         <div class="flex-[4]">
                             <input type="text" id="text" name="customer" value="{{ $data->customer_dispute->customer }}"
                                 class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="" requireddd>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Jenis
+                            Kiriman</label>
+                        <div class="flex-[4]">
+                            <input type="text" id="website-admin" name="shipping_type"
+                                value="{{ $data->customer_dispute->shipping_type }}"
+                                class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" requireddd>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Asuransi</label>
+                        <div class="flex-[4]">
+                            <input type="text" id="website-admin" name="assurance_nominal"
+                                value="{{ $data->customer_dispute->assurance_nominal }}"
+                                class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" requireddd>
                         </div>
                     </div>
                 </div>
@@ -209,152 +366,14 @@
                 </div>
 
                 <div class="grid grid-rows-3 grid-flow-col gap-4 mb-4">
-                    <div class="row-span-4 font-medium">Alat Bukti :</div>
+                    <div class="row-span-10 font-medium">Alat Bukti :</div>
                     <div class="col-span-2">
                         <div class="flex">
                             <label for="date"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Keterangan
-                                Saksi</label>
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">1.
+                                Connote*</label>
                             <div class="flex-[4]">
-                                {{-- <input value="{{ $data->customer_dispute->file_witness_testimony }}"
-                                    class=" p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" name="file_witness_testimony"
-                                    type="text" required> --}}
-                                <div class="flex flex-row">
-
-                                    <a href="{{ route('download-litigation', substr($data->customer_dispute->file_witness_testimony, 18)) }}"
-                                        style="font-size:24px ">
-                                        <div
-                                            class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                            Download
-                                            <i class="fa fa-download"></i>
-
-                                        </div>
-                                    </a>
-                                    {{-- {{ substr($data->file_disposition, 14) }} --}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-2">
-                        <div class="flex">
-                            <label for="date"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Dokumen
-                                Surat</label>
-                            <div class="flex-[4]">
-                                {{-- <input value="{{ $data->customer_dispute->file_letter_document }}"
-                                    class=" p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" name="file_letter_document"
-                                    type="text" required> --}}
-                                <div class="flex flex-row">
-
-                                    <a href="{{ route('download-litigation', substr($data->customer_dispute->file_letter_document, 18)) }}"
-                                        style="font-size:24px ">
-                                        <div
-                                            class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                            Download
-                                            <i class="fa fa-download"></i>
-
-                                        </div>
-                                    </a>
-                                    {{-- {{ substr($data->file_disposition, 14) }} --}}
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-2">
-                        <div class="flex">
-                            <label for="date"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Dokumen
-                                Form Klaim</label>
-                            <div class="flex-[4]">
-                                {{-- <input value="{{ $data->customer_dispute->file_claim_form_document }}"
-                                    class=" p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" name="file_claim_form_document"
-                                    type="text" required> --}}
-                                <div class="flex flex-row">
-
-                                    <a href="{{ route('download-litigation', substr($data->customer_dispute->file_claim_form_document, 18)) }}"
-                                        style="font-size:24px ">
-                                        <div
-                                            class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                            Download
-                                            <i class="fa fa-download"></i>
-
-                                        </div>
-                                    </a>
-                                    {{-- {{ substr($data->file_disposition, 14) }} --}}
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-2">
-                        <div class="flex">
-                            <label for="date"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Lain
-                                - Lain</label>
-                            <div class="flex-[4]">
-                                {{-- <input value="{{ $data->customer_dispute->file_other_document }}"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" name="file_other_document"
-                                    type="text" required> --}}
-                                <div class="flex flex-row">
-
-                                    <a href="{{ route('download-litigation', substr($data->customer_dispute->file_other_document, 18)) }}"
-                                        style="font-size:24px ">
-                                        <div
-                                            class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                            Download
-                                            <i class="fa fa-download"></i>
-
-                                        </div>
-                                    </a>
-                                    {{-- {{ substr($data->file_disposition, 14) }} --}}
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-4 mb-4">
-                    <div class="flex">
-                        <label for="date"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Barang
-                            Bukti</label>
-                        <div class="flex-[4]">
-                            {{-- <input value="{{ $data->customer_dispute->file_evidence }}"
-                                class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                aria-describedby="user_avatar_help" id="user_avatar" name="file_evidence" type="text"
-                                required> --}}
-                            <div class="flex flex-row">
-
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_evidence, 18)) }}"
-                                    style="font-size:24px ">
-                                    <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                        Download
-                                        <i class="fa fa-download"></i>
-
-                                    </div>
-                                </a>
-                                {{-- {{ substr($data->file_disposition, 14) }} --}}
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <label for="date"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Kelengkapan</label>
-                        <div class="flex-[4]">
-                            {{-- <input value="{{ $data->customer_dispute->file_document_completeness }}"
-                                class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                aria-describedby="user_avatar_help" id="user_avatar" name="file_document_completeness"
-                                type="text" required> --}}
-                            <div class="flex flex-row">
-
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_document_completeness, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_connote, 18)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -363,33 +382,143 @@
 
                                     </div>
                                 </a>
-                                {{-- {{ substr($data->file_disposition, 14) }} --}}
                             </div>
                         </div>
                     </div>
-                    <div class="flex">
-                        <label for="date"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Bukti
-                            Lainnya</label>
-                        <div class="flex-[4]">
-                            {{-- <input value="{{ $data->customer_dispute->file_other_evidence }}"
-                                class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                aria-describedby="user_avatar_help" id="user_avatar" name="file_other_evidence" type="text"
-                                required> --}}
-                            <div class="flex flex-row">
-
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_other_evidence, 18)) }}"
+                    <div class="col-span-2">
+                        <div class="flex">
+                            <label for="date"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">2.
+                                Orion*</label>
+                            <div class="flex-[4]">
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_orion, 18)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download
                                         <i class="fa fa-download"></i>
-
                                     </div>
                                 </a>
-                                {{-- {{ substr($data->file_disposition, 14) }} --}}
                             </div>
-
+                        </div>
+                    </div>
+                    <div class="col-span-2">
+                        <div class="flex">
+                            <label for="date"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">3.
+                                POD</label>
+                            <div class="flex-[4] flex items-center">
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_pod, 18)) }}"
+                                    style="font-size:24px ">
+                                    <div
+                                        class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                        Download
+                                        <i class="fa fa-download"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2">
+                        <div class="flex">
+                            <label for="date"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">4.
+                                Form Kasus Sengketa Konsumen*</label>
+                            <div class="flex-[4]">
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_customer_case_form, 18)) }}"
+                                    style="font-size:24px ">
+                                    <div
+                                        class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                        Download
+                                        <i class="fa fa-download"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2">
+                        <div class="flex">
+                            <label for="date"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">5.
+                                Kronologis Destinasi</label>
+                            <div class="flex-[4] flex items-center">
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_destination_chronology, 18)) }}"
+                                    style="font-size:24px ">
+                                    <div
+                                        class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                        Download
+                                        <i class="fa fa-download"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2">
+                        <div class="flex">
+                            <label for="date"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">6.
+                                Kronologis Origin</label>
+                            <div class="flex-[4] flex items-center">
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_orion_chronology, 18)) }}"
+                                    style="font-size:24px ">
+                                    <div
+                                        class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                        Download
+                                        <i class="fa fa-download"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2">
+                        <div class="flex">
+                            <label for="date"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">7.
+                                Kronologis CS</label>
+                            <div class="flex-[4] flex items-center">
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_cs_chronology, 18)) }}"
+                                    style="font-size:24px ">
+                                    <div
+                                        class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                        Download
+                                        <i class="fa fa-download"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2">
+                        <div class="flex">
+                            <label for="date"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">8.
+                                Surat Customer atau Somasi</label>
+                            <div class="flex-[4] flex items-center">
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_subpoena, 18)) }}"
+                                    style="font-size:24px ">
+                                    <div
+                                        class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                        Download
+                                        <i class="fa fa-download"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2">
+                        <div class="flex">
+                            <label for="date"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">9.
+                                Surat Kuasa</label>
+                            <div class="flex-[4] flex items-center">
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_procuration, 18)) }}"
+                                    style="font-size:24px ">
+                                    <div
+                                        class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                        Download
+                                        <i class="fa fa-download"></i>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
