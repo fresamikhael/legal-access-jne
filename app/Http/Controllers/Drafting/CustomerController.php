@@ -51,6 +51,8 @@ class CustomerController extends Controller
     {
 
         $data = $request->all();
+        dd($data);
+
         // $validatedData = $request->validate([
         //     'id' => 'required',
         //     'user_id' => 'required',
