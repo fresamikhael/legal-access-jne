@@ -3,7 +3,11 @@
 @section('content')
     <div class="flex flex-col gap-4 mx-36 my-4">
         <h1 class="text-4xl mb-4 text-black capitalize font-medium">Lease</h1>
-
+        @if (Session::get('message_success'))
+            <div class="bg-green-200 rounded-xl p-5 text-green-600">
+                {{ Session::get('message_success') }}
+            </div>
+        @endif
         <form class="mt-4" method="POST" enctype="multipart/form-data" action="{{ route('lease-post') }}">
             @csrf
 
@@ -253,7 +257,7 @@
                             <div class="flex-[4]">
                                 <input name="file_id_card"
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="file_id_card" type="file_id_card" required>
+                                    aria-describedby="user_avatar_help" id="file_id_card" type="file" required>
                             </div>
                         </div>
                     </div>

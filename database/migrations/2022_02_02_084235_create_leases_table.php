@@ -41,6 +41,7 @@ class CreateLeasesTable extends Migration
             $table->string('main_branch');
             $table->text('other_point');
             $table->string('landlord_type');
+            
             $table->string('file_director_disposition');
             $table->string('file_internal_memo');
             $table->string('file_internal_memo_optional')->nullable();
