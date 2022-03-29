@@ -23,9 +23,11 @@
                                 placeholder="" required>
                         </div>
                     </div>
+                    {{-- <input type="hidden" name="user_id" value="{{ auth()->user()->id }}"> --}}
                     <div class="flex">
                         <label for="landlord_name"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama Landlord</label>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama
+                            Landlord</label>
                         <div class="flex-[4]">
                             <input type="text" id="landlord_name" name="landlord_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -60,7 +62,7 @@
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Jenis</label>
                         <div class="flex-[4]">
                             <select required id="type" name="type"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="" selected disabled>-- Pilih --</option>
                                 <option value="Baru">Baru</option>
                                 <option value="Perpanjangan">Perpanjangan</option>
@@ -74,7 +76,7 @@
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Regional</label>
                         <div class="flex-[4]">
                             <select required id="regional" name="regional"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="" selected disabled>-- Pilih --</option>
                                 <option value="Jakarta">Jakarta</option>
                                 <option value="Bodetabekarcil">Bodetabekarcil</option>
@@ -97,7 +99,7 @@
                                 class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-l-md border border-r-0 border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                                 Rp
                             </span>
-                            <input required type="text" id="rental_value" name="rantal_value"
+                            <input required type="text" id="rental_value" name="rental_value"
                                 class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="">
                         </div>
@@ -120,7 +122,8 @@
                 <div class="flex flex-col gap-4">
                     <div class="flex">
                         <label for="landlord_name_optional"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama Landlord (Optional)</label>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama
+                            Landlord (Optional)</label>
                         <div class="flex-[4]">
                             <input type="text" id="landlord_name_optional" name="landlord_name_optional"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -132,7 +135,8 @@
 
                     <div class="flex">
                         <label for="priod_of_time"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Jangka Waktu (Hari)</label>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Jangka
+                            Waktu (Hari)</label>
                         <div class="flex-[4]">
                             <input type="number" id="priod_of_time" name="priod_of_time"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -177,7 +181,8 @@
                     </div>
                     <div class="flex">
                         <label for="main_branch"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Cabang Utama</label>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Cabang
+                            Utama</label>
                         <div class="flex-[4]">
                             <input type="text" id="main_branch" name="main_branch"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -245,7 +250,8 @@
                             <div class="flex-[4]">
                                 <input name="file_internal_memo_optional"
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="file_internal_memo_optional" type="file" required>
+                                    aria-describedby="user_avatar_help" id="file_internal_memo_optional" type="file"
+                                    required>
                             </div>
                         </div>
                     </div>
@@ -478,7 +484,8 @@
                     <div class="col-span-2">
                         <div class="flex">
                             <label for="file_others_1"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Others 1</label>
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Others
+                                1</label>
                             <div class="flex-[4]">
                                 <input name="file_others_1"
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -489,7 +496,8 @@
                     <div class="col-span-2">
                         <div class="flex">
                             <label for="file_others_2"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Others 2</label>
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Others
+                                2</label>
                             <div class="flex-[4]">
                                 <input name="file_others_2"
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -500,7 +508,8 @@
                     <div class="col-span-2">
                         <div class="flex">
                             <label for="file_others_3"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Others 3</label>
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Others
+                                3</label>
                             <div class="flex-[4]">
                                 <input name="file_others_3"
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -535,491 +544,491 @@
 
     <script type="text/babel">
         function FormAddress() {
-            const [regency, setRegency] = React.useState([])
-            const [district, setDistrict] = React.useState([])
-            const [village, setVillage] = React.useState([])
-            
-            const [form, setForm] = React.useState({
-                landlord_province: "",
-                landlord_regency: "",
-                landlord_district: "",
-                landlord_village: "",
-                landlord_zip_code: "",
-                landlord_address: "",
-            })
-            
-            const inputProvinceChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
+                        const [regency, setRegency] = React.useState([])
+                        const [district, setDistrict] = React.useState([])
+                        const [village, setVillage] = React.useState([])
 
-                axios.get(`/api/regencies/${value}`).then(res => {
-                    if(res.data.meta.code === 200) {
-                        setRegency(res.data.data)
-                    }
-                })
+                        const [form, setForm] = React.useState({
+                            landlord_province: "",
+                            landlord_regency: "",
+                            landlord_district: "",
+                            landlord_village: "",
+                            landlord_zip_code: "",
+                            landlord_address: "",
+                        })
 
-                setForm({ ...form, [name]: value })
-            }
+                        const inputProvinceChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
 
-            const inputRegencyChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
+                            axios.get(`/api/regencies/${value}`).then(res => {
+                                if(res.data.meta.code === 200) {
+                                    setRegency(res.data.data)
+                                }
+                            })
 
-                axios.get(`/api/districts/${value}`).then(res => {
-                    if(res.data.meta.code === 200) {
-                        setDistrict(res.data.data)
-                    }
-                })
+                            setForm({ ...form, [name]: value })
+                        }
 
-                setForm({ ...form, [name]: value })
-            }
+                        const inputRegencyChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
 
-            const inputDistrictChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
+                            axios.get(`/api/districts/${value}`).then(res => {
+                                if(res.data.meta.code === 200) {
+                                    setDistrict(res.data.data)
+                                }
+                            })
 
-                axios.get(`/api/villages/${value}`).then(res => {
-                    if(res.data.meta.code === 200) {
-                        setVillage(res.data.data)
-                    }
-                })
+                            setForm({ ...form, [name]: value })
+                        }
 
-                setForm({ ...form, [name]: value })
-            }
+                        const inputDistrictChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
 
-            const inputChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
+                            axios.get(`/api/villages/${value}`).then(res => {
+                                if(res.data.meta.code === 200) {
+                                    setVillage(res.data.data)
+                                }
+                            })
 
-                setForm({ ...form, [name]: value })
-            }
+                            setForm({ ...form, [name]: value })
+                        }
 
-            return (
-                <div class="flex flex-col gap-4">
-                    <div class="flex">
-                        <label for="landlord_province"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
-                            Landlord
-                        </label>
-                        <div class="flex-[4]">
-                            <select onChange={ inputProvinceChange } name="landlord_province" id="landlord_province"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="" selected disabled>Pilih Provinsi</option>
-                                @foreach ($province as $row)
-                                    <option value="{{$row->id}}">{{ $row->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div>
+                        const inputChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
 
-                    {form.landlord_province && (
-                        <div class="flex">
-                            <label for="landlord_regency"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                            </label>
-                            <div class="flex-[4]">
-                                <select onChange={ inputRegencyChange } name="landlord_regency" id="landlord_regency"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option value="" selected disabled>Pilih Kab/Kota</option>
-                                    { regency.map((value, index) => {
-                                        return (
-                                            <option key={index} value={value.id}>{value.name}</option>
-                                        )
-                                    }) }
-                                </select>
-                            </div>
-                        </div>
-                    )}
+                            setForm({ ...form, [name]: value })
+                        }
 
-                    {form.landlord_regency && (
-                        <div class="flex">
-                            <label for="landlord_district"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                            </label>
-                            <div class="flex-[4]">
-                                <select onChange={ inputDistrictChange } name="landlord_district" id="landlord_district"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option value="" selected disabled>Pilih Kecamatan</option>
-                                    { district.map((value, index) => {
-                                        return (
-                                            <option key={index} value={value.id}>{value.name}</option>
-                                        )
-                                    }) }
-                                </select>
-                            </div>
-                        </div>
-                    )}
-
-                    {form.landlord_district && (
-                        <div class="flex">
-                            <label for="landlord_village"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                            </label>
-                            <div class="flex-[4]">
-                                <select onChange={ inputChange } name="landlord_village" id="landlord_village"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option value="" selected disabled>Pilih Kelurahan</option>
-                                    { village.map((value, index) => {
-                                        return (
-                                            <option key={index} value={value.id}>{value.name}</option>
-                                        )
-                                    }) }
-                                </select>
-                            </div>
-                        </div>
-                    )}
-
-                    {form.landlord_village && (
-                        <div class="flex flex-col gap-4">
-                            <div class="flex">
-                                <label for="landlord_zip_code"
-                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                </label>
-                                <div class="flex-[4]">
-                                    <input type="text" id="landlord_zip_code" name="landlord_zip_code"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Masukkan Kode Pos" required/>
+                        return (
+                            <div class="flex flex-col gap-4">
+                                <div class="flex">
+                                    <label for="landlord_province"
+                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                                        Landlord
+                                    </label>
+                                    <div class="flex-[4]">
+                                        <select onChange={ inputProvinceChange } name="landlord_province" id="landlord_province"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="" selected disabled>Pilih Provinsi</option>
+                                            @foreach ($province as $row)
+                                                <option value="{{ $row->id }}">{{ $row->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
+
+                                {form.landlord_province && (
+                                    <div class="flex">
+                                        <label for="landlord_regency"
+                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                        </label>
+                                        <div class="flex-[4]">
+                                            <select onChange={ inputRegencyChange } name="landlord_regency" id="landlord_regency"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option value="" selected disabled>Pilih Kab/Kota</option>
+                                                { regency.map((value, index) => {
+                                                    return (
+                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                    )
+                                                }) }
+                                            </select>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {form.landlord_regency && (
+                                    <div class="flex">
+                                        <label for="landlord_district"
+                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                        </label>
+                                        <div class="flex-[4]">
+                                            <select onChange={ inputDistrictChange } name="landlord_district" id="landlord_district"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option value="" selected disabled>Pilih Kecamatan</option>
+                                                { district.map((value, index) => {
+                                                    return (
+                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                    )
+                                                }) }
+                                            </select>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {form.landlord_district && (
+                                    <div class="flex">
+                                        <label for="landlord_village"
+                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                        </label>
+                                        <div class="flex-[4]">
+                                            <select onChange={ inputChange } name="landlord_village" id="landlord_village"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option value="" selected disabled>Pilih Kelurahan</option>
+                                                { village.map((value, index) => {
+                                                    return (
+                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                    )
+                                                }) }
+                                            </select>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {form.landlord_village && (
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex">
+                                            <label for="landlord_zip_code"
+                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                            </label>
+                                            <div class="flex-[4]">
+                                                <input type="text" id="landlord_zip_code" name="landlord_zip_code"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Masukkan Kode Pos" required/>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <label for="landlord_address"
+                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                            </label>
+                                            <div class="flex-[4]">
+                                                <textarea id="landlord_address" name="landlord_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
-                            <div class="flex">
-                                <label for="landlord_address"
-                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                </label>
-                                <div class="flex-[4]">
-                                    <textarea id="landlord_address" name="landlord_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                        )
+                    }
+
+                    ReactDOM.render(<FormAddress />,document.getElementById('formAddress'))
+
+                    function FormAddressOptional() {
+                        const [regency, setRegency] = React.useState([])
+                        const [district, setDistrict] = React.useState([])
+                        const [village, setVillage] = React.useState([])
+
+                        const [form, setForm] = React.useState({
+                            landlord_province_optional: "",
+                            landlord_regency_optional: "",
+                            landlord_district_optional: "",
+                            landlord_village_optional: "",
+                            landlord_zip_code_optional: "",
+                            landlord_address_optional: "",
+                        })
+
+                        const inputProvinceChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
+
+                            axios.get(`/api/regencies/${value}`).then(res => {
+                                if(res.data.meta.code === 200) {
+                                    setRegency(res.data.data)
+                                }
+                            })
+
+                            setForm({ ...form, [name]: value })
+                        }
+
+                        const inputRegencyChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
+
+                            axios.get(`/api/districts/${value}`).then(res => {
+                                if(res.data.meta.code === 200) {
+                                    setDistrict(res.data.data)
+                                }
+                            })
+
+                            setForm({ ...form, [name]: value })
+                        }
+
+                        const inputDistrictChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
+
+                            axios.get(`/api/villages/${value}`).then(res => {
+                                if(res.data.meta.code === 200) {
+                                    setVillage(res.data.data)
+                                }
+                            })
+
+                            setForm({ ...form, [name]: value })
+                        }
+
+                        const inputChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
+
+                            setForm({ ...form, [name]: value })
+                        }
+
+                        return (
+                            <div class="flex flex-col gap-4">
+                                <div class="flex">
+                                    <label for="landlord_province_optional"
+                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                                        Landlord (Optional)
+                                    </label>
+                                    <div class="flex-[4]">
+                                        <select onChange={ inputProvinceChange } name="landlord_province_optional" id="landlord_province_optional"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="" selected disabled>Pilih Provinsi</option>
+                                            @foreach ($province as $row)
+                                                <option value="{{ $row->id }}">{{ $row->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
+
+                                {form.landlord_province_optional && (
+                                    <div class="flex">
+                                        <label for="landlord_regency_optional"
+                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                        </label>
+                                        <div class="flex-[4]">
+                                            <select onChange={ inputRegencyChange } name="landlord_regency_optional" id="landlord_regency_optional"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option value="" selected disabled>Pilih Kab/Kota</option>
+                                                { regency.map((value, index) => {
+                                                    return (
+                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                    )
+                                                }) }
+                                            </select>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {form.landlord_regency_optional && (
+                                    <div class="flex">
+                                        <label for="landlord_district_optional"
+                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                        </label>
+                                        <div class="flex-[4]">
+                                            <select onChange={ inputDistrictChange } name="landlord_district_optional" id="landlord_district_optional"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option value="" selected disabled>Pilih Kecamatan</option>
+                                                { district.map((value, index) => {
+                                                    return (
+                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                    )
+                                                }) }
+                                            </select>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {form.landlord_district_optional && (
+                                    <div class="flex">
+                                        <label for="landlord_village_optional"
+                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                        </label>
+                                        <div class="flex-[4]">
+                                            <select onChange={ inputChange } name="landlord_village_optional" id="landlord_village_optional"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option value="" selected disabled>Pilih Kelurahan</option>
+                                                { village.map((value, index) => {
+                                                    return (
+                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                    )
+                                                }) }
+                                            </select>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {form.landlord_village_optional && (
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex">
+                                            <label for="landlord_zip_code_optional"
+                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                            </label>
+                                            <div class="flex-[4]">
+                                                <input type="text" id="landlord_zip_code_optional" name="landlord_zip_code_optional"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Masukkan Kode Pos" required/>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <label for="landlord_address_optional"
+                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                            </label>
+                                            <div class="flex-[4]">
+                                                <textarea id="landlord_address_optional" name="landlord_address_optional" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
-                        </div>
-                    )}
-                </div>
-            )
-        }
-
-        ReactDOM.render(<FormAddress />,document.getElementById('formAddress'))
-
-        function FormAddressOptional() {
-            const [regency, setRegency] = React.useState([])
-            const [district, setDistrict] = React.useState([])
-            const [village, setVillage] = React.useState([])
-            
-            const [form, setForm] = React.useState({
-                landlord_province_optional: "",
-                landlord_regency_optional: "",
-                landlord_district_optional: "",
-                landlord_village_optional: "",
-                landlord_zip_code_optional: "",
-                landlord_address_optional: "",
-            })
-            
-            const inputProvinceChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
-
-                axios.get(`/api/regencies/${value}`).then(res => {
-                    if(res.data.meta.code === 200) {
-                        setRegency(res.data.data)
+                        )
                     }
-                })
 
-                setForm({ ...form, [name]: value })
-            }
+                    ReactDOM.render(<FormAddressOptional />,document.getElementById('formAddressOptional'))
 
-            const inputRegencyChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
+                    function FormObject() {
+                        const [regency, setRegency] = React.useState([])
+                        const [district, setDistrict] = React.useState([])
+                        const [village, setVillage] = React.useState([])
 
-                axios.get(`/api/districts/${value}`).then(res => {
-                    if(res.data.meta.code === 200) {
-                        setDistrict(res.data.data)
-                    }
-                })
+                        const [form, setForm] = React.useState({
+                            province_object: "",
+                            regency_object: "",
+                            district_object: "",
+                            village_object: "",
+                            zip_code_object: "",
+                            address_object: "",
+                        })
 
-                setForm({ ...form, [name]: value })
-            }
+                        const inputProvinceChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
 
-            const inputDistrictChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
+                            axios.get(`/api/regencies/${value}`).then(res => {
+                                if(res.data.meta.code === 200) {
+                                    setRegency(res.data.data)
+                                }
+                            })
 
-                axios.get(`/api/villages/${value}`).then(res => {
-                    if(res.data.meta.code === 200) {
-                        setVillage(res.data.data)
-                    }
-                })
+                            setForm({ ...form, [name]: value })
+                        }
 
-                setForm({ ...form, [name]: value })
-            }
+                        const inputRegencyChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
 
-            const inputChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
+                            axios.get(`/api/districts/${value}`).then(res => {
+                                if(res.data.meta.code === 200) {
+                                    setDistrict(res.data.data)
+                                }
+                            })
 
-                setForm({ ...form, [name]: value })
-            }
+                            setForm({ ...form, [name]: value })
+                        }
 
-            return (
-                <div class="flex flex-col gap-4">
-                    <div class="flex">
-                        <label for="landlord_province_optional"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
-                            Landlord (Optional)
-                        </label>
-                        <div class="flex-[4]">
-                            <select onChange={ inputProvinceChange } name="landlord_province_optional" id="landlord_province_optional"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="" selected disabled>Pilih Provinsi</option>
-                                @foreach ($province as $row)
-                                    <option value="{{$row->id}}">{{ $row->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div>
+                        const inputDistrictChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
 
-                    {form.landlord_province_optional && (
-                        <div class="flex">
-                            <label for="landlord_regency_optional"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                            </label>
-                            <div class="flex-[4]">
-                                <select onChange={ inputRegencyChange } name="landlord_regency_optional" id="landlord_regency_optional"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option value="" selected disabled>Pilih Kab/Kota</option>
-                                    { regency.map((value, index) => {
-                                        return (
-                                            <option key={index} value={value.id}>{value.name}</option>
-                                        )
-                                    }) }
-                                </select>
-                            </div>
-                        </div>
-                    )}
+                            axios.get(`/api/villages/${value}`).then(res => {
+                                if(res.data.meta.code === 200) {
+                                    setVillage(res.data.data)
+                                }
+                            })
 
-                    {form.landlord_regency_optional && (
-                        <div class="flex">
-                            <label for="landlord_district_optional"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                            </label>
-                            <div class="flex-[4]">
-                                <select onChange={ inputDistrictChange } name="landlord_district_optional" id="landlord_district_optional"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option value="" selected disabled>Pilih Kecamatan</option>
-                                    { district.map((value, index) => {
-                                        return (
-                                            <option key={index} value={value.id}>{value.name}</option>
-                                        )
-                                    }) }
-                                </select>
-                            </div>
-                        </div>
-                    )}
+                            setForm({ ...form, [name]: value })
+                        }
 
-                    {form.landlord_district_optional && (
-                        <div class="flex">
-                            <label for="landlord_village_optional"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                            </label>
-                            <div class="flex-[4]">
-                                <select onChange={ inputChange } name="landlord_village_optional" id="landlord_village_optional"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option value="" selected disabled>Pilih Kelurahan</option>
-                                    { village.map((value, index) => {
-                                        return (
-                                            <option key={index} value={value.id}>{value.name}</option>
-                                        )
-                                    }) }
-                                </select>
-                            </div>
-                        </div>
-                    )}
+                        const inputChange = (e) => {
+                            const name = e.target.name
+                            const value = e.target.value
 
-                    {form.landlord_village_optional && (
-                        <div class="flex flex-col gap-4">
-                            <div class="flex">
-                                <label for="landlord_zip_code_optional"
-                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                </label>
-                                <div class="flex-[4]">
-                                    <input type="text" id="landlord_zip_code_optional" name="landlord_zip_code_optional"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Masukkan Kode Pos" required/>
+                            setForm({ ...form, [name]: value })
+                        }
+
+                        return (
+                            <div class="flex flex-col gap-4">
+                                <div class="flex">
+                                    <label for="province_object"
+                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat Obyek Sewa
+                                    </label>
+                                    <div class="flex-[4]">
+                                        <select onChange={ inputProvinceChange } name="province_object" id="province_object"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="" selected disabled>Pilih Provinsi</option>
+                                            @foreach ($province as $row)
+                                                <option value="{{ $row->id }}">{{ $row->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex">
-                                <label for="landlord_address_optional"
-                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                </label>
-                                <div class="flex-[4]">
-                                    <textarea id="landlord_address_optional" name="landlord_address_optional" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                </div>
-            )
-        }
 
-        ReactDOM.render(<FormAddressOptional />,document.getElementById('formAddressOptional'))
-        
-        function FormObject() {
-            const [regency, setRegency] = React.useState([])
-            const [district, setDistrict] = React.useState([])
-            const [village, setVillage] = React.useState([])
-            
-            const [form, setForm] = React.useState({
-                province_object: "",
-                regency_object: "",
-                district_object: "",
-                village_object: "",
-                zip_code_object: "",
-                address_object: "",
-            })
-            
-            const inputProvinceChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
+                                {form.province_object && (
+                                    <div class="flex">
+                                        <label for="regency_object"
+                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                        </label>
+                                        <div class="flex-[4]">
+                                            <select onChange={ inputRegencyChange } name="regency_object" id="regency_object"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option value="" selected disabled>Pilih Kab/Kota</option>
+                                                { regency.map((value, index) => {
+                                                    return (
+                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                    )
+                                                }) }
+                                            </select>
+                                        </div>
+                                    </div>
+                                )}
 
-                axios.get(`/api/regencies/${value}`).then(res => {
-                    if(res.data.meta.code === 200) {
-                        setRegency(res.data.data)
+                                {form.regency_object && (
+                                    <div class="flex">
+                                        <label for="district_object"
+                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                        </label>
+                                        <div class="flex-[4]">
+                                            <select onChange={ inputDistrictChange } name="district_object" id="district_object"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option value="" selected disabled>Pilih Kecamatan</option>
+                                                { district.map((value, index) => {
+                                                    return (
+                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                    )
+                                                }) }
+                                            </select>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {form.district_object && (
+                                    <div class="flex">
+                                        <label for="village_object"
+                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                        </label>
+                                        <div class="flex-[4]">
+                                            <select onChange={ inputChange } name="village_object" id="village_object"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <option value="" selected disabled>Pilih Kelurahan</option>
+                                                { village.map((value, index) => {
+                                                    return (
+                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                    )
+                                                }) }
+                                            </select>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {form.village_object && (
+                                    <div class="flex flex-col gap-4">
+                                        <div class="flex">
+                                            <label for="zip_code_object"
+                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                            </label>
+                                            <div class="flex-[4]">
+                                                <input type="text" id="zip_code_object" name="zip_code_object"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Masukkan Kode Pos" required/>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <label for="address_object"
+                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                            </label>
+                                            <div class="flex-[4]">
+                                                <textarea id="address_object" name="address_object" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        )
                     }
-                })
 
-                setForm({ ...form, [name]: value })
-            }
-
-            const inputRegencyChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
-
-                axios.get(`/api/districts/${value}`).then(res => {
-                    if(res.data.meta.code === 200) {
-                        setDistrict(res.data.data)
-                    }
-                })
-
-                setForm({ ...form, [name]: value })
-            }
-
-            const inputDistrictChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
-
-                axios.get(`/api/villages/${value}`).then(res => {
-                    if(res.data.meta.code === 200) {
-                        setVillage(res.data.data)
-                    }
-                })
-
-                setForm({ ...form, [name]: value })
-            }
-
-            const inputChange = (e) => {
-                const name = e.target.name
-                const value = e.target.value
-
-                setForm({ ...form, [name]: value })
-            }
-
-            return (
-                <div class="flex flex-col gap-4">
-                    <div class="flex">
-                        <label for="province_object"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat Obyek Sewa
-                        </label>
-                        <div class="flex-[4]">
-                            <select onChange={ inputProvinceChange } name="province_object" id="province_object"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="" selected disabled>Pilih Provinsi</option>
-                                @foreach ($province as $row)
-                                    <option value="{{$row->id}}">{{ $row->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div>
-
-                    {form.province_object && (
-                        <div class="flex">
-                            <label for="regency_object"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                            </label>
-                            <div class="flex-[4]">
-                                <select onChange={ inputRegencyChange } name="regency_object" id="regency_object"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option value="" selected disabled>Pilih Kab/Kota</option>
-                                    { regency.map((value, index) => {
-                                        return (
-                                            <option key={index} value={value.id}>{value.name}</option>
-                                        )
-                                    }) }
-                                </select>
-                            </div>
-                        </div>
-                    )}
-
-                    {form.regency_object && (
-                        <div class="flex">
-                            <label for="district_object"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                            </label>
-                            <div class="flex-[4]">
-                                <select onChange={ inputDistrictChange } name="district_object" id="district_object"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option value="" selected disabled>Pilih Kecamatan</option>
-                                    { district.map((value, index) => {
-                                        return (
-                                            <option key={index} value={value.id}>{value.name}</option>
-                                        )
-                                    }) }
-                                </select>
-                            </div>
-                        </div>
-                    )}
-
-                    {form.district_object && (
-                        <div class="flex">
-                            <label for="village_object"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                            </label>
-                            <div class="flex-[4]">
-                                <select onChange={ inputChange } name="village_object" id="village_object"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                    <option value="" selected disabled>Pilih Kelurahan</option>
-                                    { village.map((value, index) => {
-                                        return (
-                                            <option key={index} value={value.id}>{value.name}</option>
-                                        )
-                                    }) }
-                                </select>
-                            </div>
-                        </div>
-                    )}
-
-                    {form.village_object && (
-                        <div class="flex flex-col gap-4">
-                            <div class="flex">
-                                <label for="zip_code_object"
-                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                </label>
-                                <div class="flex-[4]">
-                                    <input type="text" id="zip_code_object" name="zip_code_object"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Masukkan Kode Pos" required/>
-                                </div>
-                            </div>
-                            <div class="flex">
-                                <label for="address_object"
-                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                </label>
-                                <div class="flex-[4]">
-                                    <textarea id="address_object" name="address_object" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                </div>
-            )
-        }
-
-        ReactDOM.render(<FormObject />,document.getElementById('formObject'))
-    </script>
+                    ReactDOM.render(<FormObject />,document.getElementById('formObject'))
+                </script>
 @endsection

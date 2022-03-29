@@ -131,6 +131,6 @@ class OutstandingController extends Controller
         Outstanding::create($validatedData);
         Cs::create(['form_id' => $id, 'user_id' => $user_id]);
 
-        return redirect()->route('home');
+        return redirect()->route('outstanding-index')->with('message_success', 'Terima kasih atas pengajuan yang telah disampaikan. mohon untuk menunggu dikarenakan akan kami cek terlebih dahulu, mohon untuk dapat memeriksa pengajuan secara berkala.');
     }
 }

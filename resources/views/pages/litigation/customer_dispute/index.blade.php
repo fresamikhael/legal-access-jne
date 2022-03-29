@@ -3,6 +3,11 @@
 @section('content')
     <div class="flex flex-col gap-4 mx-36 my-4">
         <h1 class="text-4xl mb-4 text-black capitalize font-medium">Customer Dispute</h1>
+        @if (Session::get('message_success'))
+            <div class="bg-green-200 rounded-xl p-5 text-green-600">
+                {{ Session::get('message_success') }}
+            </div>
+        @endif
         <form class="mt-4" method="post" enctype="multipart/form-data"
             action="{{ route('customer-dispute-post') }}">
             @csrf
@@ -531,331 +536,331 @@
 
     <script type="text/babel">
         function FormAddress() {
-                                                                                    const [regency, setRegency] = React.useState([])
-                                                                                    const [district, setDistrict] = React.useState([])
-                                                                                    const [village, setVillage] = React.useState([])
+                                                                                        const [regency, setRegency] = React.useState([])
+                                                                                        const [district, setDistrict] = React.useState([])
+                                                                                        const [village, setVillage] = React.useState([])
 
-                                                                                    const [form, setForm] = React.useState({
-                                                                                        sender_province: "",
-                                                                                        sender_regency: "",
-                                                                                        sender_district: "",
-                                                                                        sender_village: "",
-                                                                                        sender_zip_code: "",
-                                                                                        sender_address: "",
-                                                                                    })
-
-                                                                                    const inputProvinceChange = (e) => {
-                                                                                        const name = e.target.name
-                                                                                        const value = e.target.value
-
-                                                                                        axios.get(`/api/regencies/${value}`).then(res => {
-                                                                                            if(res.data.meta.code === 200) {
-                                                                                                setRegency(res.data.data)
-                                                                                            }
+                                                                                        const [form, setForm] = React.useState({
+                                                                                            sender_province: "",
+                                                                                            sender_regency: "",
+                                                                                            sender_district: "",
+                                                                                            sender_village: "",
+                                                                                            sender_zip_code: "",
+                                                                                            sender_address: "",
                                                                                         })
 
-                                                                                        setForm({ ...form, [name]: value })
-                                                                                    }
+                                                                                        const inputProvinceChange = (e) => {
+                                                                                            const name = e.target.name
+                                                                                            const value = e.target.value
 
-                                                                                    const inputRegencyChange = (e) => {
-                                                                                        const name = e.target.name
-                                                                                        const value = e.target.value
+                                                                                            axios.get(`/api/regencies/${value}`).then(res => {
+                                                                                                if(res.data.meta.code === 200) {
+                                                                                                    setRegency(res.data.data)
+                                                                                                }
+                                                                                            })
 
-                                                                                        axios.get(`/api/districts/${value}`).then(res => {
-                                                                                            if(res.data.meta.code === 200) {
-                                                                                                setDistrict(res.data.data)
-                                                                                            }
-                                                                                        })
+                                                                                            setForm({ ...form, [name]: value })
+                                                                                        }
 
-                                                                                        setForm({ ...form, [name]: value })
-                                                                                    }
+                                                                                        const inputRegencyChange = (e) => {
+                                                                                            const name = e.target.name
+                                                                                            const value = e.target.value
 
-                                                                                    const inputDistrictChange = (e) => {
-                                                                                        const name = e.target.name
-                                                                                        const value = e.target.value
+                                                                                            axios.get(`/api/districts/${value}`).then(res => {
+                                                                                                if(res.data.meta.code === 200) {
+                                                                                                    setDistrict(res.data.data)
+                                                                                                }
+                                                                                            })
 
-                                                                                        axios.get(`/api/villages/${value}`).then(res => {
-                                                                                            if(res.data.meta.code === 200) {
-                                                                                                setVillage(res.data.data)
-                                                                                            }
-                                                                                        })
+                                                                                            setForm({ ...form, [name]: value })
+                                                                                        }
 
-                                                                                        setForm({ ...form, [name]: value })
-                                                                                    }
+                                                                                        const inputDistrictChange = (e) => {
+                                                                                            const name = e.target.name
+                                                                                            const value = e.target.value
 
-                                                                                    const inputChange = (e) => {
-                                                                                        const name = e.target.name
-                                                                                        const value = e.target.value
+                                                                                            axios.get(`/api/villages/${value}`).then(res => {
+                                                                                                if(res.data.meta.code === 200) {
+                                                                                                    setVillage(res.data.data)
+                                                                                                }
+                                                                                            })
 
-                                                                                        setForm({ ...form, [name]: value })
-                                                                                    }
+                                                                                            setForm({ ...form, [name]: value })
+                                                                                        }
 
-                                                                                    return (
-                                                                                        <div class="flex flex-col gap-4">
-                                                                                            <div class="flex">
-                                                                                                <label for="sender_province"
-                                                                                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
-                                                                                                    Pihak
-                                                                                                </label>
-                                                                                                <div class="flex-[4]">
-                                                                                                    <select onChange={ inputProvinceChange } name="sender_province" id="sender_province"
-                                                                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                                                                                        <option value="" selected disabled>Pilih Provinsi</option>
-                                                                                                        @foreach ($province as $row)
-                                                                                                            <option value="{{ $row->id }}">{{ $row->name }}</option>
-                                                                                                        @endforeach
-                                                                                                    </select>
+                                                                                        const inputChange = (e) => {
+                                                                                            const name = e.target.name
+                                                                                            const value = e.target.value
+
+                                                                                            setForm({ ...form, [name]: value })
+                                                                                        }
+
+                                                                                        return (
+                                                                                            <div class="flex flex-col gap-4">
+                                                                                                <div class="flex">
+                                                                                                    <label for="sender_province"
+                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                                                                                                        Pihak
+                                                                                                    </label>
+                                                                                                    <div class="flex-[4]">
+                                                                                                        <select onChange={ inputProvinceChange } name="sender_province" id="sender_province"
+                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                            <option value="" selected disabled>Pilih Provinsi</option>
+                                                                                                            @foreach ($province as $row)
+                                                                                                                <option value="{{ $row->id }}">{{ $row->name }}</option>
+                                                                                                            @endforeach
+                                                                                                        </select>
+                                                                                                    </div>
                                                                                                 </div>
+
+                                                                                                {form.sender_province && (
+                                                                                                    <div class="flex">
+                                                                                                        <label for="sender_regency"
+                                                                                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                        </label>
+                                                                                                        <div class="flex-[4]">
+                                                                                                            <select onChange={ inputRegencyChange } name="sender_regency" id="sender_regency"
+                                                                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                                <option value="" selected disabled>Pilih Kab/Kota</option>
+                                                                                                                { regency.map((value, index) => {
+                                                                                                                    return (
+                                                                                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                    )
+                                                                                                                }) }
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                )}
+
+                                                                                                {form.sender_regency && (
+                                                                                                    <div class="flex">
+                                                                                                        <label for="sender_district"
+                                                                                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                        </label>
+                                                                                                        <div class="flex-[4]">
+                                                                                                            <select onChange={ inputDistrictChange } name="sender_district" id="sender_district"
+                                                                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                                <option value="" selected disabled>Pilih Kecamatan</option>
+                                                                                                                { district.map((value, index) => {
+                                                                                                                    return (
+                                                                                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                    )
+                                                                                                                }) }
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                )}
+
+                                                                                                {form.sender_district && (
+                                                                                                    <div class="flex">
+                                                                                                        <label for="sender_village"
+                                                                                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                        </label>
+                                                                                                        <div class="flex-[4]">
+                                                                                                            <select onChange={ inputChange } name="sender_village" id="sender_village"
+                                                                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                                <option value="" selected disabled>Pilih Kelurahan</option>
+                                                                                                                { village.map((value, index) => {
+                                                                                                                    return (
+                                                                                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                    )
+                                                                                                                }) }
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                )}
+
+                                                                                                {form.sender_village && (
+                                                                                                    <div class="flex flex-col gap-4">
+                                                                                                        <div class="flex">
+                                                                                                            <label for="sender_zip_code"
+                                                                                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                            </label>
+                                                                                                            <div class="flex-[4]">
+                                                                                                                <input type="text" id="sender_zip_code" name="sender_zip_code"
+                                                                                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                                                                                    placeholder="Masukkan Kode Pos" requireddd/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="flex">
+                                                                                                            <label for="sender_address"
+                                                                                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                            </label>
+                                                                                                            <div class="flex-[4]">
+                                                                                                                <textarea id="sender_address" name="sender_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                )}
                                                                                             </div>
+                                                                                        )
+                                                                                    }
 
-                                                                                            {form.sender_province && (
+                                                                                    ReactDOM.render(<FormAddress />,document.getElementById('formAddress'))
+
+                                                                                    function FormAddressOptional() {
+                                                                                        const [regency, setRegency] = React.useState([])
+                                                                                        const [district, setDistrict] = React.useState([])
+                                                                                        const [village, setVillage] = React.useState([])
+
+                                                                                        const [form, setForm] = React.useState({
+                                                                                            receiver_province: "",
+                                                                                            receiver_regency: "",
+                                                                                            receiver_district: "",
+                                                                                            receiver_village: "",
+                                                                                            receiver_zip_code: "",
+                                                                                            receiver_address: "",
+                                                                                        })
+
+                                                                                        const inputProvinceChange = (e) => {
+                                                                                            const name = e.target.name
+                                                                                            const value = e.target.value
+
+                                                                                            axios.get(`/api/regencies/${value}`).then(res => {
+                                                                                                if(res.data.meta.code === 200) {
+                                                                                                    setRegency(res.data.data)
+                                                                                                }
+                                                                                            })
+
+                                                                                            setForm({ ...form, [name]: value })
+                                                                                        }
+
+                                                                                        const inputRegencyChange = (e) => {
+                                                                                            const name = e.target.name
+                                                                                            const value = e.target.value
+
+                                                                                            axios.get(`/api/districts/${value}`).then(res => {
+                                                                                                if(res.data.meta.code === 200) {
+                                                                                                    setDistrict(res.data.data)
+                                                                                                }
+                                                                                            })
+
+                                                                                            setForm({ ...form, [name]: value })
+                                                                                        }
+
+                                                                                        const inputDistrictChange = (e) => {
+                                                                                            const name = e.target.name
+                                                                                            const value = e.target.value
+
+                                                                                            axios.get(`/api/villages/${value}`).then(res => {
+                                                                                                if(res.data.meta.code === 200) {
+                                                                                                    setVillage(res.data.data)
+                                                                                                }
+                                                                                            })
+
+                                                                                            setForm({ ...form, [name]: value })
+                                                                                        }
+
+                                                                                        const inputChange = (e) => {
+                                                                                            const name = e.target.name
+                                                                                            const value = e.target.value
+
+                                                                                            setForm({ ...form, [name]: value })
+                                                                                        }
+
+                                                                                        return (
+                                                                                            <div class="flex flex-col gap-4">
                                                                                                 <div class="flex">
-                                                                                                    <label for="sender_regency"
-                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                    <label for="receiver_province"
+                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                                                                                                        Pihak
                                                                                                     </label>
                                                                                                     <div class="flex-[4]">
-                                                                                                        <select onChange={ inputRegencyChange } name="sender_regency" id="sender_regency"
+                                                                                                        <select onChange={ inputProvinceChange } name="receiver_province" id="receiver_province"
                                                                                                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                                                                                            <option value="" selected disabled>Pilih Kab/Kota</option>
-                                                                                                            { regency.map((value, index) => {
-                                                                                                                return (
-                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                                                                                )
-                                                                                                            }) }
+                                                                                                            <option value="" selected disabled>Pilih Provinsi</option>
+                                                                                                            @foreach ($province as $row)
+                                                                                                                <option value="{{ $row->id }}">{{ $row->name }}</option>
+                                                                                                            @endforeach
                                                                                                         </select>
                                                                                                     </div>
                                                                                                 </div>
-                                                                                            )}
 
-                                                                                            {form.sender_regency && (
-                                                                                                <div class="flex">
-                                                                                                    <label for="sender_district"
-                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                                                                                    </label>
-                                                                                                    <div class="flex-[4]">
-                                                                                                        <select onChange={ inputDistrictChange } name="sender_district" id="sender_district"
-                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                                                                                            <option value="" selected disabled>Pilih Kecamatan</option>
-                                                                                                            { district.map((value, index) => {
-                                                                                                                return (
-                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                                                                                )
-                                                                                                            }) }
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            )}
-
-                                                                                            {form.sender_district && (
-                                                                                                <div class="flex">
-                                                                                                    <label for="sender_village"
-                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                                                                                    </label>
-                                                                                                    <div class="flex-[4]">
-                                                                                                        <select onChange={ inputChange } name="sender_village" id="sender_village"
-                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                                                                                            <option value="" selected disabled>Pilih Kelurahan</option>
-                                                                                                            { village.map((value, index) => {
-                                                                                                                return (
-                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                                                                                )
-                                                                                                            }) }
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            )}
-
-                                                                                            {form.sender_village && (
-                                                                                                <div class="flex flex-col gap-4">
+                                                                                                {form.receiver_province && (
                                                                                                     <div class="flex">
-                                                                                                        <label for="sender_zip_code"
+                                                                                                        <label for="receiver_regency"
                                                                                                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
                                                                                                         </label>
                                                                                                         <div class="flex-[4]">
-                                                                                                            <input type="text" id="sender_zip_code" name="sender_zip_code"
-                                                                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                                                                                placeholder="Masukkan Kode Pos" requireddd/>
+                                                                                                            <select onChange={ inputRegencyChange } name="receiver_regency" id="receiver_regency"
+                                                                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                                <option value="" selected disabled>Pilih Kab/Kota</option>
+                                                                                                                { regency.map((value, index) => {
+                                                                                                                    return (
+                                                                                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                    )
+                                                                                                                }) }
+                                                                                                            </select>
                                                                                                         </div>
                                                                                                     </div>
+                                                                                                )}
+
+                                                                                                {form.receiver_regency && (
                                                                                                     <div class="flex">
-                                                                                                        <label for="sender_address"
+                                                                                                        <label for="receiver_district"
                                                                                                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
                                                                                                         </label>
                                                                                                         <div class="flex-[4]">
-                                                                                                            <textarea id="sender_address" name="sender_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                                                                                            <select onChange={ inputDistrictChange } name="receiver_district" id="receiver_district"
+                                                                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                                <option value="" selected disabled>Pilih Kecamatan</option>
+                                                                                                                { district.map((value, index) => {
+                                                                                                                    return (
+                                                                                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                    )
+                                                                                                                }) }
+                                                                                                            </select>
                                                                                                         </div>
                                                                                                     </div>
-                                                                                                </div>
-                                                                                            )}
-                                                                                        </div>
-                                                                                    )
-                                                                                }
+                                                                                                )}
 
-                                                                                ReactDOM.render(<FormAddress />,document.getElementById('formAddress'))
+                                                                                                {form.receiver_district && (
+                                                                                                    <div class="flex">
+                                                                                                        <label for="receiver_village"
+                                                                                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                        </label>
+                                                                                                        <div class="flex-[4]">
+                                                                                                            <select onChange={ inputChange } name="receiver_village" id="receiver_village"
+                                                                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                                <option value="" selected disabled>Pilih Kelurahan</option>
+                                                                                                                { village.map((value, index) => {
+                                                                                                                    return (
+                                                                                                                        <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                    )
+                                                                                                                }) }
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                )}
 
-                                                                                function FormAddressOptional() {
-                                                                                    const [regency, setRegency] = React.useState([])
-                                                                                    const [district, setDistrict] = React.useState([])
-                                                                                    const [village, setVillage] = React.useState([])
-
-                                                                                    const [form, setForm] = React.useState({
-                                                                                        receiver_province: "",
-                                                                                        receiver_regency: "",
-                                                                                        receiver_district: "",
-                                                                                        receiver_village: "",
-                                                                                        receiver_zip_code: "",
-                                                                                        receiver_address: "",
-                                                                                    })
-
-                                                                                    const inputProvinceChange = (e) => {
-                                                                                        const name = e.target.name
-                                                                                        const value = e.target.value
-
-                                                                                        axios.get(`/api/regencies/${value}`).then(res => {
-                                                                                            if(res.data.meta.code === 200) {
-                                                                                                setRegency(res.data.data)
-                                                                                            }
-                                                                                        })
-
-                                                                                        setForm({ ...form, [name]: value })
-                                                                                    }
-
-                                                                                    const inputRegencyChange = (e) => {
-                                                                                        const name = e.target.name
-                                                                                        const value = e.target.value
-
-                                                                                        axios.get(`/api/districts/${value}`).then(res => {
-                                                                                            if(res.data.meta.code === 200) {
-                                                                                                setDistrict(res.data.data)
-                                                                                            }
-                                                                                        })
-
-                                                                                        setForm({ ...form, [name]: value })
-                                                                                    }
-
-                                                                                    const inputDistrictChange = (e) => {
-                                                                                        const name = e.target.name
-                                                                                        const value = e.target.value
-
-                                                                                        axios.get(`/api/villages/${value}`).then(res => {
-                                                                                            if(res.data.meta.code === 200) {
-                                                                                                setVillage(res.data.data)
-                                                                                            }
-                                                                                        })
-
-                                                                                        setForm({ ...form, [name]: value })
-                                                                                    }
-
-                                                                                    const inputChange = (e) => {
-                                                                                        const name = e.target.name
-                                                                                        const value = e.target.value
-
-                                                                                        setForm({ ...form, [name]: value })
-                                                                                    }
-
-                                                                                    return (
-                                                                                        <div class="flex flex-col gap-4">
-                                                                                            <div class="flex">
-                                                                                                <label for="receiver_province"
-                                                                                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
-                                                                                                    Pihak
-                                                                                                </label>
-                                                                                                <div class="flex-[4]">
-                                                                                                    <select onChange={ inputProvinceChange } name="receiver_province" id="receiver_province"
-                                                                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                                                                                        <option value="" selected disabled>Pilih Provinsi</option>
-                                                                                                        @foreach ($province as $row)
-                                                                                                            <option value="{{ $row->id }}">{{ $row->name }}</option>
-                                                                                                        @endforeach
-                                                                                                    </select>
-                                                                                                </div>
+                                                                                                {form.receiver_village && (
+                                                                                                    <div class="flex flex-col gap-4">
+                                                                                                        <div class="flex">
+                                                                                                            <label for="receiver_zip_code"
+                                                                                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                            </label>
+                                                                                                            <div class="flex-[4]">
+                                                                                                                <input type="text" id="receiver_zip_code" name="receiver_zip_code"
+                                                                                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                                                                                    placeholder="Masukkan Kode Pos" requireddd/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="flex">
+                                                                                                            <label for="receiver_address"
+                                                                                                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                            </label>
+                                                                                                            <div class="flex-[4]">
+                                                                                                                <textarea id="receiver_address" name="receiver_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                )}
                                                                                             </div>
+                                                                                        )
+                                                                                    }
 
-                                                                                            {form.receiver_province && (
-                                                                                                <div class="flex">
-                                                                                                    <label for="receiver_regency"
-                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                                                                                    </label>
-                                                                                                    <div class="flex-[4]">
-                                                                                                        <select onChange={ inputRegencyChange } name="receiver_regency" id="receiver_regency"
-                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                                                                                            <option value="" selected disabled>Pilih Kab/Kota</option>
-                                                                                                            { regency.map((value, index) => {
-                                                                                                                return (
-                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                                                                                )
-                                                                                                            }) }
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            )}
-
-                                                                                            {form.receiver_regency && (
-                                                                                                <div class="flex">
-                                                                                                    <label for="receiver_district"
-                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                                                                                    </label>
-                                                                                                    <div class="flex-[4]">
-                                                                                                        <select onChange={ inputDistrictChange } name="receiver_district" id="receiver_district"
-                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                                                                                            <option value="" selected disabled>Pilih Kecamatan</option>
-                                                                                                            { district.map((value, index) => {
-                                                                                                                return (
-                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                                                                                )
-                                                                                                            }) }
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            )}
-
-                                                                                            {form.receiver_district && (
-                                                                                                <div class="flex">
-                                                                                                    <label for="receiver_village"
-                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                                                                                    </label>
-                                                                                                    <div class="flex-[4]">
-                                                                                                        <select onChange={ inputChange } name="receiver_village" id="receiver_village"
-                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                                                                                            <option value="" selected disabled>Pilih Kelurahan</option>
-                                                                                                            { village.map((value, index) => {
-                                                                                                                return (
-                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                                                                                )
-                                                                                                            }) }
-                                                                                                        </select>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            )}
-
-                                                                                            {form.receiver_village && (
-                                                                                                <div class="flex flex-col gap-4">
-                                                                                                    <div class="flex">
-                                                                                                        <label for="receiver_zip_code"
-                                                                                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                                                                                        </label>
-                                                                                                        <div class="flex-[4]">
-                                                                                                            <input type="text" id="receiver_zip_code" name="receiver_zip_code"
-                                                                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                                                                                placeholder="Masukkan Kode Pos" requireddd/>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="flex">
-                                                                                                        <label for="receiver_address"
-                                                                                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                                                                                        </label>
-                                                                                                        <div class="flex-[4]">
-                                                                                                            <textarea id="receiver_address" name="receiver_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            )}
-                                                                                        </div>
-                                                                                    )
-                                                                                }
-
-                                                                                ReactDOM.render(<FormAddressOptional />,document.getElementById('formAddressOptional'))
-                                                                            </script>
+                                                                                    ReactDOM.render(<FormAddressOptional />,document.getElementById('formAddressOptional'))
+                                                                                </script>
 
     <script>
         function checkbutton() {

@@ -127,6 +127,6 @@ class OtherController extends Controller
         Other::create($validatedData);
         Cs::create(['form_id' => $id, 'user_id' => $user_id]);
 
-        return redirect()->route('home');
+        return redirect()->route('other-index')->with('message_success', 'Terima kasih atas pengajuan yang telah disampaikan. mohon untuk menunggu dikarenakan akan kami cek terlebih dahulu, mohon untuk dapat memeriksa pengajuan secara berkala.');
     }
 }
