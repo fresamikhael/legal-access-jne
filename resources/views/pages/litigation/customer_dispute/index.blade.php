@@ -26,7 +26,7 @@
                         <div class="flex-[4]">
                             <input type="date" id="text"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" name="date" required>
+                                placeholder="" name="shipping_date" requireddd>
                         </div>
                     </div>
                     <div class="flex">
@@ -35,9 +35,9 @@
                             Pengirim
                         </label>
                         <div class="flex-[4]">
-                            <input type="text" id="text" name="first_party"
+                            <input type="text" id="text" name="sender_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="" requireddd>
                         </div>
                     </div>
 
@@ -48,9 +48,9 @@
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">No
                             Telepon Pengirim</label>
                         <div class="flex flex-[4]">
-                            <input type="text" id="text" name="customer"
+                            <input type="text" id="text" name="sender_phone_number"
                                 class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="" requireddd>
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Jenis
                             Kasus</label>
                         <div class="flex-[4]">
-                            <select required id="countries" name="case_type"
+                            <select requireddd id="countries" name="case_type"
                                 class="\bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="" style="display: none">-- Pilih --</option>
                                 <option>Terlambat</option>
@@ -73,7 +73,7 @@
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Faktor
                             Penyebab</label>
                         <div class="flex-[4]">
-                            <select required onchange="yesnoCheck(this);" id="countries" name="causative_factor"
+                            <select requireddd onchange="yesnoCheck(this);" id="countries" name="causative_factor"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="" style="display: none">-- Pilih --</option>
                                 <option>Alamat Tidak Jelas</option>
@@ -106,9 +106,9 @@
                             Penerima
                         </label>
                         <div class="flex-[4]">
-                            <input type="text" id="text" name="first_party"
+                            <input type="text" id="text" name="receiver_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="" requireddd>
                         </div>
                     </div>
                     <div id="formAddressOptional"></div>
@@ -175,7 +175,7 @@
                         <div class="flex-[4]">
                             <input type="text" id="text" name="first_party"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Masukkan Nama Jalan" required>
+                                placeholder="Masukkan Nama Jalan" requireddd>
                         </div>
                     </div> --}}
                     <div class="flex">
@@ -183,9 +183,9 @@
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">No
                             Telepon Penerima</label>
                         <div class="flex flex-[4]">
-                            <input type="text" id="text" name="customer"
+                            <input type="text" id="text" name="receiver_phone_number"
                                 class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="" requireddd>
                         </div>
                     </div>
 
@@ -200,7 +200,7 @@
                             </span>
                             <input type="text" id="website-admin" name="total_loss"
                                 class=" rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="" requireddd>
                         </div>
                     </div>
                     <div class="flex">
@@ -212,9 +212,9 @@
                                 class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-l-md border border-r-0 border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                                 Rp
                             </span>
-                            <input type="text" id="website-admin" name="total_loss"
+                            <input type="text" id="website-admin" name="item_nominal"
                                 class=" rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="" requireddd>
                         </div>
                     </div>
                     <div class="flex">
@@ -223,7 +223,7 @@
                         <div class="flex-[4]">
                             <input type="text" id="text"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" name="text" required>
+                                placeholder="" name="connote" requireddd>
                         </div>
                     </div>
                     <div class="flex">
@@ -232,7 +232,7 @@
                         <div class="flex-[4]">
                             <input type="text" id="text" name="customer"
                                 class=" bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="" requireddd>
                         </div>
                     </div>
                     <div class="flex">
@@ -240,7 +240,7 @@
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Jenis
                             Kiriman</label>
                         <div class="flex-[4]">
-                            <select required id="countries" name="shipping_type"
+                            <select requireddd id="countries" name="shipping_type"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="" style="display: none">-- Pilih --</option>
                                 <option>High Value Service</option>
@@ -254,11 +254,11 @@
                         <label for="text"
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Asuransi</label>
                         <div class="flex-[4]">
-                            <select required onchange="assurance(this);" id="countries" name="causative_factor"
+                            <select requireddd onchange="assurance(this);" id="countries" name="assurance"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="" style="display: none">-- Pilih --</option>
-                                <option>Ada</option>
-                                <option>Tidak</option>
+                                <option value="Ada">Ada</option>
+                                <option value="Tidak">Tidak</option>
                             </select>
                         </div>
                     </div>
@@ -272,9 +272,9 @@
                                     class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-l-md border border-r-0 border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                                     Rp
                                 </span>
-                                <input type="text" id="website-admin" name="total_loss"
+                                <input type="text" id="website-admin" name="assurance_nominal"
                                     class=" rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="" required>
+                                    placeholder="" requireddd>
                             </div>
                         </div>
                     </div>
@@ -287,7 +287,7 @@
                     Kejadian:</label>
                 <textarea id="message" rows="4" name="incident_chronology"
                     class=" block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="" required></textarea>
+                    placeholder="" requireddd></textarea>
             </div>
 
             <div class="flex flex-col gap-4 mb-4">
@@ -296,7 +296,7 @@
                         class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Bentuk
                         Kiriman</label>
                     <div class="flex-[4]">
-                        <select required onchange="yesnoCheck2(this);" id="countries" name="shipping_form"
+                        <select requireddd onchange="yesnoCheck2(this);" id="countries" name="shipping_form"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                             <option value="" style="display: none">-- Pilih --</option>
                             <option>Dokumen</option>
@@ -319,7 +319,7 @@
                     <div class="flex-[4]">
                         <textarea id="message" rows="4" name="detail_shipping_form"
                             class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="" required></textarea>
+                            placeholder="" requireddd></textarea>
                     </div>
                 </div>
                 {{-- </div> --}}
@@ -334,8 +334,8 @@
                             <div class="flex-[4]">
                                 <input
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" name="file_witness_testimony"
-                                    type="file" required>
+                                    aria-describedby="user_avatar_help" id="user_avatar" name="file_connote" type="file"
+                                    requireddd>
 
                             </div>
                         </div>
@@ -348,8 +348,8 @@
                             <div class="flex-[4]">
                                 <input
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" name="file_letter_document"
-                                    type="file" required>
+                                    aria-describedby="user_avatar_help" id="user_avatar" name="file_orion" type="file"
+                                    requireddd>
 
                             </div>
                         </div>
@@ -361,7 +361,7 @@
                                 POD</label>
                             <div class="flex-[4] flex items-center">
                                 <div class="flex-[1] mr-2">
-                                    <select name="" onchange="pod(this)"
+                                    <select onchange="pod(this)"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                         <option style="display: none">Pilih</option>
                                         <option value="Ada">Ada</option>
@@ -369,9 +369,9 @@
                                     </select>
                                 </div>
                                 <div class="flex-[3]" id="ifYesPod" style="display: none;">
-                                    <input name="file_npwp"
+                                    <input name="file_pod"
                                         class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
+                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" requireddd>
                                 </div>
                             </div>
                         </div>
@@ -384,8 +384,8 @@
                             <div class="flex-[4]">
                                 <input
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" name="file_claim_form_document"
-                                    type="file" required>
+                                    aria-describedby="user_avatar_help" id="user_avatar" name="file_customer_case_form"
+                                    type="file" requireddd>
 
                             </div>
                         </div>
@@ -405,9 +405,9 @@
                                     </select>
                                 </div>
                                 <div class="flex-[3]" id="ifYesDestination" style="display: none;">
-                                    <input name="file_npwp"
+                                    <input name="file_destination_chronology"
                                         class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
+                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" requireddd>
                                 </div>
                             </div>
                         </div>
@@ -427,9 +427,9 @@
                                     </select>
                                 </div>
                                 <div class="flex-[3]" id="ifYesOrigin" style="display: none;">
-                                    <input name="file_npwp"
+                                    <input name="file_orion_chronology"
                                         class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
+                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" requireddd>
                                 </div>
                             </div>
                         </div>
@@ -449,9 +449,9 @@
                                     </select>
                                 </div>
                                 <div class="flex-[3]" id="ifYesCs" style="display: none;">
-                                    <input name="file_npwp"
+                                    <input name="file_cs_chronology"
                                         class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
+                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" requireddd>
                                 </div>
                             </div>
                         </div>
@@ -471,9 +471,9 @@
                                     </select>
                                 </div>
                                 <div class="flex-[3]" id="ifYesAsd" style="display: none;">
-                                    <input name="file_npwp"
+                                    <input name="file_subpoena"
                                         class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
+                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" requireddd>
                                 </div>
                             </div>
                         </div>
@@ -493,14 +493,14 @@
                                     </select>
                                 </div>
                                 <div class="flex-[3]" id="ifYesKuasa" style="display: none;">
-                                    <input name="file_npwp"
+                                    <input name="file_procuration"
                                         class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
+                                        aria-describedby="user_avatar_help" id="user_avatar" type="file" requireddd>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-2">
+                    {{-- <div class="col-span-2">
                         <div class="flex">
                             <label for="date"
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">10.
@@ -509,10 +509,10 @@
                                 <input
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" name="file_other_document"
-                                    type="file" required>
+                                    type="file" requireddd>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 
@@ -531,331 +531,331 @@
 
     <script type="text/babel">
         function FormAddress() {
-                    const [regency, setRegency] = React.useState([])
-                    const [district, setDistrict] = React.useState([])
-                    const [village, setVillage] = React.useState([])
+                                                                                    const [regency, setRegency] = React.useState([])
+                                                                                    const [district, setDistrict] = React.useState([])
+                                                                                    const [village, setVillage] = React.useState([])
 
-                    const [form, setForm] = React.useState({
-                        party_province: "",
-                        party_regency: "",
-                        party_district: "",
-                        party_village: "",
-                        party_zip_code: "",
-                        party_address: "",
-                    })
+                                                                                    const [form, setForm] = React.useState({
+                                                                                        sender_province: "",
+                                                                                        sender_regency: "",
+                                                                                        sender_district: "",
+                                                                                        sender_village: "",
+                                                                                        sender_zip_code: "",
+                                                                                        sender_address: "",
+                                                                                    })
 
-                    const inputProvinceChange = (e) => {
-                        const name = e.target.name
-                        const value = e.target.value
+                                                                                    const inputProvinceChange = (e) => {
+                                                                                        const name = e.target.name
+                                                                                        const value = e.target.value
 
-                        axios.get(`/api/regencies/${value}`).then(res => {
-                            if(res.data.meta.code === 200) {
-                                setRegency(res.data.data)
-                            }
-                        })
+                                                                                        axios.get(`/api/regencies/${value}`).then(res => {
+                                                                                            if(res.data.meta.code === 200) {
+                                                                                                setRegency(res.data.data)
+                                                                                            }
+                                                                                        })
 
-                        setForm({ ...form, [name]: value })
-                    }
+                                                                                        setForm({ ...form, [name]: value })
+                                                                                    }
 
-                    const inputRegencyChange = (e) => {
-                        const name = e.target.name
-                        const value = e.target.value
+                                                                                    const inputRegencyChange = (e) => {
+                                                                                        const name = e.target.name
+                                                                                        const value = e.target.value
 
-                        axios.get(`/api/districts/${value}`).then(res => {
-                            if(res.data.meta.code === 200) {
-                                setDistrict(res.data.data)
-                            }
-                        })
+                                                                                        axios.get(`/api/districts/${value}`).then(res => {
+                                                                                            if(res.data.meta.code === 200) {
+                                                                                                setDistrict(res.data.data)
+                                                                                            }
+                                                                                        })
 
-                        setForm({ ...form, [name]: value })
-                    }
+                                                                                        setForm({ ...form, [name]: value })
+                                                                                    }
 
-                    const inputDistrictChange = (e) => {
-                        const name = e.target.name
-                        const value = e.target.value
+                                                                                    const inputDistrictChange = (e) => {
+                                                                                        const name = e.target.name
+                                                                                        const value = e.target.value
 
-                        axios.get(`/api/villages/${value}`).then(res => {
-                            if(res.data.meta.code === 200) {
-                                setVillage(res.data.data)
-                            }
-                        })
+                                                                                        axios.get(`/api/villages/${value}`).then(res => {
+                                                                                            if(res.data.meta.code === 200) {
+                                                                                                setVillage(res.data.data)
+                                                                                            }
+                                                                                        })
 
-                        setForm({ ...form, [name]: value })
-                    }
+                                                                                        setForm({ ...form, [name]: value })
+                                                                                    }
 
-                    const inputChange = (e) => {
-                        const name = e.target.name
-                        const value = e.target.value
+                                                                                    const inputChange = (e) => {
+                                                                                        const name = e.target.name
+                                                                                        const value = e.target.value
 
-                        setForm({ ...form, [name]: value })
-                    }
+                                                                                        setForm({ ...form, [name]: value })
+                                                                                    }
 
-                    return (
-                        <div class="flex flex-col gap-4">
-                            <div class="flex">
-                                <label for="party_province"
-                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
-                                    Pihak
-                                </label>
-                                <div class="flex-[4]">
-                                    <select onChange={ inputProvinceChange } name="party_province" id="party_province"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                        <option value="" selected disabled>Pilih Provinsi</option>
-                                        @foreach ($province as $row)
-                                            <option value="{{ $row->id }}">{{ $row->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
+                                                                                    return (
+                                                                                        <div class="flex flex-col gap-4">
+                                                                                            <div class="flex">
+                                                                                                <label for="sender_province"
+                                                                                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                                                                                                    Pihak
+                                                                                                </label>
+                                                                                                <div class="flex-[4]">
+                                                                                                    <select onChange={ inputProvinceChange } name="sender_province" id="sender_province"
+                                                                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                        <option value="" selected disabled>Pilih Provinsi</option>
+                                                                                                        @foreach ($province as $row)
+                                                                                                            <option value="{{ $row->id }}">{{ $row->name }}</option>
+                                                                                                        @endforeach
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
 
-                            {form.party_province && (
-                                <div class="flex">
-                                    <label for="party_regency"
-                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                    </label>
-                                    <div class="flex-[4]">
-                                        <select onChange={ inputRegencyChange } name="party_regency" id="party_regency"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="" selected disabled>Pilih Kab/Kota</option>
-                                            { regency.map((value, index) => {
-                                                return (
-                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                )
-                                            }) }
-                                        </select>
-                                    </div>
-                                </div>
-                            )}
+                                                                                            {form.sender_province && (
+                                                                                                <div class="flex">
+                                                                                                    <label for="sender_regency"
+                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                    </label>
+                                                                                                    <div class="flex-[4]">
+                                                                                                        <select onChange={ inputRegencyChange } name="sender_regency" id="sender_regency"
+                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                            <option value="" selected disabled>Pilih Kab/Kota</option>
+                                                                                                            { regency.map((value, index) => {
+                                                                                                                return (
+                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                )
+                                                                                                            }) }
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            )}
 
-                            {form.party_regency && (
-                                <div class="flex">
-                                    <label for="party_district"
-                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                    </label>
-                                    <div class="flex-[4]">
-                                        <select onChange={ inputDistrictChange } name="party_district" id="party_district"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="" selected disabled>Pilih Kecamatan</option>
-                                            { district.map((value, index) => {
-                                                return (
-                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                )
-                                            }) }
-                                        </select>
-                                    </div>
-                                </div>
-                            )}
+                                                                                            {form.sender_regency && (
+                                                                                                <div class="flex">
+                                                                                                    <label for="sender_district"
+                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                    </label>
+                                                                                                    <div class="flex-[4]">
+                                                                                                        <select onChange={ inputDistrictChange } name="sender_district" id="sender_district"
+                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                            <option value="" selected disabled>Pilih Kecamatan</option>
+                                                                                                            { district.map((value, index) => {
+                                                                                                                return (
+                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                )
+                                                                                                            }) }
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            )}
 
-                            {form.party_district && (
-                                <div class="flex">
-                                    <label for="party_village"
-                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                    </label>
-                                    <div class="flex-[4]">
-                                        <select onChange={ inputChange } name="party_village" id="party_village"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="" selected disabled>Pilih Kelurahan</option>
-                                            { village.map((value, index) => {
-                                                return (
-                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                )
-                                            }) }
-                                        </select>
-                                    </div>
-                                </div>
-                            )}
+                                                                                            {form.sender_district && (
+                                                                                                <div class="flex">
+                                                                                                    <label for="sender_village"
+                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                    </label>
+                                                                                                    <div class="flex-[4]">
+                                                                                                        <select onChange={ inputChange } name="sender_village" id="sender_village"
+                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                            <option value="" selected disabled>Pilih Kelurahan</option>
+                                                                                                            { village.map((value, index) => {
+                                                                                                                return (
+                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                )
+                                                                                                            }) }
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            )}
 
-                            {form.party_village && (
-                                <div class="flex flex-col gap-4">
-                                    <div class="flex">
-                                        <label for="party_zip_code"
-                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                        </label>
-                                        <div class="flex-[4]">
-                                            <input type="text" id="party_zip_code" name="party_zip_code"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Masukkan Kode Pos" required/>
-                                        </div>
-                                    </div>
-                                    <div class="flex">
-                                        <label for="party_address"
-                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                        </label>
-                                        <div class="flex-[4]">
-                                            <textarea id="party_address" name="party_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    )
-                }
+                                                                                            {form.sender_village && (
+                                                                                                <div class="flex flex-col gap-4">
+                                                                                                    <div class="flex">
+                                                                                                        <label for="sender_zip_code"
+                                                                                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                        </label>
+                                                                                                        <div class="flex-[4]">
+                                                                                                            <input type="text" id="sender_zip_code" name="sender_zip_code"
+                                                                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                                                                                placeholder="Masukkan Kode Pos" requireddd/>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="flex">
+                                                                                                        <label for="sender_address"
+                                                                                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                        </label>
+                                                                                                        <div class="flex-[4]">
+                                                                                                            <textarea id="sender_address" name="sender_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            )}
+                                                                                        </div>
+                                                                                    )
+                                                                                }
 
-                ReactDOM.render(<FormAddress />,document.getElementById('formAddress'))
+                                                                                ReactDOM.render(<FormAddress />,document.getElementById('formAddress'))
 
-                function FormAddressOptional() {
-                    const [regency, setRegency] = React.useState([])
-                    const [district, setDistrict] = React.useState([])
-                    const [village, setVillage] = React.useState([])
+                                                                                function FormAddressOptional() {
+                                                                                    const [regency, setRegency] = React.useState([])
+                                                                                    const [district, setDistrict] = React.useState([])
+                                                                                    const [village, setVillage] = React.useState([])
 
-                    const [form, setForm] = React.useState({
-                        party_province_optional: "",
-                        party_regency_optional: "",
-                        party_district_optional: "",
-                        party_village_optional: "",
-                        party_zip_code_optional: "",
-                        party_address_optional: "",
-                    })
+                                                                                    const [form, setForm] = React.useState({
+                                                                                        receiver_province: "",
+                                                                                        receiver_regency: "",
+                                                                                        receiver_district: "",
+                                                                                        receiver_village: "",
+                                                                                        receiver_zip_code: "",
+                                                                                        receiver_address: "",
+                                                                                    })
 
-                    const inputProvinceChange = (e) => {
-                        const name = e.target.name
-                        const value = e.target.value
+                                                                                    const inputProvinceChange = (e) => {
+                                                                                        const name = e.target.name
+                                                                                        const value = e.target.value
 
-                        axios.get(`/api/regencies/${value}`).then(res => {
-                            if(res.data.meta.code === 200) {
-                                setRegency(res.data.data)
-                            }
-                        })
+                                                                                        axios.get(`/api/regencies/${value}`).then(res => {
+                                                                                            if(res.data.meta.code === 200) {
+                                                                                                setRegency(res.data.data)
+                                                                                            }
+                                                                                        })
 
-                        setForm({ ...form, [name]: value })
-                    }
+                                                                                        setForm({ ...form, [name]: value })
+                                                                                    }
 
-                    const inputRegencyChange = (e) => {
-                        const name = e.target.name
-                        const value = e.target.value
+                                                                                    const inputRegencyChange = (e) => {
+                                                                                        const name = e.target.name
+                                                                                        const value = e.target.value
 
-                        axios.get(`/api/districts/${value}`).then(res => {
-                            if(res.data.meta.code === 200) {
-                                setDistrict(res.data.data)
-                            }
-                        })
+                                                                                        axios.get(`/api/districts/${value}`).then(res => {
+                                                                                            if(res.data.meta.code === 200) {
+                                                                                                setDistrict(res.data.data)
+                                                                                            }
+                                                                                        })
 
-                        setForm({ ...form, [name]: value })
-                    }
+                                                                                        setForm({ ...form, [name]: value })
+                                                                                    }
 
-                    const inputDistrictChange = (e) => {
-                        const name = e.target.name
-                        const value = e.target.value
+                                                                                    const inputDistrictChange = (e) => {
+                                                                                        const name = e.target.name
+                                                                                        const value = e.target.value
 
-                        axios.get(`/api/villages/${value}`).then(res => {
-                            if(res.data.meta.code === 200) {
-                                setVillage(res.data.data)
-                            }
-                        })
+                                                                                        axios.get(`/api/villages/${value}`).then(res => {
+                                                                                            if(res.data.meta.code === 200) {
+                                                                                                setVillage(res.data.data)
+                                                                                            }
+                                                                                        })
 
-                        setForm({ ...form, [name]: value })
-                    }
+                                                                                        setForm({ ...form, [name]: value })
+                                                                                    }
 
-                    const inputChange = (e) => {
-                        const name = e.target.name
-                        const value = e.target.value
+                                                                                    const inputChange = (e) => {
+                                                                                        const name = e.target.name
+                                                                                        const value = e.target.value
 
-                        setForm({ ...form, [name]: value })
-                    }
+                                                                                        setForm({ ...form, [name]: value })
+                                                                                    }
 
-                    return (
-                        <div class="flex flex-col gap-4">
-                            <div class="flex">
-                                <label for="party_province_optional"
-                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
-                                    Pihak
-                                </label>
-                                <div class="flex-[4]">
-                                    <select onChange={ inputProvinceChange } name="party_province_optional" id="party_province_optional"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                        <option value="" selected disabled>Pilih Provinsi</option>
-                                        @foreach ($province as $row)
-                                            <option value="{{ $row->id }}">{{ $row->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
+                                                                                    return (
+                                                                                        <div class="flex flex-col gap-4">
+                                                                                            <div class="flex">
+                                                                                                <label for="receiver_province"
+                                                                                                    class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                                                                                                    Pihak
+                                                                                                </label>
+                                                                                                <div class="flex-[4]">
+                                                                                                    <select onChange={ inputProvinceChange } name="receiver_province" id="receiver_province"
+                                                                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                        <option value="" selected disabled>Pilih Provinsi</option>
+                                                                                                        @foreach ($province as $row)
+                                                                                                            <option value="{{ $row->id }}">{{ $row->name }}</option>
+                                                                                                        @endforeach
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
 
-                            {form.party_province_optional && (
-                                <div class="flex">
-                                    <label for="party_regency_optional"
-                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                    </label>
-                                    <div class="flex-[4]">
-                                        <select onChange={ inputRegencyChange } name="party_regency_optional" id="party_regency_optional"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="" selected disabled>Pilih Kab/Kota</option>
-                                            { regency.map((value, index) => {
-                                                return (
-                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                )
-                                            }) }
-                                        </select>
-                                    </div>
-                                </div>
-                            )}
+                                                                                            {form.receiver_province && (
+                                                                                                <div class="flex">
+                                                                                                    <label for="receiver_regency"
+                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                    </label>
+                                                                                                    <div class="flex-[4]">
+                                                                                                        <select onChange={ inputRegencyChange } name="receiver_regency" id="receiver_regency"
+                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                            <option value="" selected disabled>Pilih Kab/Kota</option>
+                                                                                                            { regency.map((value, index) => {
+                                                                                                                return (
+                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                )
+                                                                                                            }) }
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            )}
 
-                            {form.party_regency_optional && (
-                                <div class="flex">
-                                    <label for="party_district_optional"
-                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                    </label>
-                                    <div class="flex-[4]">
-                                        <select onChange={ inputDistrictChange } name="party_district_optional" id="party_district_optional"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="" selected disabled>Pilih Kecamatan</option>
-                                            { district.map((value, index) => {
-                                                return (
-                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                )
-                                            }) }
-                                        </select>
-                                    </div>
-                                </div>
-                            )}
+                                                                                            {form.receiver_regency && (
+                                                                                                <div class="flex">
+                                                                                                    <label for="receiver_district"
+                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                    </label>
+                                                                                                    <div class="flex-[4]">
+                                                                                                        <select onChange={ inputDistrictChange } name="receiver_district" id="receiver_district"
+                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                            <option value="" selected disabled>Pilih Kecamatan</option>
+                                                                                                            { district.map((value, index) => {
+                                                                                                                return (
+                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                )
+                                                                                                            }) }
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            )}
 
-                            {form.party_district_optional && (
-                                <div class="flex">
-                                    <label for="party_village_optional"
-                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                    </label>
-                                    <div class="flex-[4]">
-                                        <select onChange={ inputChange } name="party_village_optional" id="party_village_optional"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option value="" selected disabled>Pilih Kelurahan</option>
-                                            { village.map((value, index) => {
-                                                return (
-                                                    <option key={index} value={value.id}>{value.name}</option>
-                                                )
-                                            }) }
-                                        </select>
-                                    </div>
-                                </div>
-                            )}
+                                                                                            {form.receiver_district && (
+                                                                                                <div class="flex">
+                                                                                                    <label for="receiver_village"
+                                                                                                        class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                    </label>
+                                                                                                    <div class="flex-[4]">
+                                                                                                        <select onChange={ inputChange } name="receiver_village" id="receiver_village"
+                                                                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                                                            <option value="" selected disabled>Pilih Kelurahan</option>
+                                                                                                            { village.map((value, index) => {
+                                                                                                                return (
+                                                                                                                    <option key={index} value={value.id}>{value.name}</option>
+                                                                                                                )
+                                                                                                            }) }
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            )}
 
-                            {form.party_village_optional && (
-                                <div class="flex flex-col gap-4">
-                                    <div class="flex">
-                                        <label for="party_zip_code_optional"
-                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                        </label>
-                                        <div class="flex-[4]">
-                                            <input type="text" id="party_zip_code_optional" name="party_zip_code_optional"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Masukkan Kode Pos" required/>
-                                        </div>
-                                    </div>
-                                    <div class="flex">
-                                        <label for="party_address_optional"
-                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
-                                        </label>
-                                        <div class="flex-[4]">
-                                            <textarea id="party_address_optional" name="party_address_optional" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    )
-                }
+                                                                                            {form.receiver_village && (
+                                                                                                <div class="flex flex-col gap-4">
+                                                                                                    <div class="flex">
+                                                                                                        <label for="receiver_zip_code"
+                                                                                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                        </label>
+                                                                                                        <div class="flex-[4]">
+                                                                                                            <input type="text" id="receiver_zip_code" name="receiver_zip_code"
+                                                                                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                                                                                placeholder="Masukkan Kode Pos" requireddd/>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="flex">
+                                                                                                        <label for="receiver_address"
+                                                                                                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                                                                                                        </label>
+                                                                                                        <div class="flex-[4]">
+                                                                                                            <textarea id="receiver_address" name="receiver_address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan Nama Jalan..."></textarea>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            )}
+                                                                                        </div>
+                                                                                    )
+                                                                                }
 
-                ReactDOM.render(<FormAddressOptional />,document.getElementById('formAddressOptional'))
-            </script>
+                                                                                ReactDOM.render(<FormAddressOptional />,document.getElementById('formAddressOptional'))
+                                                                            </script>
 
     <script>
         function checkbutton() {

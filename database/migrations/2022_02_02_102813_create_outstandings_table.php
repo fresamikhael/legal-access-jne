@@ -38,6 +38,7 @@ class CreateOutstandingsTable extends Migration
             $table->string('file_billing_proof');
             $table->string('file_deed_company')->nullable();
             $table->string('file_nib')->nullable();
+
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');

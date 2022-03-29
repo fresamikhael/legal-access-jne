@@ -59,30 +59,32 @@ class CustomerDisputeController extends Controller
         // $id = $data['id'];
         $user_id = $request->user_id;
 
-        $validatedData = $request->validate([
-            'id' => 'required',
-            'user_id' => 'required',
-            'date' => 'required',
-            'case_type' => 'required',
-            'causative_factor' => 'required',
-            'causative_factor_others' => '',
-            'total_loss' => 'required',
-            'connote' => 'required',
-            'incident_date' => 'required',
-            'customer' => 'required',
-            'shipping_type' => 'required',
-            'assurance' => 'required',
-            'incident_chronology' => 'required',
-            'shipping_form' => 'required',
-            'detail_shipping_form' => 'required',
-            'file_witness_testimony' => 'required',
-            'file_letter_document' => 'required',
-            'file_claim_form_document' => 'required',
-            'file_other_document' => 'required',
-            'file_evidence' => 'required',
-            'file_document_completeness' => 'required',
-            'file_other_evidence' => 'required',
-        ]);
+        $validatedData = $request->all();
+
+        // $validatedData = $request->validate([
+        //     'id' => 'required',
+        //     'user_id' => 'required',
+        //     'date' => 'required',
+        //     'case_type' => 'required',
+        //     'causative_factor' => 'required',
+        //     'causative_factor_others' => '',
+        //     'total_loss' => 'required',
+        //     'connote' => 'required',
+        //     'incident_date' => 'required',
+        //     'customer' => 'required',
+        //     'shipping_type' => 'required',
+        //     'assurance' => 'required',
+        //     'incident_chronology' => 'required',
+        //     'shipping_form' => 'required',
+        //     'detail_shipping_form' => 'required',
+        //     'file_witness_testimony' => 'required',
+        //     'file_letter_document' => 'required',
+        //     'file_claim_form_document' => 'required',
+        //     'file_other_document' => 'required',
+        //     'file_evidence' => 'required',
+        //     'file_document_completeness' => 'required',
+        //     'file_other_evidence' => 'required',
+        // ]);
         #
         $id = $validatedData['id'];
         // $validatedData2 = $request->validate([
@@ -93,13 +95,15 @@ class CustomerDisputeController extends Controller
 
         // $data = $request->all();
 
-        $name = time() . '-' . $request->file('file_witness_testimony')->getClientOriginalName();
-        $name2 = time() . '-' . $request->file('file_letter_document')->getClientOriginalName();
-        $name3 = time() . '-' . $request->file('file_claim_form_document')->getClientOriginalName();
-        $name4 = time() . '-' . $request->file('file_other_document')->getClientOriginalName();
-        $name5 = time() . '-' . $request->file('file_evidence')->getClientOriginalName();
-        $name6 = time() . '-' . $request->file('file_document_completeness')->getClientOriginalName();
-        $name7 = time() . '-' . $request->file('file_other_evidence')->getClientOriginalName();
+        $name = time() . '-' . $request->file('file_connote')->getClientOriginalName();
+        $name2 = time() . '-' . $request->file('file_orion')->getClientOriginalName();
+        $name3 = time() . '-' . $request->file('file_pod')->getClientOriginalName();
+        $name4 = time() . '-' . $request->file('file_customer_case_form')->getClientOriginalName();
+        $name5 = time() . '-' . $request->file('file_destination_chronology')->getClientOriginalName();
+        $name6 = time() . '-' . $request->file('file_orion_chronology')->getClientOriginalName();
+        $name7 = time() . '-' . $request->file('file_cs_chronology')->getClientOriginalName();
+        $name8 = time() . '-' . $request->file('file_subpoena')->getClientOriginalName();
+        $name9 = time() . '-' . $request->file('file_cs_chronology')->getClientOriginalName();
 
         // $path = $request->file('file_witness_testimony')->store('public/files');
         // $path2= $request->file('file_letter_document')->store('public/files');
@@ -109,14 +113,15 @@ class CustomerDisputeController extends Controller
         // $path6 = $request->file('file_document_completeness')->store('public/files');
         // $path7 = $request->file('file_other_evidence')->store('public/files');
 
-        $validatedData['file_witness_testimony'] = $request->file('file_witness_testimony')->storeAs('public/litigation', $name, 'public');
-        $validatedData['file_letter_document'] = $request->file('file_letter_document')->storeAs('public/litigation', $name2, 'public');
-        $validatedData['file_claim_form_document'] = $request->file('file_claim_form_document')->storeAs('public/litigation', $name3, 'public');
-        $validatedData['file_other_document'] = $request->file('file_other_document')->storeAs('public/litigation', $name4, 'public');
-        $validatedData['file_evidence'] = $request->file('file_evidence')->storeAs('public/litigation', $name5, 'public');
-        $validatedData['file_document_completeness'] = $request->file('file_document_completeness')->storeAs('public/litigation', $name6, 'public');
-        $validatedData['file_other_evidence'] = $request->file('file_other_evidence')->storeAs('public/litigation', $name7, 'public');
-
+        $validatedData['file_connote'] = $request->file('file_connote')->storeAs('public/litigation', $name, 'public');
+        $validatedData['file_orion'] = $request->file('file_orion')->storeAs('public/litigation', $name2, 'public');
+        $validatedData['file_pod'] = $request->file('file_pod')->storeAs('public/litigation', $name3, 'public');
+        $validatedData['file_customer_case_form'] = $request->file('file_customer_case_form')->storeAs('public/litigation', $name4, 'public');
+        $validatedData['file_destination_chronology'] = $request->file('file_destination_chronology')->storeAs('public/litigation', $name5, 'public');
+        $validatedData['file_orion_chronology'] = $request->file('file_orion_chronology')->storeAs('public/litigation', $name6, 'public');
+        $validatedData['file_cs_chronology'] = $request->file('file_cs_chronology')->storeAs('public/litigation', $name7, 'public');
+        $validatedData['file_subpoena'] = $request->file('file_subpoena')->storeAs('public/litigation', $name8, 'public');
+        $validatedData['file_procuration'] = $request->file('file_procuration')->storeAs('public/litigation', $name9, 'public');
         // $save = new CustomerDispute;
 
         // $save->name = $name;

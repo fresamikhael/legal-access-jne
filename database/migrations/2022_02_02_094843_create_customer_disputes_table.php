@@ -45,8 +45,8 @@ class CreateCustomerDisputesTable extends Migration
             $table->string('connote');
             $table->string('customer');
             $table->string('shipping_type');
-            $table->boolean('assurance');
-            $table->boolean('assurance_nominal')->nullable();
+            $table->string('assurance');
+            $table->string('assurance_nominal')->nullable();
 
             $table->text('incident_chronology');
             $table->string('shipping_form');
