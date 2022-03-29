@@ -57,22 +57,22 @@ class OtherController extends Controller
     public function store(Request $request)
     {
 
-        $validatedData = $request->validate([
-            'id' => 'required',
-            'user_id' => 'required',
-            'date' => 'required',
-            'party_name' => 'required',
-            'department' => 'required',
-            'document_number' => 'required',
-            'total_loss' => 'required',
-            'incident_chronology' => 'required',
-            'file_document' => 'required',
-            'file_proof1' => 'required',
-            'file_proof2' => 'required',
-            'file_proof3' => 'required',
-            'file_disposition' => 'required',
-            'file_other_document' => 'required',
-        ]);
+        // $validatedData = $request->validate([
+        //     'id' => 'required',
+        //     'user_id' => 'required',
+        //     'date' => 'required',
+        //     'party_name' => 'required',
+        //     'department' => 'required',
+        //     'document_number' => 'required',
+        //     'total_loss' => 'required',
+        //     'incident_chronology' => 'required',
+        //     'file_document' => 'required',
+        //     'file_proof1' => 'required',
+        //     'file_proof2' => 'required',
+        //     'file_proof3' => 'required',
+        //     'file_disposition' => 'required',
+        //     'file_other_document' => 'required',
+        // ]);
         #
         // $validatedData2 = $request->validate([
         //     // 'id' => 'required',
@@ -80,22 +80,23 @@ class OtherController extends Controller
         // ]);
         // $validatedData[;'']
         // $data = $request->all();
+        $validatedData = $request->all();
         $id = $validatedData['id'];
         $user_id = $request->user_id;
 
         $name = $request->file('file_document')->getClientOriginalName();
-        $name2 = $request->file('file_proof1')->getClientOriginalName();
-        $name3 = $request->file('file_proof2')->getClientOriginalName();
-        $name4 = $request->file('file_proof3')->getClientOriginalName();
-        $name5 = $request->file('file_disposition')->getClientOriginalName();
-        $name6 = $request->file('file_other_document')->getClientOriginalName();
+        $name2 = $request->file('file_proof')->getClientOriginalName();
+        // $name3 = $request->file('file_proof2')->getClientOriginalName();
+        // $name4 = $request->file('file_proof3')->getClientOriginalName();
+        // $name5 = $request->file('file_disposition')->getClientOriginalName();
+        // $name6 = $request->file('file_other_document')->getClientOriginalName();
 
         $validatedData['file_document'] = $request->file('file_document')->storeAs('public/litigation', $name, 'public');
-        $validatedData['file_proof1'] = $request->file('file_proof1')->storeAs('public/litigation', $name2, 'public');
-        $validatedData['file_proof2'] = $request->file('file_proof2')->storeAs('public/litigation', $name3, 'public');
-        $validatedData['file_proof3'] = $request->file('file_proof3')->storeAs('public/litigation', $name4, 'public');
-        $validatedData['file_disposition'] = $request->file('file_disposition')->storeAs('public/litigation', $name5, 'public');
-        $validatedData['file_other_document'] = $request->file('file_other_document')->storeAs('public/litigation', $name6, 'public');
+        $validatedData['file_proof'] = $request->file('file_proof')->storeAs('public/litigation', $name2, 'public');
+        // $validatedData['file_proof2'] = $request->file('file_proof2')->storeAs('public/litigation', $name3, 'public');
+        // $validatedData['file_proof3'] = $request->file('file_proof3')->storeAs('public/litigation', $name4, 'public');
+        // $validatedData['file_disposition'] = $request->file('file_disposition')->storeAs('public/litigation', $name5, 'public');
+        // $validatedData['file_other_document'] = $request->file('file_other_document')->storeAs('public/litigation', $name6, 'public');
 
 
 

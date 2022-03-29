@@ -56,47 +56,51 @@ class OutstandingController extends Controller
     public function store(Request $request)
     {
 
-        $validatedData = $request->validate([
-            'id' => 'required',
-            'user_id' => 'required',
-            'date' => 'required',
-            'company_name' => 'required',
-            'department' => 'required',
-            'agreement_number' => 'required',
-            'total_outstanding' => 'required',
-            'from_date' => 'required',
-            'till_date' => 'required',
-            'incident_chronology' => 'required',
-            'file_data_recap' => 'required',
-            'file_document_proof' => 'required',
-            'file_agreement' => 'required',
-            'file_billing_proof' => 'required',
-            'file_disposition' => 'required',
-            'file_other_document' => 'required',
-        ]);
+        // $validatedData = $request->validate([
+        //     'id' => 'required',
+        //     'user_id' => 'required',
+        //     'date' => 'required',
+        //     'company_name' => 'required',
+        //     'department' => 'required',
+        //     'agreement_number' => 'required',
+        //     'total_outstanding' => 'required',
+        //     'from_date' => 'required',
+        //     'till_date' => 'required',
+        //     'incident_chronology' => 'required',
+        //     'file_data_recap' => 'required',
+        //     'file_document_proof' => 'required',
+        //     'file_agreement' => 'required',
+        //     'file_billing_proof' => 'required',
+        //     'file_disposition' => 'required',
+        //     'file_other_document' => 'required',
+        // ]);
         #
         // $validatedData2 = $request->validate([
         //     // 'id' => 'required',
 
+        $validatedData = $request->all();
+        // dd($validatedData);
+
+        // dd($validatedData);
         // ]);
         // $validatedData[;'']
         // $data = $request->all();
         $id = $validatedData['id'];
         $user_id = $request->user_id;
 
-        $name = $request->file('file_data_recap')->getClientOriginalName();
-        $name2 = $request->file('file_document_proof')->getClientOriginalName();
-        $name3 = $request->file('file_agreement')->getClientOriginalName();
+        $name = $request->file('file_pcrf')->getClientOriginalName();
+        $name2 = $request->file('file_recapitulation')->getClientOriginalName();
+        $name3 = $request->file('file_packing_list')->getClientOriginalName();
         $name4 = $request->file('file_billing_proof')->getClientOriginalName();
-        $name5 = $request->file('file_disposition')->getClientOriginalName();
-        $name6 = $request->file('file_other_document')->getClientOriginalName();
+        $name5 = $request->file('file_deed_company')->getClientOriginalName();
+        $name6 = $request->file('file_nib')->getClientOriginalName();
 
-        $validatedData['file_data_recap'] = $request->file('file_data_recap')->storeAs('public/litigation', $name, 'public');
-        $validatedData['file_document_proof'] = $request->file('file_document_proof')->storeAs('public/litigation', $name2, 'public');
-        $validatedData['file_agreement'] = $request->file('file_agreement')->storeAs('public/litigation', $name3, 'public');
+        $validatedData['file_pcrf'] = $request->file('file_pcrf')->storeAs('public/litigation', $name, 'public');
+        $validatedData['file_recapitulation'] = $request->file('file_recapitulation')->storeAs('public/litigation', $name2, 'public');
+        $validatedData['file_packing_list'] = $request->file('file_packing_list')->storeAs('public/litigation', $name3, 'public');
         $validatedData['file_billing_proof'] = $request->file('file_billing_proof')->storeAs('public/litigation', $name4, 'public');
-        $validatedData['file_disposition'] = $request->file('file_disposition')->storeAs('public/litigation', $name5, 'public');
-        $validatedData['file_other_document'] = $request->file('file_other_document')->storeAs('public/litigation', $name6, 'public');
+        $validatedData['file_deed_company'] = $request->file('file_deed_company')->storeAs('public/litigation', $name5, 'public');
+        $validatedData['file_nib'] = $request->file('file_nib')->storeAs('public/litigation', $name6, 'public');
 
 
 
