@@ -1,6 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
+    @if (Session::get('message_success'))
+        <div class="bg-green-200 rounded-xl p-5 text-green-600">
+            {{ Session::get('message_success') }}
+        </div>
+    @endif
     <div class="flex">
         <img src="{{ asset('images/banner.png') }}" alt="Banner JNE" class="w-full">
     </div>

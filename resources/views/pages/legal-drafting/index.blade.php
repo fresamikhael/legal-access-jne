@@ -2,63 +2,65 @@
 
 @section('content')
     <div class="container mx-auto">
-        <div class="flex flex-col">
-            <h1 class="mx-2 my-2"> costumer </h1>
-            <div class="w-full">
-                <div class="p-4 mt-5 border-b border-gray-200 shadow">
-
-                    <table id="crudTable" class="p-4">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th class="text-xs text-gray-500">
-                                    ID
-                                </th>
-                                <th class="text-xs text-gray-500">
-                                    Name
-                                </th>
-                                <th class="text-xs text-gray-500">
-                                    Status
-                                </th>
-                                <th class="text-xs text-gray-500">
-                                    Action
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-white">
-
-                        </tbody>
-                    </table>
-
-
+        <div class="flex flex-col gap-5 mb-20">
+            <div>
+                <h1 class="mx-2 my-2 text-2xl font-semibold">Costumer</h1>
+                <div class="w-full">
+                    <div class="p-4 mt-5 border-b rounded-xl border-gray-200 shadow-md border">
+    
+                        <table id="crudTable" class="p-4">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="text-xs text-gray-500">
+                                        ID
+                                    </th>
+                                    <th class="text-xs text-gray-500">
+                                        Name
+                                    </th>
+                                    <th class="text-xs text-gray-500">
+                                        Status
+                                    </th>
+                                    <th class="text-xs text-gray-500">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+    
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <h1 class="mx-2 my-2"> Vendor & Supplier </h1>
-            <div class="w-full">
-                <div class="p-4 mt-5 border-b border-gray-200 shadow">
-
-                    <table id="crudTable2" class="p-4">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th class="text-xs text-gray-500">
-                                    ID
-                                </th>
-                                <th class="text-xs text-gray-500">
-                                    Name
-                                </th>
-                                <th class="text-xs text-gray-500">
-                                    Status
-                                </th>
-                                <th class="text-xs text-gray-500">
-                                    Action
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-white">
-
-                        </tbody>
-                    </table>
-
-
+            <div>
+                <h1 class="mx-2 my-2 text-2xl font-semibold"> Vendor & Supplier </h1>
+                <div class="w-full">
+                    <div class="p-4 mt-5 border-b border-gray-200 shadow-md border rounded-xl">
+    
+                        <table id="crudTable2" class="p-4">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="text-xs text-gray-500">
+                                        ID
+                                    </th>
+                                    <th class="text-xs text-gray-500">
+                                        Name
+                                    </th>
+                                    <th class="text-xs text-gray-500">
+                                        Status
+                                    </th>
+                                    <th class="text-xs text-gray-500">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+    
+                            </tbody>
+                        </table>
+    
+    
+                    </div>
                 </div>
             </div>
         </div>

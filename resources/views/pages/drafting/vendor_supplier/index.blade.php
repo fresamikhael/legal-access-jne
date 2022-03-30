@@ -4,6 +4,15 @@
     <div class="flex flex-col gap-4 mx-36 my-4">
         <h1 class="text-4xl mb-4 text-black capitalize font-medium">Vendor & Supplier</h1>
 
+        @if (Session::get('message_success'))
+            <div id="alert-3" class="flex p-4 mb-4 bg-green-100 rounded-lg dark:bg-green-200" role="alert">
+                <svg class="flex-shrink-0 w-5 h-5 text-green-700 dark:text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                <div class="ml-3 text-sm font-medium text-green-700 dark:text-green-800">
+                    {{ Session::get('message_success') }}
+                </div>
+            </div>
+        @endif
+        
         <form class="mt-4" method="POST" enctype="multipart/form-data" action="{{ route('vendor-post') }}">
             @csrf
 
@@ -58,7 +67,7 @@
                         <div class="flex-[4]">
                             <input type="text" id="party_name_optional" name="party_name_optional"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
+                                placeholder="">
                         </div>
                     </div>
 
@@ -338,7 +347,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">-
                                 Nomor Induk Berusaha (NIB)</label>
                             <div class="flex-[4]">
-                                <input name="file_nib"
+                                <input name="file_nib2"
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
@@ -350,7 +359,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">-
                                 Nomor Pokok Wajib Pajak (NPWP)</label>
                             <div class="flex-[4]">
-                                <input name="file_npwp"
+                                <input name="file_npwp2"
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
@@ -368,7 +377,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">-
                                 Izin Usaha & Izin Lokasi OSS</label>
                             <div class="flex-[4]">
-                                <input name="file_business_permit"
+                                <input name="file_business_permit2"
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
@@ -380,7 +389,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">-
                                 KTP Direksi</label>
                             <div class="flex-[4]">
-                                <input name="file_director_id_card"
+                                <input name="file_director_id_card2"
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="user_avatar" type="file" required>
                             </div>
@@ -388,10 +397,10 @@
                     </div>
                     <div class="col-span-2">
                         <div class="flex">
-                            <label for="file_other"
+                            <label for="file_other2"
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Lain-lain</label>
                             <div class="flex-[4]">
-                                <input name="file_other"
+                                <input name="file_other2"
                                     class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                     aria-describedby="user_avatar_help" id="file_other" type="file" required>
                             </div>

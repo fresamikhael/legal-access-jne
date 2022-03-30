@@ -47,11 +47,77 @@
                     <div class="flex">
                         <label for="text"
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama
-                            Pihak</label>
+                            Pihak
+                        </label>
                         <div class="flex-[4]">
-                            <input type="text" id="text" value="{{ $data->other->party_name }}"
+                            <input type="text" id="text" name="party_name" value="{{ $data->other->party_name }}"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" name="party_name" required>
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Alamat
+                            Pihak
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\Province::find($data->other->party_province)->name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\Regency::find($data->other->party_regency)->name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\District::find($data->other->party_district)->name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name"
+                                value="{{ App\Models\Village::find($data->other->party_village)->name }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name" value="{{ $data->other->party_zip_code }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <label for="text"
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">
+                        </label>
+                        <div class="flex-[4]">
+                            <input type="text" id="text" name="party_name" value="{{ $data->other->party_address }}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="" required>
                         </div>
                     </div>
                     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
@@ -76,30 +142,6 @@
                                 placeholder="" name="department" required>
                         </div>
                     </div>
-                </div>
-
-                <div class="flex flex-col gap-4">
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama
-                            Perusahaan/Customer</label>
-                        <div class="flex-[4]">
-                            <input type="text" id="text" name="company_name" value="{{ $data->other->party_name }}"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" readonly>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <label for="text"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Unit/Departemen/Divisi</label>
-                        <div class="flex-[4]">
-                            <input type="text" id="text" name="department" value="{{ $data->other->department }}"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" readonly>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-4">
                     <div class="flex">
                         <label for="text"
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nomor
@@ -141,120 +183,10 @@
                     <div class="col-span-2">
                         <div class="flex">
                             <label for="date"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Dokumen</label>
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">1.
+                                Dokumen*</label>
                             <div class="flex-[4]">
-                                {{-- <input value="{{ $data->other->file_document }}"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" type="text" name="file_document"
-                                    required> --}}
-                                <div class="flex flex-row">
-
-                                    <a href="{{ route('download-litigation', substr($data->other->file_document, 18)) }}"
-                                        style="font-size:24px ">
-                                        <div
-                                            class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                            Download
-                                            <i class="fa fa-download"></i>
-
-                                        </div>
-                                    </a>
-                                    {{-- {{ substr($data->file_disposition, 14) }} --}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-2">
-                        <div class="flex">
-                            <label for="date"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Bukti
-                                1</label>
-                            <div class="flex-[4]">
-                                {{-- <input value="{{ $data->other->file_proof1 }}"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" type="text" name="file_proof1"
-                                    required> --}}
-                                <div class="flex flex-row">
-
-                                    <a href="{{ route('download-litigation', substr($data->other->file_proof1, 18)) }}"
-                                        style="font-size:24px ">
-                                        <div
-                                            class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                            Download
-                                            <i class="fa fa-download"></i>
-
-                                        </div>
-                                    </a>
-                                    {{-- {{ substr($data->file_disposition, 14) }} --}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-2">
-                        <div class="flex">
-                            <label for="date"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Bukti
-                                2</label>
-                            <div class="flex-[4]">
-                                {{-- <input value="{{ $data->other->file_proof2 }}"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" type="text" name="file_proof2"
-                                    required> --}}
-                                <div class="flex flex-row">
-
-                                    <a href="{{ route('download-litigation', substr($data->other->file_proof2, 18)) }}"
-                                        style="font-size:24px ">
-                                        <div
-                                            class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                            Download
-                                            <i class="fa fa-download"></i>
-
-                                        </div>
-                                    </a>
-                                    {{-- {{ substr($data->file_disposition, 14) }} --}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-2">
-                        <div class="flex">
-                            <label for="date"
-                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Bukti
-                                3</label>
-                            <div class="flex-[4]">
-                                {{-- <input value="{{ $data->other->file_proof3 }}"
-                                    class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                    aria-describedby="user_avatar_help" id="user_avatar" type="text" name="file_proof3"
-                                    required> --}}
-                                <div class="flex flex-row">
-
-                                    <a href="{{ route('download-litigation', substr($data->other->file_proof3, 18)) }}"
-                                        style="font-size:24px ">
-                                        <div
-                                            class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                            Download
-                                            <i class="fa fa-download"></i>
-
-                                        </div>
-                                    </a>
-                                    {{-- {{ substr($data->file_disposition, 14) }} --}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-4 mb-4">
-                    <div class="flex">
-                        <label for="date"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Disposisi</label>
-                        <div class="flex-[4]">
-                            {{-- <input value="{{ $data->other->file_disposition }}"
-                                class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                aria-describedby="user_avatar_help" id="user_avatar" type="text" name="file_disposition"
-                                required> --}}
-                            <div class="flex flex-row">
-
-                                <a href="{{ route('download-litigation', substr($data->other->file_disposition, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->other->file_document, 18)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download
@@ -262,33 +194,38 @@
 
                                     </div>
                                 </a>
-                                {{-- {{ substr($data->file_disposition, 14) }} --}}
                             </div>
                         </div>
                     </div>
-                    <div class="flex">
-                        <label for="date"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Dokumen
-                            Lainnya</label>
-                        <div class="flex-[4]">
-                            {{-- <input value="{{ $data->other->file_other_document }}"
-                                class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                aria-describedby="user_avatar_help" id="user_avatar" type="text" name="file_other_document"
-                                required> --}}
-                            <div class="flex flex-row">
-
-                                <a href="{{ route('download-litigation', substr($data->other->file_other_document, 18)) }}"
+                    <div class="col-span-2">
+                        <div class="flex">
+                            <label for="date"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">2.
+                                Bukti*</label>
+                            <div class="flex-[4]">
+                                <a href="{{ route('download-litigation', substr($data->other->file_proof, 18)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download
                                         <i class="fa fa-download"></i>
-
                                     </div>
                                 </a>
-                                {{-- {{ substr($data->file_disposition, 14) }} --}}
                             </div>
                         </div>
                     </div>
+                    {{-- <div class="col-span-2">
+                        <div class="flex">
+                            <label for="date"
+                                class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">3.
+                                Dokumen Tambahan</label>
+                            <div class="flex-[4]">
+                                <input
+                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    aria-describedby="user_avatar_help" id="user_avatar" type="file" name="file_documents"
+                                    required>
+                            </div>
+                        </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

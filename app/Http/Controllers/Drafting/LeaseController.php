@@ -50,7 +50,7 @@ class LeaseController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        dd($data);
+
         $name1 = $request->file('file_director_disposition')->getClientOriginalName();
         $name2 = $request->file('file_internal_memo')->getClientOriginalName();
         $name3 = $request->file('file_internal_memo_optional')->getClientOriginalName();
