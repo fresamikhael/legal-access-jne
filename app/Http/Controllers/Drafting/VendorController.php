@@ -51,7 +51,7 @@ class VendorController extends Controller
     {
 
         $data = $request->all();
-        dd($data);
+        // dd($data);
         $name1 = $request->file('file_deed_of_company')->getClientOriginalName();
         $name2 = $request->file('file_nib')->getClientOriginalName();
         $name3 = $request->file('file_npwp')->getClientOriginalName();
