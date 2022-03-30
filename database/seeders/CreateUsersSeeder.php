@@ -43,7 +43,7 @@ class CreateUsersSeeder extends Seeder
                 'id' => 'USR004',
                 'name' => 'Udin',
                 'username' => 'udin',
-                'role' => 'LEGALLITIGASI1',
+                'role' => 'LEGALLEASE',
                 'email' => 'udin@jne.co.id',
                 'password' => bcrypt('udin'),
             ],

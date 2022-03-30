@@ -236,6 +236,7 @@ class LeaseController extends Controller
             $file->move('Drafting', $filename); 
         }
         
+        $data['user_id'] = auth()->user()->id;
         // $save = new Permit();
 
         // $save->name = $name1;

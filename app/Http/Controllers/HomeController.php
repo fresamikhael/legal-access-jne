@@ -42,6 +42,8 @@ class HomeController extends Controller
             return redirect()->route('legal-manager-dashboard');
         } elseif (auth()->user()->role == 'CONTRACTBUSINESS') {
             return redirect()->route('cd-dashboard');
+        } elseif (auth()->user()->role == 'LEGALLEASE') {
+            return redirect()->route('legal-lease-dashboard');
         } elseif (auth()->user()->role == 'USER') {
             return view('welcome', [
                 'total_submission' => $total_submission
