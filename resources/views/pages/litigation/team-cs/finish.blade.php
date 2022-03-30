@@ -50,7 +50,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar"
                                     name="file_consumer_dispute_case_form" type="text"> --}}
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-litigation', substr($data->file_consumer_dispute_case_form, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->file_consumer_dispute_case_form, 16)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -302,7 +302,7 @@
                             Surat Tanggapan</label>
                         <div class="flex-[4]">
                             <input name="file_response_letter"
-                                class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                 aria-describedby="user_avatar_help" id="user_avatar" type="file">
                         </div>
                     </div>
@@ -314,7 +314,7 @@
                             Pengiriman</label>
                         <div class="flex-[4]">
                             <input name="file_proof_shipment"
-                                class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                 aria-describedby="user_avatar_help" id="user_avatar" type="file">
                         </div>
                     </div>

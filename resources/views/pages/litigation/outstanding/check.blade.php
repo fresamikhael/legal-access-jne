@@ -427,7 +427,7 @@
                                     Kasus Sengketa Konsumen</label>
                                 <div class="flex-[4]">
                                     <input
-                                        class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                         aria-describedby="user_avatar_help" id="user_avatar"
                                         name="file_consumer_dispute_case_form" type="file" required>
                                 </div>
@@ -440,7 +440,7 @@
                                     Pengiriman Operasional</label>
                                 <div class="flex-[4]">
                                     <input
-                                        class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                         aria-describedby="user_avatar_help" id="user_avatar"
                                         name="file_operational_delivery_chronology" type="file" required>
                                 </div>
@@ -453,7 +453,7 @@
                                     Penanganan CS</label>
                                 <div class="flex-[4]">
                                     <input
-                                        class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                         aria-describedby="user_avatar_help" id="user_avatar"
                                         name="file_cs_handling_chronology" type="file" required>
                                 </div>
@@ -466,7 +466,7 @@
                                     POD</label>
                                 <div class="flex-[4]">
                                     <input
-                                        class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                         aria-describedby="user_avatar_help" id="user_avatar" name="file_pod_evidence"
                                         type="file" required>
                                 </div>
@@ -479,7 +479,7 @@
                                     Tanda Terima</label>
                                 <div class="flex-[4]">
                                     <input
-                                        class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                         aria-describedby="user_avatar_help" id="user_avatar" name="file_receipt_proof"
                                         type="file" required>
                                 </div>
@@ -495,7 +495,7 @@
                                     Dokumentasi 1</label>
                                 <div class="flex-[4]">
                                     <input
-                                        class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                         aria-describedby="user_avatar_help" id="user_avatar"
                                         name="file_proof_of_documentation1" type="file" required>
                                 </div>
@@ -508,7 +508,7 @@
                                     Dokumentasi 2</label>
                                 <div class="flex-[4]">
                                     <input
-                                        class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                         aria-describedby="user_avatar_help" id="user_avatar"
                                         name="file_proof_of_documentation2" type="file" required>
                                 </div>
@@ -521,7 +521,7 @@
                                     Dokumentasi 3</label>
                                 <div class="flex-[4]">
                                     <input
-                                        class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                         aria-describedby="user_avatar_help" id="user_avatar"
                                         name="file_proof_of_documentation3" type="file" required>
                                 </div>
@@ -534,7 +534,7 @@
                                     pendukung lainnya</label>
                                 <div class="flex-[4]">
                                     <input
-                                        class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                         aria-describedby="user_avatar_help" id="user_avatar"
                                         name="file_other_supporting_document" type="file" required>
                                 </div>
@@ -547,7 +547,7 @@
                                     penawaran ganti kerugian</label>
                                 <div class="flex-[4]">
                                     <input
-                                        class="p-2.5 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                         aria-describedby="user_avatar_help" id="user_avatar" name="nominal_indemnity_offer"
                                         type="number" required>
                                 </div>

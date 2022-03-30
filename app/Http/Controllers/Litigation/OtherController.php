@@ -57,32 +57,8 @@ class OtherController extends Controller
 
     public function store(Request $request)
     {
-
-        // $validatedData = $request->validate([
-        //     'id' => 'required',
-        //     'user_id' => 'required',
-        //     'date' => 'required',
-        //     'party_name' => 'required',
-        //     'department' => 'required',
-        //     'document_number' => 'required',
-        //     'total_loss' => 'required',
-        //     'incident_chronology' => 'required',
-        //     'file_document' => 'required',
-        //     'file_proof1' => 'required',
-        //     'file_proof2' => 'required',
-        //     'file_proof3' => 'required',
-        //     'file_disposition' => 'required',
-        //     'file_other_document' => 'required',
-        // ]);
-        #
-        // $validatedData2 = $request->validate([
-        //     // 'id' => 'required',
-
-        // ]);
-        // $validatedData[;'']
-        // $data = $request->all();
-        $validatedData = $request->all();
-        $id = $validatedData['id'];
+        $data = $request->all();
+        $id = $data['id'];
         $user_id = $request->user_id;
 
         if ($request->file('file_document')) {
@@ -90,7 +66,7 @@ class OtherController extends Controller
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_document'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
 
         if ($request->file('file_proof')) {
@@ -98,35 +74,10 @@ class OtherController extends Controller
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_proof'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
 
-
-        // $path = $request->file('file_document')->store('public/files');
-        // $path2= $request->file('file_proof1')->store('public/files');
-        // $path3 = $request->file('file_proof2')->store('public/files');
-        // $path4 = $request->file('file_proof3')->store('public/files');
-        // $path5 = $request->file('file_disposition')->store('public/files');
-        // $path6 = $request->file('file_other_document')->store('public/files');
-
-        // $save = new Other;
-
-        // $save->name = $name;
-        // $save->name = $name2;
-        // $save->name = $name3;
-        // $save->name = $name4;
-        // $save->name = $name5;
-        // $save->name = $name6;
-
-        // $save->path = $path;
-        // $save->path = $path2;
-        // $save->path = $path3;
-        // $save->path = $path4;
-        // $save->path = $path5;
-        // $save->path = $path6;
-
-        // UploadFile::create($validatedData2);
-        Other::create($validatedData);
+        Other::create($data);
         Cs::create(['form_id' => $id, 'user_id' => $user_id]);
 
         return redirect()->route('other-index')->with('message_success', 'Terima kasih atas pengajuan yang telah disampaikan. mohon untuk menunggu dikarenakan akan kami cek terlebih dahulu, mohon untuk dapat memeriksa pengajuan secara berkala.');

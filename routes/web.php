@@ -85,7 +85,8 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::prefix('/litigation')->group(function () {
-        Route::get('/', [LitigationController::class, 'index'])->name('litigation-index');
+        Route::get('/index', [LitigationController::class, 'index'])->name('litigation-index');
+        // Route::get('/ts', [LitigationController::class, 'index'])->name('litigation-indexx');
 
         Route::get('/customer-dispute', [CustomerDisputeController::class, 'index'])->name('customer-dispute-index');
         Route::get('/customer-dispute/check', [CustomerDisputeController::class, 'check'])->name('customer-dispute-check');

@@ -79,14 +79,14 @@ class OutstandingController extends Controller
         // $validatedData2 = $request->validate([
         //     // 'id' => 'required',
 
-        $validatedData = $request->all();
+        $data = $request->all();
         // dd($validatedData);
 
         // dd($validatedData);
         // ]);
         // $validatedData[;'']
         // $data = $request->all();
-        $id = $validatedData['id'];
+        $id = $data['id'];
         $user_id = $request->user_id;
 
         if ($request->file('file_pcrf')) {
@@ -94,42 +94,42 @@ class OutstandingController extends Controller
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_pcrf'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_recapitulation')) {
             $file = $request->file('file_recapitulation');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_recapitulation'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_packing_list')) {
             $file = $request->file('file_packing_list');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_packing_list'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_billing_proof')) {
             $file = $request->file('file_billing_proof');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_billing_proof'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_deed_company')) {
             $file = $request->file('file_deed_company');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_deed_company'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_nib')) {
             $file = $request->file('file_nib');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_nib'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
 
         // $path = $request->file('file_document')->store('public/files');
@@ -156,7 +156,7 @@ class OutstandingController extends Controller
         // $save->path = $path6;
 
         // UploadFile::create($validatedData2);
-        Outstanding::create($validatedData);
+        Outstanding::create($data);
         Cs::create(['form_id' => $id, 'user_id' => $user_id]);
 
         return redirect()->route('outstanding-index')->with('message_success', 'Terima kasih atas pengajuan yang telah disampaikan. mohon untuk menunggu dikarenakan akan kami cek terlebih dahulu, mohon untuk dapat memeriksa pengajuan secara berkala.');
