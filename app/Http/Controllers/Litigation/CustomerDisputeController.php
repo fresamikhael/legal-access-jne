@@ -8,6 +8,7 @@ use App\Models\Litigation\Cs;
 use App\Http\Controllers\Controller;
 use App\Models\Litigation\CustomerDispute;
 use App\Models\Province;
+use Illuminate\Support\Str;
 
 class CustomerDisputeController extends Controller
 {
@@ -95,15 +96,69 @@ class CustomerDisputeController extends Controller
 
         // $data = $request->all();
 
-        $name = time() . '-' . $request->file('file_connote')->getClientOriginalName();
-        $name2 = time() . '-' . $request->file('file_orion')->getClientOriginalName();
-        $name3 = time() . '-' . $request->file('file_pod')->getClientOriginalName();
-        $name4 = time() . '-' . $request->file('file_customer_case_form')->getClientOriginalName();
-        $name5 = time() . '-' . $request->file('file_destination_chronology')->getClientOriginalName();
-        $name6 = time() . '-' . $request->file('file_orion_chronology')->getClientOriginalName();
-        $name7 = time() . '-' . $request->file('file_cs_chronology')->getClientOriginalName();
-        $name8 = time() . '-' . $request->file('file_subpoena')->getClientOriginalName();
-        $name9 = time() . '-' . $request->file('file_cs_chronology')->getClientOriginalName();
+        if ($request->file('file_connote')) {
+            $file = $request->file('file_connote');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_connote'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_orion')) {
+            $file = $request->file('file_orion');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_orion'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_pod')) {
+            $file = $request->file('file_pod');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_pod'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_customer_case_form')) {
+            $file = $request->file('file_customer_case_form');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_customer_case_form'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_destination_chronology')) {
+            $file = $request->file('file_destination_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_destination_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_orion_chronology')) {
+            $file = $request->file('file_orion_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_orion_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_cs_chronology')) {
+            $file = $request->file('file_cs_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_cs_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_subpoena')) {
+            $file = $request->file('file_subpoena');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_subpoena'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_cs_chronology')) {
+            $file = $request->file('file_cs_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_cs_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
 
         // $path = $request->file('file_witness_testimony')->store('public/files');
         // $path2= $request->file('file_letter_document')->store('public/files');
@@ -113,15 +168,6 @@ class CustomerDisputeController extends Controller
         // $path6 = $request->file('file_document_completeness')->store('public/files');
         // $path7 = $request->file('file_other_evidence')->store('public/files');
 
-        $validatedData['file_connote'] = $request->file('file_connote')->storeAs('public/litigation', $name, 'public');
-        $validatedData['file_orion'] = $request->file('file_orion')->storeAs('public/litigation', $name2, 'public');
-        $validatedData['file_pod'] = $request->file('file_pod')->storeAs('public/litigation', $name3, 'public');
-        $validatedData['file_customer_case_form'] = $request->file('file_customer_case_form')->storeAs('public/litigation', $name4, 'public');
-        $validatedData['file_destination_chronology'] = $request->file('file_destination_chronology')->storeAs('public/litigation', $name5, 'public');
-        $validatedData['file_orion_chronology'] = $request->file('file_orion_chronology')->storeAs('public/litigation', $name6, 'public');
-        $validatedData['file_cs_chronology'] = $request->file('file_cs_chronology')->storeAs('public/litigation', $name7, 'public');
-        $validatedData['file_subpoena'] = $request->file('file_subpoena')->storeAs('public/litigation', $name8, 'public');
-        $validatedData['file_procuration'] = $request->file('file_procuration')->storeAs('public/litigation', $name9, 'public');
         // $save = new CustomerDispute;
 
         // $save->name = $name;

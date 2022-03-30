@@ -242,7 +242,10 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">1. Akta Perusahaan</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    @dd($data->file_deed_of_company)
+                                    {{-- @php
+                                        
+                                    @endphp
+                                    @dd($data->file_vendor_offer) --}}
                                     <a href="{{ route('download-Drafting', substr($data->file_vendor_offer, 16)) }}"
                                         style="font-size:24px ">
                                         <div

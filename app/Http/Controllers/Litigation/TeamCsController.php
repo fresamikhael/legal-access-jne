@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Litigation\Cs;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class TeamCsController extends Controller
 {
@@ -268,25 +269,69 @@ class TeamCsController extends Controller
 
         $item = Cs::findOrFail($id);
 
-        $name1 = time() . '-' . $request->file('file_consumer_dispute_case_form')->getClientOriginalName();
-        $name2 = time() . '-' . $request->file('file_operational_delivery_chronology')->getClientOriginalName();
-        $name3 = time() . '-' . $request->file('file_cs_handling_chronology')->getClientOriginalName();
-        $name4 = time() . '-' . $request->file('file_pod_evidence')->getClientOriginalName();
-        $name5 = time() . '-' . $request->file('file_receipt_proof')->getClientOriginalName();
-        $name6 = time() . '-' . $request->file('file_proof_of_documentation1')->getClientOriginalName();
-        $name7 = time() . '-' . $request->file('file_proof_of_documentation2')->getClientOriginalName();
-        $name8 = time() . '-' . $request->file('file_proof_of_documentation3')->getClientOriginalName();
-        $name9 = time() . '-' . $request->file('file_other_supporting_document')->getClientOriginalName();
-
-        $data['file_consumer_dispute_case_form'] = $request->file('file_consumer_dispute_case_form')->storeAs('public/litigation', $name1, 'public');
-        $data['file_operational_delivery_chronology'] = $request->file('file_operational_delivery_chronology')->storeAs('public/litigation', $name2, 'public');
-        $data['file_cs_handling_chronology'] = $request->file('file_cs_handling_chronology')->storeAs('public/litigation', $name3, 'public');
-        $data['file_pod_evidence'] = $request->file('file_pod_evidence')->storeAs('public/litigation', $name4, 'public');
-        $data['file_receipt_proof'] = $request->file('file_receipt_proof')->storeAs('public/litigation', $name5, 'public');
-        $data['file_proof_of_documentation1'] = $request->file('file_proof_of_documentation1')->storeAs('public/litigation', $name6, 'public');
-        $data['file_proof_of_documentation2'] = $request->file('file_proof_of_documentation2')->storeAs('public/litigation', $name7, 'public');
-        $data['file_proof_of_documentation3'] = $request->file('file_proof_of_documentation3')->storeAs('public/litigation', $name8, 'public');
-        $data['file_other_supporting_document'] = $request->file('file_other_supporting_document')->storeAs('public/litigation', $name9, 'public');
+        if ($request->file('file_consumer_dispute_case_form')) {
+            $file = $request->file('file_consumer_dispute_case_form');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_consumer_dispute_case_form'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_operational_delivery_chronology')) {
+            $file = $request->file('file_operational_delivery_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_operational_delivery_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_cs_handling_chronology')) {
+            $file = $request->file('file_cs_handling_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_cs_handling_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_pod_evidence')) {
+            $file = $request->file('file_pod_evidence');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_pod_evidence'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_receipt_proof')) {
+            $file = $request->file('file_receipt_proof');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_receipt_proof'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation1')) {
+            $file = $request->file('file_proof_of_documentation1');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation1'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation2')) {
+            $file = $request->file('file_proof_of_documentation2');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation2'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation3')) {
+            $file = $request->file('file_proof_of_documentation3');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation3'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_other_supporting_document')) {
+            $file = $request->file('file_other_supporting_document');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_other_supporting_document'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
 
         $item->update([
             'file_consumer_dispute_case_form' => $data['file_consumer_dispute_case_form'],
@@ -319,25 +364,69 @@ class TeamCsController extends Controller
 
         $item = Cs::findOrFail($id);
 
-        $name1 = time() . '-' . $request->file('file_consumer_dispute_case_form')->getClientOriginalName();
-        $name2 = time() . '-' . $request->file('file_operational_delivery_chronology')->getClientOriginalName();
-        $name3 = time() . '-' . $request->file('file_cs_handling_chronology')->getClientOriginalName();
-        $name4 = time() . '-' . $request->file('file_pod_evidence')->getClientOriginalName();
-        $name5 = time() . '-' . $request->file('file_receipt_proof')->getClientOriginalName();
-        $name6 = time() . '-' . $request->file('file_proof_of_documentation1')->getClientOriginalName();
-        $name7 = time() . '-' . $request->file('file_proof_of_documentation2')->getClientOriginalName();
-        $name8 = time() . '-' . $request->file('file_proof_of_documentation3')->getClientOriginalName();
-        $name9 = time() . '-' . $request->file('file_other_supporting_document')->getClientOriginalName();
-
-        $data['file_consumer_dispute_case_form'] = $request->file('file_consumer_dispute_case_form')->storeAs('public/litigation', $name1, 'public');
-        $data['file_operational_delivery_chronology'] = $request->file('file_operational_delivery_chronology')->storeAs('public/litigation', $name2, 'public');
-        $data['file_cs_handling_chronology'] = $request->file('file_cs_handling_chronology')->storeAs('public/litigation', $name3, 'public');
-        $data['file_pod_evidence'] = $request->file('file_pod_evidence')->storeAs('public/litigation', $name4, 'public');
-        $data['file_receipt_proof'] = $request->file('file_receipt_proof')->storeAs('public/litigation', $name5, 'public');
-        $data['file_proof_of_documentation1'] = $request->file('file_proof_of_documentation1')->storeAs('public/litigation', $name6, 'public');
-        $data['file_proof_of_documentation2'] = $request->file('file_proof_of_documentation2')->storeAs('public/litigation', $name7, 'public');
-        $data['file_proof_of_documentation3'] = $request->file('file_proof_of_documentation3')->storeAs('public/litigation', $name8, 'public');
-        $data['file_other_supporting_document'] = $request->file('file_other_supporting_document')->storeAs('public/litigation', $name9, 'public');
+        if ($request->file('file_consumer_dispute_case_form')) {
+            $file = $request->file('file_consumer_dispute_case_form');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_consumer_dispute_case_form'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_operational_delivery_chronology')) {
+            $file = $request->file('file_operational_delivery_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_operational_delivery_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_cs_handling_chronology')) {
+            $file = $request->file('file_cs_handling_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_cs_handling_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_pod_evidence')) {
+            $file = $request->file('file_pod_evidence');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_pod_evidence'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_receipt_proof')) {
+            $file = $request->file('file_receipt_proof');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_receipt_proof'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation1')) {
+            $file = $request->file('file_proof_of_documentation1');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation1'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation2')) {
+            $file = $request->file('file_proof_of_documentation2');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation2'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation3')) {
+            $file = $request->file('file_proof_of_documentation3');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation3'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_other_supporting_document')) {
+            $file = $request->file('file_other_supporting_document');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_other_supporting_document'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
 
         $item->update([
             'file_consumer_dispute_case_form' => $data['file_consumer_dispute_case_form'],
@@ -370,25 +459,69 @@ class TeamCsController extends Controller
 
         $item = Cs::findOrFail($id);
 
-        $name1 = time() . '-' . $request->file('file_consumer_dispute_case_form')->getClientOriginalName();
-        $name2 = time() . '-' . $request->file('file_operational_delivery_chronology')->getClientOriginalName();
-        $name3 = time() . '-' . $request->file('file_cs_handling_chronology')->getClientOriginalName();
-        $name4 = time() . '-' . $request->file('file_pod_evidence')->getClientOriginalName();
-        $name5 = time() . '-' . $request->file('file_receipt_proof')->getClientOriginalName();
-        $name6 = time() . '-' . $request->file('file_proof_of_documentation1')->getClientOriginalName();
-        $name7 = time() . '-' . $request->file('file_proof_of_documentation2')->getClientOriginalName();
-        $name8 = time() . '-' . $request->file('file_proof_of_documentation3')->getClientOriginalName();
-        $name9 = time() . '-' . $request->file('file_other_supporting_document')->getClientOriginalName();
-
-        $data['file_consumer_dispute_case_form'] = $request->file('file_consumer_dispute_case_form')->storeAs('public/litigation', $name1, 'public');
-        $data['file_operational_delivery_chronology'] = $request->file('file_operational_delivery_chronology')->storeAs('public/litigation', $name2, 'public');
-        $data['file_cs_handling_chronology'] = $request->file('file_cs_handling_chronology')->storeAs('public/litigation', $name3, 'public');
-        $data['file_pod_evidence'] = $request->file('file_pod_evidence')->storeAs('public/litigation', $name4, 'public');
-        $data['file_receipt_proof'] = $request->file('file_receipt_proof')->storeAs('public/litigation', $name5, 'public');
-        $data['file_proof_of_documentation1'] = $request->file('file_proof_of_documentation1')->storeAs('public/litigation', $name6, 'public');
-        $data['file_proof_of_documentation2'] = $request->file('file_proof_of_documentation2')->storeAs('public/litigation', $name7, 'public');
-        $data['file_proof_of_documentation3'] = $request->file('file_proof_of_documentation3')->storeAs('public/litigation', $name8, 'public');
-        $data['file_other_supporting_document'] = $request->file('file_other_supporting_document')->storeAs('public/litigation', $name9, 'public');
+        if ($request->file('file_consumer_dispute_case_form')) {
+            $file = $request->file('file_consumer_dispute_case_form');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_consumer_dispute_case_form'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_operational_delivery_chronology')) {
+            $file = $request->file('file_operational_delivery_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_operational_delivery_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_cs_handling_chronology')) {
+            $file = $request->file('file_cs_handling_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_cs_handling_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_pod_evidence')) {
+            $file = $request->file('file_pod_evidence');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_pod_evidence'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_receipt_proof')) {
+            $file = $request->file('file_receipt_proof');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_receipt_proof'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation1')) {
+            $file = $request->file('file_proof_of_documentation1');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation1'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation2')) {
+            $file = $request->file('file_proof_of_documentation2');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation2'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation3')) {
+            $file = $request->file('file_proof_of_documentation3');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation3'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_other_supporting_document')) {
+            $file = $request->file('file_other_supporting_document');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_other_supporting_document'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
 
         $item->update([
             'file_consumer_dispute_case_form' => $data['file_consumer_dispute_case_form'],
@@ -436,25 +569,69 @@ class TeamCsController extends Controller
 
         $item = Cs::findOrFail($id);
 
-        $name1 = time() . '-' . $request->file('file_consumer_dispute_case_form')->getClientOriginalName();
-        $name2 = time() . '-' . $request->file('file_operational_delivery_chronology')->getClientOriginalName();
-        $name3 = time() . '-' . $request->file('file_cs_handling_chronology')->getClientOriginalName();
-        $name4 = time() . '-' . $request->file('file_pod_evidence')->getClientOriginalName();
-        $name5 = time() . '-' . $request->file('file_receipt_proof')->getClientOriginalName();
-        $name6 = time() . '-' . $request->file('file_proof_of_documentation1')->getClientOriginalName();
-        $name7 = time() . '-' . $request->file('file_proof_of_documentation2')->getClientOriginalName();
-        $name8 = time() . '-' . $request->file('file_proof_of_documentation3')->getClientOriginalName();
-        $name9 = time() . '-' . $request->file('file_other_supporting_document')->getClientOriginalName();
-
-        $data['file_consumer_dispute_case_form'] = $request->file('file_consumer_dispute_case_form')->storeAs('public/litigation', $name1, 'public');
-        $data['file_operational_delivery_chronology'] = $request->file('file_operational_delivery_chronology')->storeAs('public/litigation', $name2, 'public');
-        $data['file_cs_handling_chronology'] = $request->file('file_cs_handling_chronology')->storeAs('public/litigation', $name3, 'public');
-        $data['file_pod_evidence'] = $request->file('file_pod_evidence')->storeAs('public/litigation', $name4, 'public');
-        $data['file_receipt_proof'] = $request->file('file_receipt_proof')->storeAs('public/litigation', $name5, 'public');
-        $data['file_proof_of_documentation1'] = $request->file('file_proof_of_documentation1')->storeAs('public/litigation', $name6, 'public');
-        $data['file_proof_of_documentation2'] = $request->file('file_proof_of_documentation2')->storeAs('public/litigation', $name7, 'public');
-        $data['file_proof_of_documentation3'] = $request->file('file_proof_of_documentation3')->storeAs('public/litigation', $name8, 'public');
-        $data['file_other_supporting_document'] = $request->file('file_other_supporting_document')->storeAs('public/litigation', $name9, 'public');
+        if ($request->file('file_consumer_dispute_case_form')) {
+            $file = $request->file('file_consumer_dispute_case_form');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_consumer_dispute_case_form'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_operational_delivery_chronology')) {
+            $file = $request->file('file_operational_delivery_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_operational_delivery_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_cs_handling_chronology')) {
+            $file = $request->file('file_cs_handling_chronology');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_cs_handling_chronology'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_pod_evidence')) {
+            $file = $request->file('file_pod_evidence');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_pod_evidence'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_receipt_proof')) {
+            $file = $request->file('file_receipt_proof');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_receipt_proof'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation1')) {
+            $file = $request->file('file_proof_of_documentation1');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation1'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation2')) {
+            $file = $request->file('file_proof_of_documentation2');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation2'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_of_documentation3')) {
+            $file = $request->file('file_proof_of_documentation3');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_of_documentation3'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_other_supporting_document')) {
+            $file = $request->file('file_other_supporting_document');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_other_supporting_document'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
 
         $item->update([
             'file_consumer_dispute_case_form' => $data['file_consumer_dispute_case_form'],
@@ -490,12 +667,20 @@ class TeamCsController extends Controller
 
         // if($request->file('file_response_letter'))
         // dd($data['file_response_letter']);
-        $name1 = time() . '-' . $request->file('file_response_letter')->getClientOriginalName();
-        $data['file_response_letter'] = $request->file('file_response_letter')->storeAs('public/litigation', $name1, 'public');
-
-        $name2 = time() . '-' . $request->file('file_proof_shipment')->getClientOriginalName();
-        $data['file_proof_shipment'] = $request->file('file_proof_shipment')->storeAs('public/litigation', $name2, 'public');
-
+        if ($request->file('file_response_letter')) {
+            $file = $request->file('file_response_letter');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_response_letter'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_proof_shipment')) {
+            $file = $request->file('file_proof_shipment');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof_shipment'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
         $item->update([
             'file_response_letter' => $data['file_response_letter'],
             'file_proof_shipment' => $data['file_proof_shipment'],
@@ -522,15 +707,28 @@ class TeamCsController extends Controller
 
         // if($request->file('file_response_letter'))
         // dd($data['file_response_letter']);
-        $name1 = $request->file('file_acceptance_letter')->getClientOriginalName();
-        $data['file_acceptance_letter'] = $request->file('file_acceptance_letter')->storeAs('public/files/file_acceptance_letter', $name1, 'public');
-
-        $name2 = $request->file('file_case_report')->getClientOriginalName();
-        $data['file_case_report'] = $request->file('file_case_report')->storeAs('public/files/file_case_report', $name2, 'public');
-
-        $name3 = $request->file('file_invoice')->getClientOriginalName();
-        $data['file_invoice'] = $request->file('file_invoice')->storeAs('public/files/file_invoice', $name3, 'public');
-
+        if ($request->file('file_acceptance_letter')) {
+            $file = $request->file('file_acceptance_letter');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_acceptance_letter'] = 'file_invoice/'.$filename;
+            $file->move('file_invoice', $filename); 
+        }
+        if ($request->file('file_case_report')) {
+            $file = $request->file('file_case_report');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_case_report'] = 'file_invoice/'.$filename;
+            $file->move('file_invoice', $filename); 
+        }
+        if ($request->file('file_invoice')) {
+            $file = $request->file('file_invoice');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_invoice'] = 'file_invoice/'.$filename;
+            $file->move('file_invoice', $filename); 
+        }
+        
         $item->update([
             'file_acceptance_letter' => $data['file_acceptance_letter'],
             'file_case_report' => $data['file_case_report'],

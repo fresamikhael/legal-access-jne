@@ -20,9 +20,16 @@ class DownloadController extends Controller
         $pathToFile = public_path('storage/public/litigation/' . $id);
         return response()->download($pathToFile);
     }
-    function downloadDrafting($id)
+    function downloadDrafting($path)
     {
-        $pathToFile = public_path('storage/public/Drafting/' . $id);
-        return response()->download($pathToFile);
+        $file= public_path('Drafting/' . $path);
+
+        $headers = array(
+            'Content-Type: application/pdf',
+        );
+
+        // return Response::download($file, 'filename.pdf', $headers);
+            // $pathToFile = public_path('storage/public/Drafting/' . $id);
+        return response()->download($file, $headers);
     }
 }

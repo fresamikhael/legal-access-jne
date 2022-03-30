@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Drafting\Lease;
 use App\Http\Controllers\Controller;
 use App\Models\Province;
+use Illuminate\Support\Str;
 
 class LeaseController extends Controller
 {
@@ -51,58 +52,190 @@ class LeaseController extends Controller
     {
         $data = $request->all();
 
-        $name1 = $request->file('file_director_disposition')->getClientOriginalName();
-        $name2 = $request->file('file_internal_memo')->getClientOriginalName();
-        $name3 = $request->file('file_internal_memo_optional')->getClientOriginalName();
-        $name4 = $request->file('file_id_card')->getClientOriginalName();
-        $name5 = $request->file('file_npwp')->getClientOriginalName();
-        $name6 = $request->file('file_kk')->getClientOriginalName();
-        $name7 = $request->file('file_mariagge_book')->getClientOriginalName();
-        $name8 = $request->file('file_director_id_card')->getClientOriginalName();
-        $name9 = $request->file('file_deed')->getClientOriginalName();
-        $name10 = $request->file('file_sk_menkumham')->getClientOriginalName();
-        $name11 = $request->file('file_business_permit')->getClientOriginalName();
-        $name12 = $request->file('file_nib')->getClientOriginalName();
-        $name13 = $request->file('file_npwp_company')->getClientOriginalName();
-        $name14 = $request->file('file_location_permit')->getClientOriginalName();
-        $name15 = $request->file('file_setificate')->getClientOriginalName();
-        $name16 = $request->file('file_imb')->getClientOriginalName();
-        $name17 = $request->file('file_sppt1')->getClientOriginalName();
-        $name18 = $request->file('file_sppt2')->getClientOriginalName();
-        $name19 = $request->file('file_sppt3')->getClientOriginalName();
-        $name20 = $request->file('file_procuration')->getClientOriginalName();
-        $name21 = $request->file('file_previous_agreement')->getClientOriginalName();
-        $name22 = $request->file('file_director_procuration')->getClientOriginalName();
-        $name23 = $request->file('file_others_1')->getClientOriginalName();
-        $name24 = $request->file('file_others_2')->getClientOriginalName();
-        $name25 = $request->file('file_others_3')->getClientOriginalName();
+        if ($request->file('file_director_disposition')) {
+            $file = $request->file('file_director_disposition');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_director_disposition'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
 
-        $data['file_director_disposition'] = $request->file('file_director_disposition')->storeAs('public/Drafting', $name1, 'public');
-        $data['file_internal_memo'] = $request->file('file_internal_memo')->storeAs('public/Drafting', $name2, 'public');
-        $data['file_internal_memo_optional'] = $request->file('file_internal_memo_optional')->storeAs('public/Drafting', $name3, 'public');
-        $data['file_id_card'] = $request->file('file_id_card')->storeAs('public/Drafting', $name4, 'public');
-        $data['file_npwp'] = $request->file('file_npwp')->storeAs('public/Drafting', $name5, 'public');
-        $data['file_kk'] = $request->file('file_kk')->storeAs('public/Drafting', $name6, 'public');
-        $data['file_mariagge_book'] = $request->file('file_mariagge_book')->storeAs('public/Drafting', $name7, 'public');
-        $data['file_director_id_card'] = $request->file('file_director_id_card')->storeAs('public/Drafting', $name8, 'public');
-        $data['file_deed'] = $request->file('file_deed')->storeAs('public/Drafting', $name9, 'public');
-        $data['file_sk_menkumham'] = $request->file('file_sk_menkumham')->storeAs('public/Drafting', $name10, 'public');
-        $data['file_business_permit'] = $request->file('file_business_permit')->storeAs('public/Drafting', $name11, 'public');
-        $data['file_nib'] = $request->file('file_nib')->storeAs('public/Drafting', $name12, 'public');
-        $data['file_npwp_company'] = $request->file('file_npwp_company')->storeAs('public/Drafting', $name13, 'public');
-        $data['file_location_permit'] = $request->file('file_location_permit')->storeAs('public/Drafting', $name14, 'public');
-        $data['file_setificate'] = $request->file('file_setificate')->storeAs('public/Drafting', $name15, 'public');
-        $data['file_imb'] = $request->file('file_imb')->storeAs('public/Drafting', $name16, 'public');
-        $data['file_sppt1'] = $request->file('file_sppt1')->storeAs('public/Drafting', $name17, 'public');
-        $data['file_sppt2'] = $request->file('file_sppt2')->storeAs('public/Drafting', $name18, 'public');
-        $data['file_sppt3'] = $request->file('file_sppt3')->storeAs('public/Drafting', $name19, 'public');
-        $data['file_procuration'] = $request->file('file_procuration')->storeAs('public/Drafting', $name20, 'public');
-        $data['file_previous_agreement'] = $request->file('file_previous_agreement')->storeAs('public/Drafting', $name21, 'public');
-        $data['file_director_procuration'] = $request->file('file_director_procuration')->storeAs('public/Drafting', $name22, 'public');
-        $data['file_others_1'] = $request->file('file_others_1')->storeAs('public/Drafting', $name23, 'public');
-        $data['file_others_2'] = $request->file('file_others_2')->storeAs('public/Drafting', $name24, 'public');
-        $data['file_others_3'] = $request->file('file_others_3')->storeAs('public/Drafting', $name25, 'public');
+        if ($request->file('file_internal_memo')) {
+            $file = $request->file('file_internal_memo');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_internal_memo'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
 
+        if ($request->file('file_internal_memo_optional')) {
+            $file = $request->file('file_internal_memo_optional');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_internal_memo_optional'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_id_card')) {
+            $file = $request->file('file_id_card');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_id_card'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_npwp')) {
+            $file = $request->file('file_npwp');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_npwp'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_kk')) {
+            $file = $request->file('file_kk');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_kk'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_mariagge_book')) {
+            $file = $request->file('file_mariagge_book');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_mariagge_book'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_director_id_card')) {
+            $file = $request->file('file_director_id_card');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_director_id_card'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_deed')) {
+            $file = $request->file('file_deed');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_deed'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_sk_menkumham')) {
+            $file = $request->file('file_sk_menkumham');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_sk_menkumham'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_business_permit')) {
+            $file = $request->file('file_business_permit');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_business_permit'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_nib')) {
+            $file = $request->file('file_nib');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_nib'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_npwp_company')) {
+            $file = $request->file('file_npwp_company');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_npwp_company'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_location_permit')) {
+            $file = $request->file('file_location_permit');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_location_permit'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_setificate')) {
+            $file = $request->file('file_setificate');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_setificate'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_sppt1')) {
+            $file = $request->file('file_sppt1');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_sppt1'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_sppt2')) {
+            $file = $request->file('file_sppt2');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_sppt2'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_sppt3')) {
+            $file = $request->file('file_sppt3');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_sppt3'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_procuration')) {
+            $file = $request->file('file_procuration');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_procuration'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_previous_agreement')) {
+            $file = $request->file('file_previous_agreement');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_previous_agreement'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_others_1')) {
+            $file = $request->file('file_others_1');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_others_1'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_others_2')) {
+            $file = $request->file('file_others_2');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_others_2'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_others_3')) {
+            $file = $request->file('file_others_3');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_others_3'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+        
         // $save = new Permit();
 
         // $save->name = $name1;

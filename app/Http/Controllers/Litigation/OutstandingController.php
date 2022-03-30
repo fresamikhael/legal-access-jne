@@ -8,6 +8,7 @@ use App\Models\Litigation\Cs;
 use App\Http\Controllers\Controller;
 use App\Models\Litigation\Outstanding;
 use App\Models\Province;
+use Illuminate\Support\Str;
 
 class OutstandingController extends Controller
 {
@@ -88,21 +89,48 @@ class OutstandingController extends Controller
         $id = $validatedData['id'];
         $user_id = $request->user_id;
 
-        $name = $request->file('file_pcrf')->getClientOriginalName();
-        $name2 = $request->file('file_recapitulation')->getClientOriginalName();
-        $name3 = $request->file('file_packing_list')->getClientOriginalName();
-        $name4 = $request->file('file_billing_proof')->getClientOriginalName();
-        $name5 = $request->file('file_deed_company')->getClientOriginalName();
-        $name6 = $request->file('file_nib')->getClientOriginalName();
-
-        $validatedData['file_pcrf'] = $request->file('file_pcrf')->storeAs('public/litigation', $name, 'public');
-        $validatedData['file_recapitulation'] = $request->file('file_recapitulation')->storeAs('public/litigation', $name2, 'public');
-        $validatedData['file_packing_list'] = $request->file('file_packing_list')->storeAs('public/litigation', $name3, 'public');
-        $validatedData['file_billing_proof'] = $request->file('file_billing_proof')->storeAs('public/litigation', $name4, 'public');
-        $validatedData['file_deed_company'] = $request->file('file_deed_company')->storeAs('public/litigation', $name5, 'public');
-        $validatedData['file_nib'] = $request->file('file_nib')->storeAs('public/litigation', $name6, 'public');
-
-
+        if ($request->file('file_pcrf')) {
+            $file = $request->file('file_pcrf');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_pcrf'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_recapitulation')) {
+            $file = $request->file('file_recapitulation');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_recapitulation'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_packing_list')) {
+            $file = $request->file('file_packing_list');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_packing_list'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_billing_proof')) {
+            $file = $request->file('file_billing_proof');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_billing_proof'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_deed_company')) {
+            $file = $request->file('file_deed_company');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_deed_company'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_nib')) {
+            $file = $request->file('file_nib');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_nib'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
 
         // $path = $request->file('file_document')->store('public/files');
         // $path2= $request->file('file_proof1')->store('public/files');

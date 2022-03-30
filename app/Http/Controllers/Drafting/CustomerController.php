@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Drafting\Customer;
 use App\Http\Controllers\Controller;
 use App\Models\Province;
+use Illuminate\Support\Str;
 
 class CustomerController extends Controller
 {
@@ -83,30 +84,95 @@ class CustomerController extends Controller
         // ]);
         #
 
-        $name1 = $request->file('file_mom')->getClientOriginalName();
-        $name2 = $request->file('file_agreement_draft')->getClientOriginalName();
-        $name3 = $request->file('file_claim_form')->getClientOriginalName();
-        $name5 = $request->file('file_nib')->getClientOriginalName();
-        $name6 = $request->file('file_npwp')->getClientOriginalName();
-        $name7 = $request->file('file_business_permit')->getClientOriginalName();
-        $name8 = $request->file('file_director_id_card')->getClientOriginalName();
-        $name9 = $request->file('file_other')->getClientOriginalName();
-        $name10 = $request->file('file_deed_of_company')->getClientOriginalName();
-        $name11 = $request->file('file_oss_location')->getClientOriginalName();
-        $name12 = $request->file('file_sk')->getClientOriginalName();
+        if ($request->file('file_mom')) {
+            $file = $request->file('file_mom');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_mom'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_agreement_draft')) {
+            $file = $request->file('file_agreement_draft');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_agreement_draft'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_claim_form')) {
+            $file = $request->file('file_claim_form');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_claim_form'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_nib')) {
+            $file = $request->file('file_nib');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_nib'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_npwp')) {
+            $file = $request->file('file_npwp');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_npwp'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_business_permit')) {
+            $file = $request->file('file_business_permit');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_business_permit'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_director_id_card')) {
+            $file = $request->file('file_director_id_card');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_director_id_card'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_other')) {
+            $file = $request->file('file_other');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_other'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_deed_of_company')) {
+            $file = $request->file('file_deed_of_company');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_deed_of_company'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_oss_location')) {
+            $file = $request->file('file_oss_location');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_oss_location'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+
+        if ($request->file('file_sk')) {
+            $file = $request->file('file_sk');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_sk'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
 
         $data['user_id'] = auth()->user()->id; 
-        $data['file_mom'] = $request->file('file_mom')->storeAs('public/Drafting', $name1, 'public');
-        $data['file_agreement_draft'] = $request->file('file_agreement_draft')->storeAs('public/Drafting', $name2, 'public');
-        $data['file_claim_form'] = $request->file('file_claim_form')->storeAs('public/Drafting', $name3, 'public');
-        $data['file_nib'] = $request->file('file_nib')->storeAs('public/Drafting', $name5, 'public');
-        $data['file_npwp'] = $request->file('file_npwp')->storeAs('public/Drafting', $name6, 'public');
-        $data['file_business_permit'] = $request->file('file_business_permit')->storeAs('public/Drafting', $name7, 'public');
-        $data['file_director_id_card'] = $request->file('file_director_id_card')->storeAs('public/Drafting', $name8, 'public');
-        $data['file_other'] = $request->file('file_other')->storeAs('public/Drafting', $name9, 'public');
-        $data['file_deed_of_company'] = $request->file('file_deed_of_company')->storeAs('public/Drafting', $name10, 'public');
-        $data['file_oss_location'] = $request->file('file_oss_location')->storeAs('public/Drafting', $name11, 'public');
-        $data['file_sk'] = $request->file('file_sk')->storeAs('public/Drafting', $name12, 'public');
         // $save = new Permit();
 
         // $save->name = $name1;

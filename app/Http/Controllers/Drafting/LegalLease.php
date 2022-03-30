@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Drafting\Lease;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class LegalLease extends Controller
 {
@@ -92,10 +93,14 @@ class LegalLease extends Controller
 
         $item = Lease::findOrFail($id);
 
-        if($request->file('file_agreement_draft'))
-        $name1 = $request->file('file_agreement_draft')->getClientOriginalName();
-        $data['file_agreement_draft'] = $request->file('file_agreement_draft')->storeAs('public/Drafting',$name1,'public');
-
+        if ($request->file('file_agreement_draft')) {
+            $file = $request->file('file_agreement_draft');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_agreement_draft'] = 'Drafting/'.$filename;
+            $file->move('Drafting', $filename); 
+        }
+        
         $item->update([
             'file_agreement_draft' => $data['file_agreement_draft'],
             'note' => $request->note,

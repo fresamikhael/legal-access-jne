@@ -56,9 +56,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/database-other', [DatabaseController::class, 'dataOther'])->name('database-other');
     Route::get('/database-perizinan', [DatabaseController::class, 'dataPerizinan'])->name('database-perizinan');
 
-    Route::get('/downloadPermit/{public}', [DownloadController::class, 'downloadPermit'])->name('download');
-    Route::get('/downloadLitigation/{download}', [DownloadController::class, 'downloadLitigation'])->name('download-litigation');
-    Route::get('/downloadDrafting/{download}', [DownloadController::class, 'downloadDrafting'])->name('download-Drafting');
+    Route::get('/downloadPermit/{path}', [DownloadController::class, 'downloadPermit'])->name('download');
+    Route::get('/downloadLitigation/{path}', [DownloadController::class, 'downloadLitigation'])->name('download-litigation');
+    Route::get('/downloadDrafting/{path}', [DownloadController::class, 'downloadDrafting'])->name('download-Drafting');
     Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
 
     Route::get('/update/{id}', [ContractBusinessController::class, 'update'])->name('cd-update');
