@@ -253,7 +253,7 @@
 
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-litigation', substr($data->fraud->file_document_proof, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->fraud->file_document_proof, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -281,7 +281,7 @@
                                 aria-describedby="user_avatar_help" id="user_avatar" type="text" readonly> --}}
                             <div class="flex flex-row">
 
-                                <a href="{{ route('download-litigation', substr($data->fraud->file_perpetrator_statement, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->fraud->file_perpetrator_statement, 11)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download
@@ -305,7 +305,7 @@
                                 aria-describedby="user_avatar_help" id="user_avatar" type="text" readonly> --}}
                             <div class="flex flex-row">
 
-                                <a href="{{ route('download-litigation', substr($data->fraud->file_witness_statement, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->fraud->file_witness_statement, 11)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download
@@ -328,7 +328,7 @@
                                 aria-describedby="user_avatar_help" id="user_avatar" type="text" readonly> --}}
                             <div class="flex flex-row">
 
-                                <a href="{{ route('download-litigation', substr($data->fraud->file_other, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->fraud->file_other, 11)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -355,7 +355,7 @@
                             aria-describedby="user_avatar_help" id="user_avatar" type="text" readonly> --}}
                         <div class="flex flex-row">
 
-                            <a href="{{ route('download-litigation', substr($data->fraud->file_evidence_documentation, 18)) }}"
+                            <a href="{{ route('download-litigation', substr($data->fraud->file_evidence_documentation, 11)) }}"
                                 style="font-size:24px ">
                                 <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                     Download
@@ -377,7 +377,7 @@
                             aria-describedby="user_avatar_help" id="user_avatar" type="text" readonly> --}}
                         <div class="flex flex-row">
 
-                            <a href="{{ route('download-litigation', substr($data->fraud->file_investigation_document, 18)) }}"
+                            <a href="{{ route('download-litigation', substr($data->fraud->file_investigation_document, 11)) }}"
                                 style="font-size:24px ">
                                 <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                     Download
@@ -399,7 +399,7 @@
                             aria-describedby="user_avatar_help" id="user_avatar" type="text" readonly> --}}
                         <div class="flex flex-row">
 
-                            <a href="{{ route('download-litigation', substr($data->fraud->file_other_evidence, 18)) }}"
+                            <a href="{{ route('download-litigation', substr($data->fraud->file_other_evidence, 11)) }}"
                                 style="font-size:24px ">
                                 <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                     Download

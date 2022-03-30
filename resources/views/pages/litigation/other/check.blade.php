@@ -186,7 +186,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">1.
                                 Dokumen*</label>
                             <div class="flex-[4]">
-                                <a href="{{ route('download-litigation', substr($data->other->file_document, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->other->file_document, 11)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download
@@ -203,7 +203,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">2.
                                 Bukti*</label>
                             <div class="flex-[4]">
-                                <a href="{{ route('download-litigation', substr($data->other->file_proof, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->other->file_proof, 11)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download

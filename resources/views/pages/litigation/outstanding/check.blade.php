@@ -214,7 +214,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">1.
                                 Perjanjian/PCRF*</label>
                             <div class="flex-[4]">
-                                <a href="{{ route('download-litigation', substr($data->outstanding->file_pcrf, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->outstanding->file_pcrf, 11)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download
@@ -232,7 +232,7 @@
                                 Rekapitulasi
                                 Data Outstanding*</label>
                             <div class="flex-[4]">
-                                <a href="{{ route('download-litigation', substr($data->outstanding->file_recapitulation, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->outstanding->file_recapitulation, 11)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download

@@ -53,7 +53,7 @@ class FraudController extends Controller
     public function store(Request $request)
     {
 
-        $validatedData = $request->validate([
+        $data = $request->validate([
             'id' => 'required',
             'user_id' => 'required',
             'date' => 'required',
@@ -79,7 +79,7 @@ class FraudController extends Controller
             'file_other_evidence' => 'required',
         ]);
         // $data = $request->all();
-        $id = $validatedData['id'];
+        $id = $data['id'];
         $user_id = $request->user_id;
 
         if ($request->file('file_document_proof')) {
@@ -87,51 +87,51 @@ class FraudController extends Controller
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_document_proof'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_perpetrator_statement')) {
             $file = $request->file('file_perpetrator_statement');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_perpetrator_statement'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_witness_statement')) {
             $file = $request->file('file_witness_statement');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_witness_statement'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_other')) {
             $file = $request->file('file_other');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_other'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_evidence_documentation')) {
             $file = $request->file('file_evidence_documentation');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_evidence_documentation'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_investigation_document')) {
             $file = $request->file('file_investigation_document');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_investigation_document'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
         if ($request->file('file_other_evidence')) {
             $file = $request->file('file_other_evidence');
             $extension = $file->getClientOriginalExtension();
             $filename = Str::random(40) . '.' . $extension;
             $data['file_other_evidence'] = 'Litigation/'.$filename;
-            $file->move('Litigation', $filename); 
+            $file->move('Litigation', $filename);
         }
-        
+
         // $save = new Permit();
 
         // $save->name = $name1;
@@ -145,9 +145,9 @@ class FraudController extends Controller
         // $save->path = $path4;
 
         // UploadFile::create($validatedData2);
-        Fraud::create($validatedData);
+        Fraud::create($data);
         Cs::create(['form_id' => $id, 'user_id' => $user_id]);
 
-        return redirect()->route('fraud-index')->with('message_success', 'Terima kasih atas pengajuan yang telah disampaikan. mohon untuk menunggu dikarenakan akan kami cek terlebih dahulu, mohon untuk dapat memeriksa pengajuan secara berkala.');;
+        return redirect()->route('fraud-index')->with('message_success', 'Terima kasih atas pengajuan yang telah disampaikan. mohon untuk menunggu dikarenakan akan kami cek terlebih dahulu, mohon untuk dapat memeriksa pengajuan secara berkala.');
     }
 }
