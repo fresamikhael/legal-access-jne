@@ -373,7 +373,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">1.
                                 Connote*</label>
                             <div class="flex-[4]">
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_connote, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_connote, 11)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -391,7 +391,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">2.
                                 Orion*</label>
                             <div class="flex-[4]">
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_orion, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_orion, 11)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -408,7 +408,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">3.
                                 POD</label>
                             <div class="flex-[4] flex items-center">
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_pod, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_pod, 11)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -425,7 +425,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">4.
                                 Form Kasus Sengketa Konsumen*</label>
                             <div class="flex-[4]">
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_customer_case_form, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_customer_case_form, 11)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -442,7 +442,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">5.
                                 Kronologis Destinasi</label>
                             <div class="flex-[4] flex items-center">
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_destination_chronology, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_destination_chronology, 11)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -459,7 +459,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">6.
                                 Kronologis Origin</label>
                             <div class="flex-[4] flex items-center">
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_orion_chronology, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_orion_chronology, 11)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -476,7 +476,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">7.
                                 Kronologis CS</label>
                             <div class="flex-[4] flex items-center">
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_cs_chronology, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_cs_chronology, 11)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -493,7 +493,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">8.
                                 Surat Customer atau Somasi</label>
                             <div class="flex-[4] flex items-center">
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_subpoena, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_subpoena, 11)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -510,7 +510,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">9.
                                 Surat Kuasa</label>
                             <div class="flex-[4] flex items-center">
-                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_procuration, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->customer_dispute->file_procuration, 11)) }}"
                                     style="font-size:24px ">
                                     <div
                                         class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">

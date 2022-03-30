@@ -242,7 +242,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">1. Akta Perusahaan</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_deed_of_company, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_deed_of_company, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -260,7 +260,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">2. Nomor Induk Berusaha (NIB)</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_nib, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_nib, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -278,7 +278,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">3. Nomor Pokok Wajib Pajak (NPWP)</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_npwp, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_npwp, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -297,7 +297,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">4. Izin Usaha</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_business_permit, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_business_permit, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -316,7 +316,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">5. Izin Lokasi OSS</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_oss_location, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_oss_location, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -335,7 +335,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">6. KTP Direksi</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_director_id_card, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_director_id_card, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -354,7 +354,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">7. Surat Kuasa</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_sk, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_sk, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -373,7 +373,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">8. Lain-lain</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_other, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_other, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -509,7 +509,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Penawaran Vendor</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_vendor_offer, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_vendor_offer, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -528,7 +528,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">MOM Kesepakatan Para Pihak</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_mom, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_mom, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -548,7 +548,7 @@
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_dispotition, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_dispotition, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -568,7 +568,7 @@
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_agreement_draft, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_agreement_draft, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -588,7 +588,7 @@
                                 Entitas Customer</label>
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-Drafting', substr($data->file_customer_entity, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_customer_entity, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -608,7 +608,7 @@
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_sk_menkumham, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_sk_menkumham, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -628,7 +628,7 @@
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_nib2, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_nib2, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -648,7 +648,7 @@
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_npwp2, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_npwp2, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -669,7 +669,7 @@
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_business_permit2, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_business_permit2, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -689,7 +689,7 @@
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_director_id_card2, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_director_id_card2, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -709,7 +709,7 @@
                             <div class="flex-[4]">
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_other2, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_other2, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
