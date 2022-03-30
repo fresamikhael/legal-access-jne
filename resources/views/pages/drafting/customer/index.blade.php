@@ -62,8 +62,7 @@
                     
                     <div class="flex">
                         <label for="agreement_draft"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama
-                            Pihak (Optional)
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Draf Perjanjian
                         </label>
                         <div class="flex-[4]">
                             <input type="text" id="agreement_draft" name="agreement_draft"
