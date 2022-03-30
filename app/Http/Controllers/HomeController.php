@@ -58,4 +58,27 @@ class HomeController extends Controller
     {
         return view('pages.auth.login');
     }
+
+    public function statistic()
+    {
+        $customer_submission = Customer::count();
+        $vendor_submission = VendorSupplier::count();
+        $lease_submission = Lease::count();
+        $custdis_submission = CustomerDispute::count();
+        $fraud_submission = Fraud::count();
+        $outstanding_submission = Outstanding::count();
+        $other_submission = Other::count();
+        $permit_submission = Permit::count();
+
+        return view('statistic', [
+            'customer_submission' => $customer_submission,
+            'vendor_submission' => $vendor_submission,
+            'lease_submission' => $lease_submission,
+            'custdis_submission' => $custdis_submission,
+            'fraud_submission' => $fraud_submission,
+            'outstanding_submission' => $outstanding_submission,
+            'other_submission' => $other_submission,
+            'permit_submission' => $permit_submission
+        ]);
+    }
 }

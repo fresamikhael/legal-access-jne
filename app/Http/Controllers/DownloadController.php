@@ -10,15 +10,17 @@ use App\Http\Controllers\Storage;
 
 class DownloadController extends Controller
 {
-    function downloadPermit($id)
+    function downloadPermit($path)
     {
-        $pathToFile = public_path('storage/public/permit/' . $id);
-        return response()->download($pathToFile);
+        $file= public_path('Permit/' . $path);
+
+        return response()->download($file);
     }
-    function downloadLitigation($id)
+    function downloadLitigation($path)
     {
-        $pathToFile = public_path('storage/public/litigation/' . $id);
-        return response()->download($pathToFile);
+        $file= public_path('Litigation/' . $path);
+
+        return response()->download($file);
     }
     function downloadDrafting($path)
     {

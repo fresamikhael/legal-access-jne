@@ -44,6 +44,9 @@ Route::middleware('auth')->group(function () {
         return redirect('/');
     });
     Route::get('/', [HomeController::class, 'index'])->name('home');
+
+    Route::get('/statistic', [HomeController::class, 'statistic'])->name('statistic');
+
     Route::get('/database', [DatabaseController::class, 'index'])->name('database');
     Route::get('/database/detail/{id}', [DatabaseController::class, 'detail'])->name('database.detail');
 
