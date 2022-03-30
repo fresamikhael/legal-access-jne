@@ -51,18 +51,6 @@ class CustomerController extends Controller
     {
 
         $data = $request->all();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        dd($data);
->>>>>>> beca50f3828bfe121a2b024a587593eac6c69cea
-=======
-        dd($data);
->>>>>>> beca50f3828bfe121a2b024a587593eac6c69cea
-=======
-        dd($data);
->>>>>>> beca50f3828bfe121a2b024a587593eac6c69cea
 
         // $validatedData = $request->validate([
         //     'id' => 'required',
