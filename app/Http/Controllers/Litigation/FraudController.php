@@ -7,6 +7,7 @@ use App\Models\Litigation\Cs;
 use App\Models\Litigation\Fraud;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class FraudController extends Controller
 {
@@ -81,22 +82,56 @@ class FraudController extends Controller
         $id = $validatedData['id'];
         $user_id = $request->user_id;
 
-        $name1 = $request->file('file_document_proof')->getClientOriginalName();
-        $name2 = $request->file('file_perpetrator_statement')->getClientOriginalName();
-        $name3 = $request->file('file_witness_statement')->getClientOriginalName();
-        $name4 = $request->file('file_other')->getClientOriginalName();
-        $name2 = $request->file('file_evidence_documentation')->getClientOriginalName();
-        $name3 = $request->file('file_investigation_document')->getClientOriginalName();
-        $name4 = $request->file('file_other_evidence')->getClientOriginalName();
-
-        $validatedData['file_document_proof'] = $request->file('file_document_proof')->storeAs('public/litigation', $name1, 'public');
-        $validatedData['file_perpetrator_statement'] = $request->file('file_perpetrator_statement')->storeAs('public/litigation', $name2, 'public');
-        $validatedData['file_witness_statement'] = $request->file('file_witness_statement')->storeAs('public/litigation', $name3, 'public');
-        $validatedData['file_other'] = $request->file('file_other')->storeAs('public/litigation', $name4, 'public');
-        $validatedData['file_evidence_documentation'] = $request->file('file_evidence_documentation')->storeAs('public/litigation', $name2, 'public');
-        $validatedData['file_investigation_document'] = $request->file('file_investigation_document')->storeAs('public/litigation', $name3, 'public');
-        $validatedData['file_other_evidence'] = $request->file('file_other_evidence')->storeAs('public/litigation', $name4, 'public');
-
+        if ($request->file('file_document_proof')) {
+            $file = $request->file('file_document_proof');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_document_proof'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_perpetrator_statement')) {
+            $file = $request->file('file_perpetrator_statement');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_perpetrator_statement'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_witness_statement')) {
+            $file = $request->file('file_witness_statement');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_witness_statement'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_other')) {
+            $file = $request->file('file_other');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_other'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_evidence_documentation')) {
+            $file = $request->file('file_evidence_documentation');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_evidence_documentation'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_investigation_document')) {
+            $file = $request->file('file_investigation_document');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_investigation_document'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        if ($request->file('file_other_evidence')) {
+            $file = $request->file('file_other_evidence');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_other_evidence'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
+        
         // $save = new Permit();
 
         // $save->name = $name1;

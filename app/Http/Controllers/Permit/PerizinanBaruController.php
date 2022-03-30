@@ -9,6 +9,7 @@ use App\Models\StatusPermit;
 use Illuminate\Http\Request;
 use App\Models\Permit\Permit;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 
 class PerizinanBaruController extends Controller
 {
@@ -74,23 +75,34 @@ class PerizinanBaruController extends Controller
         $data = $request->all();
         $id_permit = $data['id'];
 
-        $name1 = time() . '-' . $request->file('file_disposition')->getClientOriginalName();
-        $name2 = time() . '-' . $request->file('file_document1')->getClientOriginalName();
-        $name3 = time() . '-' . $request->file('file_document2')->getClientOriginalName();
-        $name4 = time() . '-' . $request->file('file_document3')->getClientOriginalName();
-
-        // dd(gmdate("Y-m-d\TH:i:s\Z", time()));
-
-        // $file = public_path('storage/public/permit' . $name1);
-
-        // if (!file_exists($file)) {
-        //     return dd($name1);
-        // }
-
-        $data['file_disposition'] = $request->file('file_disposition')->storeAs('public/permit', $name1, 'public');
-        $data['file_document1'] = $request->file('file_document1')->storeAs('public/permit', $name2, 'public');
-        $data['file_document2'] = $request->file('file_document2')->storeAs('public/permit', $name3, 'public');
-        $data['file_document3'] = $request->file('file_document3')->storeAs('public/permit', $name4, 'public');
+        if ($request->file('file_disposition')) {
+            $file = $request->file('file_disposition');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_disposition'] = 'Permit/'.$filename;
+            $file->move('Permit', $filename); 
+        }
+        if ($request->file('file_document1')) {
+            $file = $request->file('file_document1');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_document1'] = 'Permit/'.$filename;
+            $file->move('Permit', $filename); 
+        }
+        if ($request->file('file_document2')) {
+            $file = $request->file('file_document2');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_document2'] = 'Permit/'.$filename;
+            $file->move('Permit', $filename); 
+        }
+        if ($request->file('file_document3')) {
+            $file = $request->file('file_document3');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_document3'] = 'Permit/'.$filename;
+            $file->move('Permit', $filename); 
+        }
 
         // $save = new Permit();
 

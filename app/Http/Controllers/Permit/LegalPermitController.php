@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Permit\Permit;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class LegalPermitController extends Controller
 {
@@ -117,9 +118,13 @@ class LegalPermitController extends Controller
 
         $item = Permit::findOrFail($id);
 
-        if($request->file('latest_skpd'))
-        $name1 = $request->file('latest_skpd')->getClientOriginalName();
-        $data['latest_skpd'] = $request->file('latest_skpd')->storeAs('public/permit',$name1,'public');
+        if ($request->file('latest_skpd')) {
+            $file = $request->file('latest_skpd');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['latest_skpd'] = 'Permit/'.$filename;
+            $file->move('Permit', $filename); 
+        }
 
         $item->update([
             'latest_skpd' => $data['latest_skpd'],
@@ -143,14 +148,21 @@ class LegalPermitController extends Controller
 
         $item = Permit::findOrFail($id);
 
-        if($request->file('latest_skpd'))
-        $name1 = $request->file('latest_skpd')->getClientOriginalName();
-        $data['latest_skpd'] = $request->file('latest_skpd')->storeAs('public/permit',$name1,'public');
-
-        if($request->file('proof_of_payment'))
-        $name2 = $request->file('proof_of_payment')->getClientOriginalName();
-        $data['proof_of_payment'] = $request->file('proof_of_payment')->storeAs('public/permit',$name2,'public');
-
+        if ($request->file('latest_skpd')) {
+            $file = $request->file('latest_skpd');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['latest_skpd'] = 'Permit/'.$filename;
+            $file->move('Permit', $filename); 
+        }
+        if ($request->file('proof_of_payment')) {
+            $file = $request->file('proof_of_payment');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['proof_of_payment'] = 'Permit/'.$filename;
+            $file->move('Permit', $filename); 
+        }
+        
         $item->update([
             'latest_skpd' => $data['latest_skpd'],
             'proof_of_payment' => $data['proof_of_payment'],

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Litigation\Cs;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class LitigationController extends Controller
 {
@@ -71,10 +72,14 @@ class LitigationController extends Controller
 
                 $item = Cs::findOrFail($id);
 
-                $name1 = $request->file('file_subpoena_response')->getClientOriginalName();
-
-                $data['file_subpoena_response'] = $request->file('file_subpoena_response')->storeAs('public/litigation', $name1, 'public');
-
+                if ($request->file('file_subpoena_response')) {
+                    $file = $request->file('file_subpoena_response');
+                    $extension = $file->getClientOriginalExtension();
+                    $filename = Str::random(40) . '.' . $extension;
+                    $data['file_subpoena_response'] = 'Litigation/'.$filename;
+                    $file->move('Litigation', $filename); 
+                }
+                
                 $item->update([
                     'file_subpoena_response' => $data['file_subpoena_response'],
                     'case_analysis' => $request->case_analysis,

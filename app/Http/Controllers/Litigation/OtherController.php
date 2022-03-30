@@ -9,6 +9,7 @@ use App\Models\Litigation\Cs;
 use App\Models\Litigation\Other;
 use App\Http\Controllers\Controller;
 use App\Models\Province;
+use Illuminate\Support\Str;
 
 class OtherController extends Controller
 {
@@ -84,20 +85,21 @@ class OtherController extends Controller
         $id = $validatedData['id'];
         $user_id = $request->user_id;
 
-        $name = $request->file('file_document')->getClientOriginalName();
-        $name2 = $request->file('file_proof')->getClientOriginalName();
-        // $name3 = $request->file('file_proof2')->getClientOriginalName();
-        // $name4 = $request->file('file_proof3')->getClientOriginalName();
-        // $name5 = $request->file('file_disposition')->getClientOriginalName();
-        // $name6 = $request->file('file_other_document')->getClientOriginalName();
+        if ($request->file('file_document')) {
+            $file = $request->file('file_document');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_document'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
 
-        $validatedData['file_document'] = $request->file('file_document')->storeAs('public/litigation', $name, 'public');
-        $validatedData['file_proof'] = $request->file('file_proof')->storeAs('public/litigation', $name2, 'public');
-        // $validatedData['file_proof2'] = $request->file('file_proof2')->storeAs('public/litigation', $name3, 'public');
-        // $validatedData['file_proof3'] = $request->file('file_proof3')->storeAs('public/litigation', $name4, 'public');
-        // $validatedData['file_disposition'] = $request->file('file_disposition')->storeAs('public/litigation', $name5, 'public');
-        // $validatedData['file_other_document'] = $request->file('file_other_document')->storeAs('public/litigation', $name6, 'public');
-
+        if ($request->file('file_proof')) {
+            $file = $request->file('file_proof');
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '.' . $extension;
+            $data['file_proof'] = 'Litigation/'.$filename;
+            $file->move('Litigation', $filename); 
+        }
 
 
         // $path = $request->file('file_document')->store('public/files');

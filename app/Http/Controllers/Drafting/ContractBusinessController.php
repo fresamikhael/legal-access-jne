@@ -7,6 +7,7 @@ use App\Models\Drafting\Customer;
 use App\Http\Controllers\Controller;
 use App\Models\Drafting\VendorSupplier;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class ContractBusinessController extends Controller
 {
@@ -147,11 +148,13 @@ class ContractBusinessController extends Controller
 
                 $item = Customer::findOrFail($id);
 
-                if ($request->file('file_internal_memo'))
-                    $name1 = $request->file('file_internal_memo')->getClientOriginalName();
-                $data['file_internal_memo'] = $request->file('file_internal_memo')->storeAs('public/files/file_internal_memo', $name1, 'public');
-
-                $item->update([$data, 'file_internal_memo' => $data['file_internal_memo'], 'note' => $request->note, 'status' => 'UPDATED BY USER']);
+                if ($request->file('file_internal_memo')) {
+                    $file = $request->file('file_internal_memo');
+                    $extension = $file->getClientOriginalExtension();
+                    $filename = Str::random(40) . '.' . $extension;
+                    $data['file_internal_memo'] = 'file_internal_memo/'.$filename;
+                    $file->move('file_internal_memo', $filename); 
+                }
 
                 return redirect()->route('home');
                 break;
