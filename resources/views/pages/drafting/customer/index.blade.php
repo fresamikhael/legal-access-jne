@@ -4,6 +4,15 @@
     <div class="flex flex-col gap-4 mx-36 my-4">
         <h1 class="text-4xl mb-4 text-black capitalize font-medium">Customer</h1>
 
+        @if (Session::get('message_success'))
+            <div id="alert-3" class="flex p-4 mb-4 bg-green-100 rounded-lg dark:bg-green-200" role="alert">
+                <svg class="flex-shrink-0 w-5 h-5 text-green-700 dark:text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                <div class="ml-3 text-sm font-medium text-green-700 dark:text-green-800">
+                    {{ Session::get('message_success') }}
+                </div>
+            </div>
+        @endif
+        
         <form class="mt-4" method="POST" enctype="multipart/form-data" action="{{ route('customer-post') }}">
             @csrf
 
@@ -50,11 +59,12 @@
                     
                     <div id="formAddressOptional">
                     </div>
-
+                    
                     <div class="flex">
                         <label for="agreement_draft"
-                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Draft
-                            Perjanjian</label>
+                            class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Nama
+                            Pihak (Optional)
+                        </label>
                         <div class="flex-[4]">
                             <input type="text" id="agreement_draft" name="agreement_draft"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -74,16 +84,16 @@
                             </select>
                         </div>
                     </div>
-                    <div class="flex" id="ifYes" style="display: none;">
-                        <label for="text"
+                    {{-- <div class="flex" id="ifYes" style="display: none;">
+                        <label for="agreement_draft"
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Addendum
                             ke-</label>
                         <div class="flex-[4]">
-                            <input type="text" id="text" name="agreement_draft"
+                            <input type="text" id="agreement_draft" name="agreement_draft"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="" required>
                         </div>
-                    </div>
+                    </div> --}}
                     {{-- <div class="flex">
                         <label for="date"
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Tanggal
@@ -144,13 +154,13 @@
                         <label for="discount"
                             class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">Discount</label>
                         <div class="flex flex-[4]">
+                            <input type="text" id="discount" name="discount"
+                            class="rounded-none rounded-l-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="" required>
                             <span
-                                class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-l-md border border-r-0 border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                                class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-r-md border border-l-0 border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                                 %
                             </span>
-                            <input type="text" id="discount" name="discount"
-                                class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="" required>
                         </div>
                     </div>
                 </div>
@@ -212,7 +222,7 @@
                     <div class="row-span-8 font-medium">Entitas :</div>
                     <div class="col-span-2">
                         <div class="flex">
-                            <label for="file_deed_of_company"
+                            <label for="Akta"
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">1.
                                 Akta
                                 Perusahaan</label>
@@ -261,7 +271,7 @@
                     </div>
                     <div class="col-span-2">
                         <div class="flex">
-                            <label for="file_business_permit"
+                            <label for="Usaha"
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">4.
                                 Izin
                                 Usaha</label>
@@ -284,7 +294,7 @@
                     </div>
                     <div class="col-span-2">
                         <div class="flex">
-                            <label for="file_oss_location"
+                            <label for="Lokasi"
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">5.
                                 Izin
                                 Lokasi OSS</label>
@@ -307,13 +317,13 @@
                     </div>
                     <div class="col-span-2">
                         <div class="flex">
-                            <label for="file_director_id_card"
+                            <label for="KTP"
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">6.
                                 KTP
                                 Direksi</label>
                             <div class="flex-[4] flex items-center">
                                 <div class="flex-[1] mr-2">
-                                    <select name="" onchange="ktp(this)"
+                                    <select name="" id="KTP" onchange="ktp(this)"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                         <option style="display: none">Pilih</option>
                                         <option value="Ada">Ada</option>
