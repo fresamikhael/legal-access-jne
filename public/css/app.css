@@ -968,6 +968,12 @@ input:checked + .toggle-bg {
 .mb-20 {
   margin-bottom: 5rem;
 }
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.-mr-1 {
+  margin-right: -0.25rem;
+}
 .ml-0 {
   margin-left: 0px;
 }
@@ -1025,6 +1031,9 @@ input:checked + .toggle-bg {
 .h-full {
   height: 100%;
 }
+.h-4 {
+  height: 1rem;
+}
 .h-5 {
   height: 1.25rem;
 }
@@ -1034,9 +1043,6 @@ input:checked + .toggle-bg {
 .h-9 {
   height: 2.25rem;
 }
-.h-4 {
-  height: 1rem;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1045,6 +1051,9 @@ input:checked + .toggle-bg {
 }
 .w-36 {
   width: 9rem;
+}
+.w-4 {
+  width: 1rem;
 }
 .w-5 {
   width: 1.25rem;
@@ -1066,9 +1075,6 @@ input:checked + .toggle-bg {
 }
 .w-1\/2 {
   width: 50%;
-}
-.w-4 {
-  width: 1rem;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1093,6 +1099,9 @@ input:checked + .toggle-bg {
 }
 .flex-\[12\] {
   flex: 12;
+}
+.flex-\[5\] {
+  flex: 5;
 }
 .flex-1 {
   flex: 1 1 0%;

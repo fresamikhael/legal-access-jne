@@ -20,6 +20,7 @@ use App\Http\Controllers\Litigation\TeamCsController;
 use App\Http\Controllers\Permit\LegalPermitController;
 use App\Http\Controllers\Permit\PerizinanBaruController;
 use App\Http\Controllers\Permit\PermitController;
+use App\Http\Controllers\RegulationController;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Route;
 
@@ -116,6 +117,13 @@ Route::middleware('auth')->group(function () {
 
         Route::get('/perizinan-baru', [PerizinanBaruController::class, 'index'])->name('perizinan-baru-index');
         Route::post('/perizinan-baru/post', [PerizinanBaruController::class, 'store'])->name('perizinan-baru-post');
+    });
+
+    Route::prefix('/regulation')->group(function () {
+        Route::get('/', [RegulationController::class, 'index'])->name('regulation-index');
+
+        Route::get('/internal', [RegulationController::class, 'internal'])->name('regulation-internal');
+        Route::get('/normative', [RegulationController::class, 'normative'])->name('regulation-normative');
     });
 
     Route::prefix('/legal-permit')->group(function () {
