@@ -250,7 +250,7 @@
                                 Packing
                                 List/Invoice tertunggak*</label>
                             <div class="flex-[4]">
-                                <a href="{{ route('download-litigation', substr($data->outstanding->file_packing_list, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->outstanding->file_packing_list, 11)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download
@@ -267,7 +267,7 @@
                                 class="flex items-center flex-[3] mb-2 text-md font-medium text-gray-900 dark:text-gray-300">4.
                                 Bukti Penagihan*</label>
                             <div class="flex-[4]">
-                                <a href="{{ route('download-litigation', substr($data->outstanding->file_billing_proof, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->outstanding->file_billing_proof, 11)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download
@@ -307,7 +307,7 @@
                                     Akta
                                     Perusahaan</label>
                                 <div class="flex-[4] flex items-center">
-                                    <a href="{{ route('download-litigation', substr($data->outstanding->file_deed_company, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->outstanding->file_deed_company, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -346,7 +346,7 @@
                                     Nomor
                                     Induk Berusaha (NIB)</label>
                                 <div class="flex-[4] flex items-center">
-                                    <a href="{{ route('download-litigation', substr($data->outstanding->file_nib, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->outstanding->file_nib, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">

@@ -361,7 +361,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_director_disposition, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_director_disposition, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -409,7 +409,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_internal_memo, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_internal_memo, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -458,7 +458,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_id_card, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_id_card, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -507,7 +507,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_npwp, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_npwp, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -556,7 +556,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_kk, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_kk, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -604,7 +604,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_mariagge_book, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_mariagge_book, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -652,7 +652,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_director_id_card, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_director_id_card, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -700,7 +700,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_deed, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_deed, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -748,7 +748,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_sk_menkumham, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_sk_menkumham, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -796,7 +796,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_business_permit, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_business_permit, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -844,7 +844,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_nib, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_nib, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -892,7 +892,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_npwp_company, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_npwp_company, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -940,7 +940,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_location_permit, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_location_permit, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -989,7 +989,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_setificate, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_setificate, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -1038,7 +1038,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_imb, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_imb, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -1087,7 +1087,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_sppt1, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_sppt1, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -1136,7 +1136,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_sppt2, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_sppt2, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -1185,7 +1185,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_sppt3, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_sppt3, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -1234,7 +1234,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_procuration, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_procuration, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -1283,7 +1283,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_previous_agreement, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_previous_agreement, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -1332,7 +1332,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" type="text"> --}}
                                 <div class="flex flex-row">
 
-                                    <a href="{{ route('download-Drafting', substr($data->file_director_procuration, 16)) }}"
+                                    <a href="{{ route('download-Drafting', substr($data->file_director_procuration, 9)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">

@@ -49,7 +49,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar"
                                     name="file_consumer_dispute_case_form" type="text"> --}}
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-litigation', substr($data->file_consumer_dispute_case_form, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->file_consumer_dispute_case_form, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -73,7 +73,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar"
                                     name="file_operational_delivery_chronology" type="text"> --}}
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-litigation', substr($data->file_operational_delivery_chronology, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->file_operational_delivery_chronology, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -97,7 +97,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" name="file_cs_handling_chronology"
                                     type="text"> --}}
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-litigation', substr($data->file_cs_handling_chronology, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->file_cs_handling_chronology, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -121,7 +121,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" name="file_pod_evidence"
                                     type="text"> --}}
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-litigation', substr($data->file_pod_evidence, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->file_pod_evidence, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -145,7 +145,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" name="file_receipt_proof"
                                     type="text"> --}}
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-litigation', substr($data->file_receipt_proof, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->file_receipt_proof, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -172,7 +172,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" name="file_proof_of_documentation1"
                                     type="text"> --}}
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-litigation', substr($data->file_proof_of_documentation1, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->file_proof_of_documentation1, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -196,7 +196,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" name="file_proof_of_documentation2"
                                     type="text"> --}}
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-litigation', substr($data->file_proof_of_documentation2, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->file_proof_of_documentation2, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -220,7 +220,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar" name="file_proof_of_documentation3"
                                     type="text"> --}}
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-litigation', substr($data->file_proof_of_documentation3, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->file_proof_of_documentation3, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -244,7 +244,7 @@
                                     aria-describedby="user_avatar_help" id="user_avatar"
                                     name="file_other_supporting_document" type="text"> --}}
                                 <div class="flex flex-row">
-                                    <a href="{{ route('download-litigation', substr($data->file_other_supporting_document, 18)) }}"
+                                    <a href="{{ route('download-litigation', substr($data->file_other_supporting_document, 11)) }}"
                                         style="font-size:24px ">
                                         <div
                                             class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -282,7 +282,7 @@
                                 aria-describedby="user_avatar_help" id="user_avatar" name="file_subpoena_response"
                                 type="text"> --}}
                             <div class="flex flex-row">
-                                <a href="{{ route('download-litigation', substr($data->file_subpoena_response, 18)) }}"
+                                <a href="{{ route('download-litigation', substr($data->file_subpoena_response, 11)) }}"
                                     style="font-size:24px ">
                                     <div class="bg-[#384094] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                         Download
