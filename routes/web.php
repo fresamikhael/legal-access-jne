@@ -68,7 +68,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/update/{id}', [ContractBusinessController::class, 'updatePost'])->name('cd-update-post');
 
     Route::prefix('/drafting')->group(function () {
-        Route::get('/', [DraftingController::class, 'index'])->name('drafting-index');
+        Route::get('/index', [DraftingController::class, 'index'])->name('drafting-index');
 
         Route::get('/customer', [CustomerController::class, 'index'])->name('customer-index');
         Route::post('/customer/post', [CustomerController::class, 'store'])->name('customer-post');
