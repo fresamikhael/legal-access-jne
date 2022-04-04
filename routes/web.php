@@ -11,6 +11,7 @@ use App\Http\Controllers\Drafting\LeaseController;
 use App\Http\Controllers\Drafting\LegalLease;
 use App\Http\Controllers\Drafting\VendorController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InformationController;
 use App\Http\Controllers\Litigation\CustomerDisputeController;
 use App\Http\Controllers\Litigation\FraudController;
 use App\Http\Controllers\Litigation\LitigationController;
@@ -46,6 +47,8 @@ Route::middleware('auth')->group(function () {
     });
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
+    Route::get('/informasi', [InformationController::class, 'index'])->name('information.index');
+    
     Route::get('/statistic', [HomeController::class, 'statistic'])->name('statistic');
 
     Route::get('/database', [DatabaseController::class, 'index'])->name('database');
