@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Drafting\Customer;
+use App\Models\Regulation;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Permit\Permit;
 use App\Models\Drafting\Lease;
-use App\Models\Drafting\VendorSupplier;
-use App\Models\Litigation\CustomerDispute;
+use App\Models\FileRegulation;
 use App\Models\Litigation\Fraud;
 use App\Models\Litigation\Other;
+use App\Models\Drafting\Customer;
 use App\Models\Litigation\Outstanding;
-use App\Models\Regulation;
+use App\Models\Drafting\VendorSupplier;
 use Yajra\DataTables\Facades\DataTables;
+use App\Models\Litigation\CustomerDispute;
 
 class DatabaseController extends Controller
 {
@@ -228,5 +230,42 @@ class DatabaseController extends Controller
         }
 
         return view('pages.database.index');
+    }
+
+    public function create()
+    {
+        return view('pages.database.create');
+    }
+
+    public function store(Request $request)
+    {
+        $regulation = Regulation::create([
+            'name' => $request->name,
+            'type' => $request->type,
+            'entity' => $request->entity,
+            'number' => $request->number,
+            'year' => $request->year,
+            'title' => $request->title,
+            'set_date' => $request->set_date,
+            'promulgated_date' => $request->promulgated_date,
+            'valid_date' => $request->valid_date,
+            'source' => $request->source,
+            'status' => $request->status,
+        ]);
+
+        $files = $request->file('file');
+
+        foreach ($files as $file) {
+            $extension = $file->getClientOriginalExtension();
+            $filename = Str::random(40) . '-' . '.' . $extension;
+            $file->move('regulation', $filename);
+
+            FileRegulation::create([
+                'regulation_id' => $regulation->id,
+                'file' => 'regulation/'.$filename
+            ]);
+        }
+
+        return redirect()->route('database');
     }
 }

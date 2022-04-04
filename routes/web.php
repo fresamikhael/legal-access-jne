@@ -48,10 +48,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::get('/informasi', [InformationController::class, 'index'])->name('information.index');
-    
+
     Route::get('/statistic', [HomeController::class, 'statistic'])->name('statistic');
 
     Route::get('/database', [DatabaseController::class, 'index'])->name('database');
+    Route::get('/database/add', [DatabaseController::class, 'create'])->name('database-add');
+    Route::post('/database/store', [DatabaseController::class, 'store'])->name('database-store');
     Route::get('/database/detail/{id}', [DatabaseController::class, 'detail'])->name('database.detail');
 
     Route::get('/database-customer', [DatabaseController::class, 'index'])->name('database-customer');
@@ -129,6 +131,7 @@ Route::middleware('auth')->group(function () {
         Route::post('/internal/store', [RegulationController::class, 'regulation_internal'])->name('regulation-internal-store');
 
         Route::get('/normative', [RegulationController::class, 'normative'])->name('regulation-normative');
+        Route::post('/normative/store', [RegulationController::class, 'regulation_normative'])->name('regulation-normative-store');
     });
 
     Route::prefix('/legal-permit')->group(function () {

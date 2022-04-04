@@ -16,6 +16,8 @@ class CreateRuleTable extends Migration
         Schema::create('rules', function (Blueprint $table) {
             $table->id();
 
+            $table->string('name');
+            $table->string('type');
             $table->string('file');
 
             $table->timestamps();

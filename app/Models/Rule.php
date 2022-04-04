@@ -11,6 +11,10 @@ class Rule extends Model
 
     protected $table = 'rules';
 
-    // protected $fillable = ['file'];
+    protected $fillable = [
+        'name',
+        'type',
+        'file'
+    ];
 
 }
