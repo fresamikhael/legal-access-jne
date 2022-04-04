@@ -829,11 +829,11 @@ input:checked + .toggle-bg {
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
-.col-span-4 {
-  grid-column: span 4 / span 4;
-}
 .col-span-3 {
   grid-column: span 3 / span 3;
+}
+.col-span-4 {
+  grid-column: span 4 / span 4;
 }
 .col-span-1 {
   grid-column: span 1 / span 1;
@@ -847,11 +847,14 @@ input:checked + .toggle-bg {
 .row-span-3 {
   grid-row: span 3 / span 3;
 }
-.row-span-21 {
-  grid-row: span 21 / span 21;
+.row-span-23 {
+  grid-row: span 23 / span 23;
 }
 .row-span-22 {
   grid-row: span 22 / span 22;
+}
+.row-span-21 {
+  grid-row: span 21 / span 21;
 }
 .row-span-4 {
   grid-row: span 4 / span 4;
@@ -956,14 +959,14 @@ input:checked + .toggle-bg {
 .mb-6 {
   margin-bottom: 1.5rem;
 }
+.-mt-4 {
+  margin-top: -1rem;
+}
 .ml-20 {
   margin-left: 5rem;
 }
 .ml-4 {
   margin-left: 1rem;
-}
-.-mt-4 {
-  margin-top: -1rem;
 }
 .mb-20 {
   margin-bottom: 5rem;

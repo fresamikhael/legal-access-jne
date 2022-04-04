@@ -20,6 +20,7 @@ class CreateLeasesTable extends Migration
             $table->string('landlord_province');
             $table->string('landlord_regency');
             $table->string('landlord_village');
+            $table->string('landlord_district');
             $table->string('landlord_zip_code');
             $table->string('landlord_address');
             $table->string('type');
@@ -27,12 +28,15 @@ class CreateLeasesTable extends Migration
             $table->integer('rental_value');
             $table->string('province_object');
             $table->string('regency_object');
+            $table->string('district_object');
             $table->string('village_object');
             $table->string('zip_code_object');
+            $table->string('address_object');
             $table->string('landlord_name_optional')->nullable();
             $table->string('landlord_province_optional')->nullable();
             $table->string('landlord_regency_optional')->nullable();
             $table->string('landlord_village_optional')->nullable();
+            $table->string('landlord_district_optional')->nullable();
             $table->string('landlord_zip_code_optional')->nullable();
             $table->string('landlord_address_optional')->nullable();
             $table->string('priod_of_time');

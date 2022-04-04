@@ -51,7 +51,7 @@ class LeaseController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-
+        
         if ($request->file('file_director_disposition')) {
             $file = $request->file('file_director_disposition');
             $extension = $file->getClientOriginalExtension();
