@@ -166,7 +166,7 @@
                         <div class="flex-[6]">
                             <input
                                 class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                aria-describedby="user_avatar_help" id="user_avatar" name="file" type="file">
+                                aria-describedby="user_avatar_help" id="user_avatar" name="file[]" multiple type="file">
                         </div>
                     </div>
                 </div>

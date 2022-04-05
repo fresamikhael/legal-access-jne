@@ -14,17 +14,33 @@
                         <tbody>
                             <tr class="text-sm text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <th class="w-[20%] px-6 py-3 text-right">
-                                    Jenis Peraturan
+                                    Nama Peraturan
                                 </th>
                                 <td class="px-6 py-4">
+                                    {{ $regulation->name }}
+                                </td>
+                            </tr>
+                            <tr class="text-sm text-gray-700 dark:text-gray-400">
+                                <th class="w-[20%] px-6 py-3 text-right">
+                                    Tipe Peraturan
+                                </th>
+                                <td class="px-6 py- 4">
                                     {{ $regulation->type }}
+                                </td>
+                            </tr>
+                            <tr class="text-sm text-gray-700 dark:text-gray-400">
+                                <th class="w-[20%] px-6 py-3 text-right">
+                                    Entitas
+                                </th>
+                                <td class="px-6 py- 4">
+                                    {{ $regulation->entity }}
                                 </td>
                             </tr>
                             <tr class="text-sm text-gray-700 dark:text-gray-400">
                                 <th class="w-[20%] px-6 py-3 text-right">
                                     Nomor Peraturan
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py- 4">
                                     {{ $regulation->number }}
                                 </td>
                             </tr>
@@ -54,7 +70,7 @@
                             </tr>
                             <tr class="text-sm text-gray-700 dark:text-gray-400">
                                 <th class="w-[20%] px-6 py-3 text-right">
-                                    Nomor LN
+                                    Tanggal Diundangkan
                                 </th>
                                 <td class="px-6 py-4">
                                     {{ $regulation->promulgated_date }}
@@ -62,18 +78,26 @@
                             </tr>
                             <tr class="text-sm text-gray-700     bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <th class="w-[20%] px-6 py-3 text-right">
-                                    Nomor TLN
+                                    Tanggal Berlaku
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{ $regulation->year }}
+                                    {{ $regulation->valid_date }}
                                 </td>
                             </tr>
                             <tr class="text-sm text-gray-700 dark:text-gray-400">
                                 <th class="w-[20%] px-6 py-3 text-right">
-                                    Tanggal Diundangkan
+                                    Sumber
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{ $regulation->valid_date }}
+                                    {{ $regulation->source }}
+                                </td>
+                            </tr>
+                            <tr class="text-sm text-gray-700 dark:text-gray-400">
+                                <th class="w-[20%] px-6 py-3 text-right">
+                                    Status Peraturan
+                                </th>
+                                <td class="px-6 py-4">
+                                    {{ $regulation->status }}
                                 </td>
                             </tr>
                         </tbody>
@@ -90,9 +114,11 @@
 
             <div class="p-5">
                 <div class="grid grid-cols-2 gap-4">
-                    <a href="#" class="text-[100px] flex items-center justify-center">
-                        <i class="fa-solid fa-file-arrow-down"></i>
-                    </a>
+                    @foreach ($regulation->files as $data)
+                        <a href="{{ asset($data->file) }}" target="__blank" class="text-[100px] flex items-center justify-center">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>

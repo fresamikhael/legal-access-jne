@@ -125,7 +125,7 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::prefix('/regulation')->group(function () {
-        Route::get('/', [RegulationController::class, 'index'])->name('regulation-index');
+        Route::get('/index', [RegulationController::class, 'index'])->name('regulation-index');
 
         Route::get('/internal', [RegulationController::class, 'internal'])->name('regulation-internal');
         Route::post('/internal/store', [RegulationController::class, 'regulation_internal'])->name('regulation-internal-store');
