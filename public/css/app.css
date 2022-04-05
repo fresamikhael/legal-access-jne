@@ -950,9 +950,6 @@ input:checked + .toggle-bg {
 .mt-4 {
   margin-top: 1rem;
 }
-.-mt-20 {
-  margin-top: -5rem;
-}
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -961,6 +958,9 @@ input:checked + .toggle-bg {
 }
 .-mt-4 {
   margin-top: -1rem;
+}
+.-mt-20 {
+  margin-top: -5rem;
 }
 .ml-20 {
   margin-left: 5rem;
@@ -1205,8 +1205,8 @@ input:checked + .toggle-bg {
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
-.grid-rows-\[12\] {
-  grid-template-rows: 12;
+.grid-rows-6 {
+  grid-template-rows: repeat(6, minmax(0, 1fr));
 }
 .grid-rows-3 {
   grid-template-rows: repeat(3, minmax(0, 1fr));
@@ -1219,9 +1219,6 @@ input:checked + .toggle-bg {
 }
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
-}
-.grid-rows-6 {
-  grid-template-rows: repeat(6, minmax(0, 1fr));
 }
 .flex-row {
   flex-direction: row;
