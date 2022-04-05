@@ -42,10 +42,10 @@
                         <div class="flex-[6]">
                             <select name="type" id=""
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="Peraturan Perusahaan">Peraturan Perusahaan</option>
-                                <option value="SK Direksi">SK Direksi</option>
-                                <option value="SE Direksi">SE Direksi</option>
-                                <option value="Internal Memo">Internal Memo</option>
+                                <option value="UU">UU</option>
+                                <option value="PERPU">PERPU</option>
+                                <option value="PP">PP</option>
+                                <option value="PERPRES">PERPRES</option>
                             </select>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                         <div class="flex-[6]">
                             <input
                                 class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                aria-describedby="user_avatar_help" id="user_avatar" name="file" type="file" multiple>
+                                aria-describedby="user_avatar_help" id="user_avatar" name="file" type="file">
                         </div>
                     </div>
                 </div>
