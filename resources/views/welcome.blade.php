@@ -7,7 +7,16 @@
         </div>
     @endif
     <div class="flex">
-        <img src="{{ asset('images/banner.png') }}" alt="Banner JNE" class="w-full">
+        @php
+            $banner = DB::table('banner')
+                ->orderBy('id', 'DESC')
+                ->first();
+        @endphp
+        @if ($banner === null)
+            <img src="{{ asset('images/banner.png') }}" alt="Banner JNE" class="w-full h-[400px] object-cover">
+        @else
+            <img src="{{ url(env('APP_URL_ADMIN').$banner->file) }}" alt="Banner JNE" class="w-full h-[400px] object-cover">
+        @endif
     </div>
 
     <div class="flex gap-4 py-4 px-4">
