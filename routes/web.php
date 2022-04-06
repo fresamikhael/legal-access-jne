@@ -47,7 +47,7 @@ Route::middleware('auth')->group(function () {
     });
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
-    Route::get('/informasi', [InformationController::class, 'index'])->name('information.index');
+    Route::get('/informasi', [InformationController::class, 'index'])->name('information-index');
 
     Route::get('/statistic', [HomeController::class, 'statistic'])->name('statistic');
 
@@ -68,6 +68,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/downloadPermit/{path}', [DownloadController::class, 'downloadPermit'])->name('download');
     Route::get('/downloadLitigation/{path}', [DownloadController::class, 'downloadLitigation'])->name('download-litigation');
     Route::get('/downloadDrafting/{path}', [DownloadController::class, 'downloadDrafting'])->name('download-Drafting');
+    Route::get('/downloadRegulation/{path}', [DownloadController::class, 'downloadRegulation'])->name('download-Regulation');
     Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
 
     Route::get('/update/{id}', [ContractBusinessController::class, 'update'])->name('cd-update');
@@ -128,9 +129,15 @@ Route::middleware('auth')->group(function () {
         Route::get('/index', [RegulationController::class, 'index'])->name('regulation-index');
 
         Route::get('/internal', [RegulationController::class, 'internal'])->name('regulation-internal');
+        Route::get('/internal/create', [RegulationController::class, 'create_internal'])->name('regulation-internal-create');
+        Route::get('/internal/detail/{id}', [RegulationController::class, 'detail_internal'])->name('regulation-internal-detail');
+
         Route::post('/internal/store', [RegulationController::class, 'regulation_internal'])->name('regulation-internal-store');
 
         Route::get('/normative', [RegulationController::class, 'normative'])->name('regulation-normative');
+        Route::get('/normative/create', [RegulationController::class, 'create_normative'])->name('regulation-normative-create');
+        Route::get('/normative/detail/{id}', [RegulationController::class, 'detail_normative'])->name('regulation-normative-detail');
+
         Route::post('/normative/store', [RegulationController::class, 'regulation_normative'])->name('regulation-normative-store');
     });
 

@@ -14,7 +14,7 @@ class Rule extends Model
     protected $fillable = [
         'name',
         'type',
-        'file'
+        'file',
+        'rule_type'
     ];
-
 }

@@ -28,4 +28,11 @@ class DownloadController extends Controller
 
         return response()->download($file);
     }
+
+    function downloadRegulation($path)
+    {
+        $file = public_path('Rule/'. $path);
+
+        return response()->download($file);
+    }
 }
