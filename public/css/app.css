@@ -1082,9 +1082,6 @@ input:checked + .toggle-bg {
 .w-1\/2 {
   width: 50%;
 }
-.w-32 {
-  width: 8rem;
-}
 .min-w-0 {
   min-width: 0px;
 }
@@ -1093,6 +1090,9 @@ input:checked + .toggle-bg {
 }
 .max-w-\[1500px\] {
   max-width: 1500px;
+}
+.flex-initial {
+  flex: 0 1 auto;
 }
 .flex-\[2\] {
   flex: 2;
@@ -1117,9 +1117,6 @@ input:checked + .toggle-bg {
 }
 .flex-1 {
   flex: 1 1 0%;
-}
-.flex-initial {
-  flex: 0 1 auto;
 }
 .flex-\[7\] {
   flex: 7;
